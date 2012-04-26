@@ -1,5 +1,5 @@
 // Actors {{{
-function makePunchLine() { // Punch line slide {{{
+function makePunchLineActor() { // Punch line slide {{{
     var actor = new UseActor("punch_line")
     actor.top_set_node = document.getElementById("punch_line_top_set")
     actor.equals_node = document.getElementById("punch_line_equals")
@@ -92,7 +92,7 @@ window.addEventListener("load",function() {
     // Punch line (first appearance) {{{
         hire("standard_backdrop",default_value,"title_slide"),
         hire(titles[nextTitleIndex()],default_value,"title_slide"),
-        hire("punch_line",makePunchLine,"title_slide"),
+        hire("punch_line",makePunchLineActor,"title_slide"),
         fadeOutAndFire(1,"title_slide"),
         "",
         linear(1,"punch_line","top_set_opacity",1),
