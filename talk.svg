@@ -16,7 +16,7 @@
 <script xlink:href="slick.js"/>
 <script xlink:href="script.js"/>
 <!-- }}} Header -->
-<defs id="resources"> <!-- Resources {{{ -->
+<!-- Resources {{{ --> <defs id="resources">
     <!-- title_slide {{{ -->
         <image
             id="title_slide"
