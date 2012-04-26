@@ -9,6 +9,7 @@ function makePunchLineActor() { // Punch line slide {{{
     actor.s_operator_node = document.getElementById("punch_line_s_operator")
     actor.reverse_s_operator_node = document.getElementById("punch_line_reverse_s_operator")
     actor.dot_operator_node = document.getElementById("punch_line_dot_operator")
+    actor.sum_operator_node = document.getElementById("punch_line_sum_operator")
 
     actor.top_set_opacity = 0
     actor.equals_opacity = 0
@@ -19,6 +20,7 @@ function makePunchLineActor() { // Punch line slide {{{
     actor.s_operator_opacity = 0
     actor.reverse_s_operator_opacity = 0
     actor.dot_operator_opacity = 0
+    actor.sum_operator_opacity = 0
 
     appendToMethod(actor,"update",function() {
         actor.top_set_node.setAttribute("opacity",actor.top_set_opacity*actor.non_focused_opacity)
@@ -26,7 +28,12 @@ function makePunchLineActor() { // Punch line slide {{{
         for(var i = 0; i < actor.bottom_set_nodes.length; ++i)
             actor.bottom_set_nodes[i].setAttribute("opacity",actor.bottom_set_opacity*actor.non_focused_opacity);
         if(actor.non_focused_opacity < 1) {
-            ["rational_power_series","s_operator","reverse_s_operator","dot_operator"].forEach(function(label) {
+            ["rational_power_series",
+             "s_operator",
+             "reverse_s_operator",
+             "dot_operator",
+             "sum_operator",
+            ].forEach(function(label) {
                 actor[label + "_node"].setAttribute("opacity",Math.max(
                     actor[label + "_node"].getAttribute("opacity"),
                     actor[label + "_opacity"]
@@ -159,6 +166,11 @@ window.addEventListener("load",function() {
         parallel(
             linear(0.5,"punch_line","reverse_s_operator_opacity",1,0.25),
             linear(0.5,"punch_line","dot_operator_opacity",0.25,1)
+        ),
+        "",
+        parallel(
+            linear(0.5,"punch_line","dot_operator_opacity",1,0.25),
+            linear(0.5,"punch_line","sum_operator_opacity",0.25,1)
         ),
         "",
         linear(0.5,"punch_line","non_focused_opacity",1),
