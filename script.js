@@ -37,6 +37,47 @@ function makePunchLineActor() { // Punch line slide {{{
 
     return actor
 } // }}}
+function makeOutlineActor() { // Outline slide {{{
+    var actor = new UseActor("outline")
+
+    var labels = [
+        "languages",
+        "weighted_languages",
+        "weighted_languages_in_arrow",
+        "weighted_languages_out_arrow",
+        "infinite_languages",
+        "infinite_languages_in_arrow",
+        "infinite_languages_out_arrow",
+        "infinite_weighted_languages",
+        "escape_divergence",
+        "escape_divergence_in_arrow",
+        "embrace_divergence",
+        "embrace_divergence_in_arrow",
+        "embrace_divergence_out_arrow",
+        "infinite_matrix_product_states"
+    ]
+
+    var nodes = {}
+    var opacities = {}
+    labels.forEach(function(label) {
+        nodes[label] = document.getElementById("outline_" + label)
+        if(!nodes[label]) throw Error("unable to find an node with id '" + "outline_" + label + "'")
+        actor[label + "_opacity"] = 0
+    })
+
+    actor.non_focused_opacity = 1
+
+    appendToMethod(actor,"update",function() {
+        labels.forEach(function(label) {
+            nodes[label].setAttribute("opacity",Math.max(
+                actor.non_focused_opacity,
+                actor[label + "_opacity"]
+            ))
+        })
+    })
+
+    return actor
+} // }}}
 // }}} Actors
 
 // Title Management {{{
@@ -66,6 +107,7 @@ function rotateTitle(index) { // {{{
 // }}}
 var titles = [ // Titles {{{
     "The Punch Line",
+    "Outline",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -121,6 +163,68 @@ window.addEventListener("load",function() {
         "",
         linear(0.5,"punch_line","non_focused_opacity",1),
         "",
+    // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        fadeOutAndFire(0.5,"punch_line"),
+        hireAndFadeIn(0.5,"outline",makeOutlineActor),
+        "",
+        set("outline","languages_opacity",1),
+        linear(0.5,"outline","non_focused_opacity",0.15),
+        "",
+        parallel(
+            linear(0.5,"outline","languages_opacity",0.5),
+            linear(0.5,"outline","weighted_languages_opacity",1),
+            linear(0.5,"outline","weighted_languages_in_arrow_opacity",1),
+            linear(0.5,"outline","infinite_languages_opacity",1),
+            linear(0.5,"outline","infinite_languages_in_arrow_opacity",1)
+        ),
+        "",
+        parallel(
+            linear(0.5,"outline","weighted_languages_opacity",0.5),
+            linear(0.5,"outline","weighted_languages_in_arrow_opacity",0.5),
+            linear(0.5,"outline","infinite_languages_opacity",0.5),
+            linear(0.5,"outline","infinite_languages_in_arrow_opacity",0.5),
+            linear(0.5,"outline","infinite_languages_out_arrow_opacity",1),
+            linear(0.5,"outline","weighted_languages_out_arrow_opacity",1),
+            linear(0.5,"outline","infinite_weighted_languages_opacity",1)
+        ),
+        "",
+        parallel(
+            linear(0.5,"outline","infinite_languages_out_arrow_opacity",0.5),
+            linear(0.5,"outline","weighted_languages_out_arrow_opacity",0.5),
+            linear(0.5,"outline","infinite_weighted_languages_opacity",0.5),
+            linear(0.5,"outline","escape_divergence_opacity",1),
+            linear(0.5,"outline","escape_divergence_in_arrow_opacity",1),
+            linear(0.5,"outline","embrace_divergence_opacity",1),
+            linear(0.5,"outline","embrace_divergence_in_arrow_opacity",1)
+        ),
+        "",
+        parallel(
+            linear(0.5,"outline","escape_divergence_opacity",0.5),
+            linear(0.5,"outline","escape_divergence_in_arrow_opacity",0.5),
+            linear(0.5,"outline","embrace_divergence_opacity",0.5),
+            linear(0.5,"outline","embrace_divergence_in_arrow_opacity",0.5),
+            linear(0.5,"outline","embrace_divergence_out_arrow_opacity",1),
+            linear(0.5,"outline","infinite_matrix_product_states_opacity",1)
+        ),
+        "",
+        parallel(
+            linear(0.5,"outline","languages_opacity",1),
+            linear(0.5,"outline","weighted_languages_opacity",0),
+            linear(0.5,"outline","weighted_languages_in_arrow_opacity",0),
+            linear(0.5,"outline","infinite_languages_opacity",0),
+            linear(0.5,"outline","infinite_languages_in_arrow_opacity",0),
+            linear(0.5,"outline","infinite_languages_out_arrow_opacity",0),
+            linear(0.5,"outline","weighted_languages_out_arrow_opacity",0),
+            linear(0.5,"outline","infinite_weighted_languages_opacity",0),
+            linear(0.5,"outline","escape_divergence_opacity",0),
+            linear(0.5,"outline","escape_divergence_in_arrow_opacity",0),
+            linear(0.5,"outline","embrace_divergence_opacity",0),
+            linear(0.5,"outline","embrace_divergence_in_arrow_opacity",0),
+            linear(0.5,"outline","embrace_divergence_out_arrow_opacity",0),
+            linear(0.5,"outline","infinite_matrix_product_states_opacity",0)
+        ),
     // }}}
 // }}} Script
     ]))
