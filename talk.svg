@@ -17,6 +17,14 @@
 <script xlink:href="script.js"/>
 <!-- }}} Header -->
 <defs id="resources"> <!-- Resources {{{ -->
+    <!-- title_slide {{{ -->
+        <image
+            id="title_slide"
+            xlink:href="title.svg"
+            width="1024px"
+            height="768px"
+        />
+    <!-- }}} -->
 <!-- }}} Resources --> </defs>
 <!-- Postlude {{{ -->
 <rect

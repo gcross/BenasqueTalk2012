@@ -18,8 +18,10 @@ window.addEventListener("load",function() {
 
     initializeSlick([].concat([
 // Script {{{
-"",
-
+    <!-- Title {{{ -->
+        hire("title_slide"),
+        "",
+    <!-- }}} -->
 // }}} Script
     ]))
 },false)
