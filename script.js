@@ -5,41 +5,53 @@ function makePunchLineActor() { // Punch line slide {{{
     actor.equals_node = document.getElementById("punch_line_equals")
     actor.bottom_set_nodes = document.getElementsByClassName("punch_line_bottom_set")
 
-    actor.rational_power_series_node = document.getElementById("punch_line_rational_power_series")
-    actor.s_operator_node = document.getElementById("punch_line_s_operator")
-    actor.reverse_s_operator_node = document.getElementById("punch_line_reverse_s_operator")
-    actor.dot_operator_node = document.getElementById("punch_line_dot_operator")
-    actor.sum_operator_node = document.getElementById("punch_line_sum_operator")
+    var labels = [
+        "rational_power_series",
+        "s_operator",
+        "reverse_s_operator",
+        ["dot_operator"],
+        "sum_operator"
+    ]
+
+    var nodes = {}
+    var opacities = {}
+    labels = labels.map(function(label) {
+        if(typeof label === "string") {
+            node = document.getElementById("punch_line_" + label)
+            if(!node)
+                throw Error("unable to find a node with id '" + "punch_line_" + label + "'")
+            nodes[label] = [node]
+        } else {
+            label = label[0]
+            nodelist = document.getElementsByClassName("punch_line_" + label)
+            if(nodelist.length = 0)
+                throw Error("unable to find any nodes with class '" + "punch_line_" + label + "'")
+            nodes[label] = Array(nodelist.length)
+            for(var i = 0; i < nodelist.length; ++i) nodes[label][i] = nodelist[i];
+        }
+        actor[label + "_opacity"] = 0
+        return label
+    })
+    actor.nodes = nodes
+    actor.opacities = opacities
 
     actor.top_set_opacity = 0
     actor.equals_opacity = 0
     actor.bottom_set_opacity = 0
 
     actor.non_focused_opacity = 1
-    actor.rational_power_series_opacity = 0
-    actor.s_operator_opacity = 0
-    actor.reverse_s_operator_opacity = 0
-    actor.dot_operator_opacity = 0
-    actor.sum_operator_opacity = 0
 
     appendToMethod(actor,"update",function() {
         actor.top_set_node.setAttribute("opacity",actor.top_set_opacity*actor.non_focused_opacity)
         actor.equals_node.setAttribute("opacity",actor.equals_opacity*actor.non_focused_opacity)
         for(var i = 0; i < actor.bottom_set_nodes.length; ++i)
             actor.bottom_set_nodes[i].setAttribute("opacity",actor.bottom_set_opacity*actor.non_focused_opacity);
-        if(actor.non_focused_opacity < 1) {
-            ["rational_power_series",
-             "s_operator",
-             "reverse_s_operator",
-             "dot_operator",
-             "sum_operator",
-            ].forEach(function(label) {
-                actor[label + "_node"].setAttribute("opacity",Math.max(
-                    actor[label + "_node"].getAttribute("opacity"),
-                    actor[label + "_opacity"]
-                ))
-            })
-        }
+        labels.forEach(function(label) {
+            actor.nodes[label].forEach(function(node) { node.setAttribute("opacity",Math.max(
+                node.getAttribute("opacity"),
+                actor[label + "_opacity"]
+            ))})
+        })
     })
 
     return actor

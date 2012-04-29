@@ -39,9 +39,9 @@
      inkscape:window-height="1152"
      id="namedview26763"
      showgrid="true"
-     inkscape:zoom="0.73058495"
-     inkscape:cx="275.48246"
-     inkscape:cy="370.31234"
+     inkscape:zoom="1.4611699"
+     inkscape:cx="408.59497"
+     inkscape:cy="260.81104"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -60,18 +60,6 @@
        id="tspan3888"
        x="-251.75485"
        y="604.77802">s</tspan></text>
-  <path
-     sodipodi:type="arc"
-     style="fill:#000000;fill-opacity:1;stroke:none"
-     id="punch_line_dot_operator"
-     sodipodi:cx="270"
-     sodipodi:cy="658"
-     sodipodi:rx="10"
-     sodipodi:ry="10"
-     d="m 280,658 a 10,10 0 1 1 -20,0 10,10 0 1 1 20,0 z"
-     transform="matrix(0.4782969,0,0,0.4782969,210.05467,304.98776)"
-     inkscape:label="#path3910"
-     class="punch_line_bottom_set" />
   <text
      xml:space="preserve"
      style="font-size:61.22200012px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
@@ -226,14 +214,14 @@
      style="font-size:49.29932404px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bangla MN;-inkscape-font-specification:Bangla MN"
      x="466.19879"
      y="604.77802"
-     id="text16397"
+     id="punch_line_s_operator"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan16399"
        x="466.19879"
        y="604.77802">s</tspan></text>
   <path
-     class="punch_line_bottom_set"
+     class="punch_line_bottom_set punch_line_dot_operator"
      inkscape:label="#path3910"
      transform="matrix(0.4782969,0,0,0.4782969,282.28672,304.98776)"
      d="m 280,658 a 10,10 0 1 1 -20,0 10,10 0 1 1 20,0 z"
@@ -293,7 +281,7 @@
        x="317.34735"
        y="650.91345">i</tspan></text>
   <path
-     class="punch_line_bottom_set"
+     class="punch_line_bottom_set punch_line_dot_operator"
      inkscape:label="#path3910"
      transform="matrix(0.4782969,0,0,0.4782969,119.80672,304.98776)"
      d="m 280,658 a 10,10 0 1 1 -20,0 10,10 0 1 1 20,0 z"
@@ -305,8 +293,21 @@
      style="fill:#000000;fill-opacity:1;stroke:none"
      sodipodi:type="arc" />
   <path
+     sodipodi:type="arc"
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     id="punch_line_dot_operator"
+     sodipodi:cx="270"
+     sodipodi:cy="658"
+     sodipodi:rx="10"
+     sodipodi:ry="10"
+     d="m 280,658 a 10,10 0 1 1 -20,0 10,10 0 1 1 20,0 z"
+     transform="matrix(0.4782969,0,0,0.4782969,210.05467,304.98776)"
+     inkscape:label="#path3910"
+     class="punch_line_bottom_set punch_line_dot_operator" />
+  <path
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 339.19483,594.16669 0,55.43503"
+     d="m 339.19483,591.98961 0,55.43503"
      id="path16421"
-     inkscape:connector-curvature="0" />
+     inkscape:connector-curvature="0"
+     class="punch_line_bottom_set punch_line_dot_operator" />
 </svg>
