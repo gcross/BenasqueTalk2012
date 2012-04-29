@@ -127,6 +127,7 @@ function rotateTitle(index) { // {{{
 var titles = [ // Titles {{{
     "The Punch Line",
     "Outline",
+    "Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -248,6 +249,132 @@ window.addEventListener("load",function() {
             linear(0.5,"outline","embrace_divergence_in_arrow_opacity",0),
             linear(0.5,"outline","embrace_divergence_out_arrow_opacity",0),
             linear(0.5,"outline","infinite_matrix_product_states_opacity",0)
+        ),
+        "",
+    // }}}
+    // Languages {{{
+        fadeOutAndFire(0.5,"outline"),
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"languages.borderlines"),
+        "",
+        hireAndFadeIn(1,"languages.alphabet"),
+        "",
+        parallel(
+            hireAndFadeIn(0.5,"languages.alphabet.example1"),
+            sequence(
+                wait(0.25),
+                hireAndFadeIn(0.5,"languages.alphabet.example2")
+            )
+        ),
+        "",
+        hireAndFadeIn(1,"languages.word"),
+        "",
+        linear(0.5,styleFor("languages.alphabet.example2"),"opacity",0.25),
+        parallel(
+            sequence(
+                wait(0),
+                hireAndFadeIn(0.5,"languages.word.example1a")
+            ),
+            sequence(
+                wait(0.10),
+                hireAndFadeIn(0.5,"languages.word.example1b")
+            ),
+            sequence(
+                wait(0.20),
+                hireAndFadeIn(0.5,"languages.word.example1c")
+            )
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1a"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1b"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1c"),"opacity",0.25)
+        ),
+        linear(0.5,styleFor("languages.alphabet.example2"),"opacity",1),
+        parallel(
+            sequence(
+                wait(0),
+                hireAndFadeIn(0.5,"languages.word.example2a")
+            ),
+            sequence(
+                wait(0.10),
+                hireAndFadeIn(0.5,"languages.word.example2b")
+            ),
+            sequence(
+                wait(0.20),
+                hireAndFadeIn(0.5,"languages.word.example2c")
+            )
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1a"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1b"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1c"),"opacity",1)
+        ),
+        wait(0.5),
+        hireAndFadeIn(0.5,"languages.language"),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example2"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example2a"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example2b"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example2c"),"opacity",0.25)
+        ),
+        parallel(
+            sequence(
+                wait(0),
+                hireAndFadeIn(0.5,"languages.language.example1a")
+            ),
+            sequence(
+                wait(0.10),
+                hireAndFadeIn(0.5,"languages.language.example1b")
+            ),
+            sequence(
+                wait(0.20),
+                hireAndFadeIn(0.5,"languages.language.example1c")
+            )
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1a"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1b"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1c"),"opacity",0.25),
+            linear(0.5,styleFor("languages.language.example1a"),"opacity",0.25),
+            linear(0.5,styleFor("languages.language.example1b"),"opacity",0.25),
+            linear(0.5,styleFor("languages.language.example1c"),"opacity",0.25)
+        ),
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example2"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example2a"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example2b"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example2c"),"opacity",1)
+        ),
+        parallel(
+            sequence(
+                wait(0),
+                hireAndFadeIn(0.5,"languages.language.example2a")
+            ),
+            sequence(
+                wait(0.10),
+                hireAndFadeIn(0.5,"languages.language.example2b")
+            ),
+            sequence(
+                wait(0.20),
+                hireAndFadeIn(0.5,"languages.language.example2c")
+            )
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1a"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1b"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1c"),"opacity",1),
+            linear(0.5,styleFor("languages.language.example1a"),"opacity",1),
+            linear(0.5,styleFor("languages.language.example1b"),"opacity",1),
+            linear(0.5,styleFor("languages.language.example1c"),"opacity",1)
         ),
     // }}}
 // }}} Script
