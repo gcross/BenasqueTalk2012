@@ -2436,7 +2436,7 @@
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="1.2161458"
-     inkscape:cx="603.65215"
+     inkscape:cx="566.65001"
      inkscape:cy="331.93846"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -3008,6 +3008,19 @@
        id="tspan11000"
        x="908.71069"
        y="597.84644">1</tspan></text>
+  <path
+     sodipodi:nodetypes="ccccccc"
+     inkscape:connector-curvature="0"
+     id="automata.check_mark"
+     d="m 635.92328,597.05774 16.335,-21.78 75.45705,49.77794 c 28.36724,-90.61544 78.96968,-150.87975 123.28545,-188.62544 l 19.0575,21.78 c -48.3735,37.72776 -114.80141,129.17238 -122.5125,212.355 z"
+     style="fill:#54ff00;fill-opacity:1;stroke:#009800;stroke-width:5.44499969;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+     inkscape:label="#path127395" />
+  <path
+     id="automata.cross_mark"
+     d="m 658.55401,446.47211 -19.39775,22.886 c 31.74737,26.53157 62.53558,54.6391 91.79931,83.46165 -33.89597,34.69896 -65.14289,70.30002 -91.79931,104.64611 l 22.46062,19.0575 c 27.78366,-33.60462 58.48995,-67.94161 91.37388,-101.58329 32.88393,33.64168 63.59022,67.97867 91.37387,101.58329 l 22.46067,-19.0575 C 840.16896,623.11978 808.92192,587.5187 775.02595,552.81976 804.2898,523.99721 835.07788,495.88968 866.8253,469.35811 l -19.3978,-22.886 c -32.42073,26.20766 -64.26914,54.69469 -94.43674,84.22735 -30.1676,-29.53266 -62.01601,-58.01969 -94.43675,-84.22735 z"
+     style="fill:#ff0015;fill-opacity:1;stroke:#981100;stroke-width:5.44499969;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline"
+     inkscape:connector-curvature="0"
+     inkscape:label="#path127393" />
         <!-- }}} -->
     <!-- }}} Slides -->
     <!-- standard_backdrop {{{ -->
