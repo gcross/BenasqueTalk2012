@@ -142,8 +142,8 @@
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="1.2161458"
-     inkscape:cx="706.84701"
-     inkscape:cy="68.81212"
+     inkscape:cx="603.65215"
+     inkscape:cy="331.93846"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -414,50 +414,50 @@
        id="tspan6904">allowed transition betweenn staesfor each symbol in the word.</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="559.48029"
+     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="594.41986"
      y="597.84644"
      id="automata.input.1.0"
      sodipodi:linespacing="125%"
      inkscape:label="#text6912"><tspan
        sodipodi:role="line"
        id="tspan6914"
-       x="559.48029"
+       x="594.41986"
        y="597.84644">0</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="automata.input.2.0"
      y="597.84644"
-     x="665.48029"
-     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="700.41986"
+     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      xml:space="preserve"
      inkscape:label="#text6916"><tspan
        y="597.84644"
-       x="665.48029"
+       x="700.41986"
        id="tspan6918"
        sodipodi:role="line">0</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="771.48029"
+     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="806.41986"
      y="597.84644"
      id="automata.input.3.0"
      sodipodi:linespacing="125%"
      inkscape:label="#text6920"><tspan
        sodipodi:role="line"
        id="tspan6922"
-       x="771.48029"
+       x="806.41986"
        y="597.84644">0</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="automata.input.4.0"
      y="597.84644"
-     x="877.48029"
-     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="912.41986"
+     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      xml:space="preserve"
      inkscape:label="#text6924"><tspan
        y="597.84644"
-       x="877.48029"
+       x="912.41986"
        id="tspan6926"
        sodipodi:role="line">0</tspan></text>
   <g
@@ -648,7 +648,7 @@
      id="automata.reader"
      width="95.354942"
      height="137.21808"
-     x="544.54663"
+     x="546.31329"
      y="485.2381"
      inkscape:label="#rect10049" />
   <rect
@@ -670,48 +670,48 @@
      sodipodi:linespacing="125%"
      id="automata.input.3.1"
      y="597.84644"
-     x="771.48029"
-     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="802.71069"
+     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      xml:space="preserve"
      inkscape:label="#text10986"><tspan
        y="597.84644"
-       x="771.48029"
+       x="802.71069"
        id="tspan10988"
        sodipodi:role="line">1</tspan></text>
   <text
      sodipodi:linespacing="125%"
      id="automata.input.1.1"
      y="597.84644"
-     x="559.48029"
-     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="590.71069"
+     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      xml:space="preserve"
      inkscape:label="#text10990"><tspan
        y="597.84644"
-       x="559.48029"
+       x="590.71069"
        id="tspan10992"
        sodipodi:role="line">1</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="665.48029"
+     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="696.71069"
      y="597.84644"
      id="automata.input.2.1"
      sodipodi:linespacing="125%"
      inkscape:label="#text10994"><tspan
        sodipodi:role="line"
        id="tspan10996"
-       x="665.48029"
+       x="696.71069"
        y="597.84644">1</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="877.48029"
+     style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="908.71069"
      y="597.84644"
      id="automata.input.4.1"
      sodipodi:linespacing="125%"
      inkscape:label="#text10998"><tspan
        sodipodi:role="line"
        id="tspan11000"
-       x="877.48029"
+       x="908.71069"
        y="597.84644">1</tspan></text>
 </svg>
