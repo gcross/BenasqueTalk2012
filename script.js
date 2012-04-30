@@ -145,6 +145,21 @@ window.addEventListener("load",function() {
     })()
     // }}} Initialization
 
+// Functions {{{
+function hireAndFlashIn(time_to_enter,time_between_starts) {
+    animations = []
+    var current_wait_time = 0
+    for(var i = 2; i < arguments.length; ++i) {
+        animations.push(sequence(
+            wait(current_wait_time),
+            hireAndFadeIn(time_to_enter,arguments[i])
+        ))
+        current_wait_time += time_between_starts
+    }
+    return parallel.apply(null,animations)
+}
+// }}}
+
     initializeSlick([].concat([
 // Script {{{
     // Title {{{
@@ -259,30 +274,18 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(1,"languages.alphabet"),
         "",
-        parallel(
-            hireAndFadeIn(0.5,"languages.alphabet.example1"),
-            sequence(
-                wait(0.25),
-                hireAndFadeIn(0.5,"languages.alphabet.example2")
-            )
+        hireAndFlashIn(0.5,0.25,
+            "languages.alphabet.example1",
+            "languages.alphabet.example2"
         ),
         "",
         hireAndFadeIn(1,"languages.word"),
         "",
         linear(0.5,styleFor("languages.alphabet.example2"),"opacity",0.25),
-        parallel(
-            sequence(
-                wait(0),
-                hireAndFadeIn(0.5,"languages.word.example1a")
-            ),
-            sequence(
-                wait(0.10),
-                hireAndFadeIn(0.5,"languages.word.example1b")
-            ),
-            sequence(
-                wait(0.20),
-                hireAndFadeIn(0.5,"languages.word.example1c")
-            )
+        hireAndFlashIn(0.5,0.1,
+            "languages.word.example1a",
+            "languages.word.example1b",
+            "languages.word.example1c"
         ),
         "",
         parallel(
@@ -292,19 +295,10 @@ window.addEventListener("load",function() {
             linear(0.5,styleFor("languages.word.example1c"),"opacity",0.25)
         ),
         linear(0.5,styleFor("languages.alphabet.example2"),"opacity",1),
-        parallel(
-            sequence(
-                wait(0),
-                hireAndFadeIn(0.5,"languages.word.example2a")
-            ),
-            sequence(
-                wait(0.10),
-                hireAndFadeIn(0.5,"languages.word.example2b")
-            ),
-            sequence(
-                wait(0.20),
-                hireAndFadeIn(0.5,"languages.word.example2c")
-            )
+        hireAndFlashIn(0.5,0.1,
+            "languages.word.example2a",
+            "languages.word.example2b",
+            "languages.word.example2c"
         ),
         "",
         parallel(
@@ -322,19 +316,10 @@ window.addEventListener("load",function() {
             linear(0.5,styleFor("languages.word.example2b"),"opacity",0.25),
             linear(0.5,styleFor("languages.word.example2c"),"opacity",0.25)
         ),
-        parallel(
-            sequence(
-                wait(0),
-                hireAndFadeIn(0.5,"languages.language.example1a")
-            ),
-            sequence(
-                wait(0.10),
-                hireAndFadeIn(0.5,"languages.language.example1b")
-            ),
-            sequence(
-                wait(0.20),
-                hireAndFadeIn(0.5,"languages.language.example1c")
-            )
+        hireAndFlashIn(0.5,0.1,
+            "languages.language.example1a",
+            "languages.language.example1b",
+            "languages.language.example1c"
         ),
         "",
         parallel(
@@ -352,19 +337,10 @@ window.addEventListener("load",function() {
             linear(0.5,styleFor("languages.word.example2b"),"opacity",1),
             linear(0.5,styleFor("languages.word.example2c"),"opacity",1)
         ),
-        parallel(
-            sequence(
-                wait(0),
-                hireAndFadeIn(0.5,"languages.language.example2a")
-            ),
-            sequence(
-                wait(0.10),
-                hireAndFadeIn(0.5,"languages.language.example2b")
-            ),
-            sequence(
-                wait(0.20),
-                hireAndFadeIn(0.5,"languages.language.example2c")
-            )
+        hireAndFlashIn(0.5,0.1,
+            "languages.language.example2a",
+            "languages.language.example2b",
+            "languages.language.example2c"
         ),
         "",
         parallel(
