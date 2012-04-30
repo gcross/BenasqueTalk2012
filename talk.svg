@@ -128,54 +128,54 @@
               <path
                  sodipodi:nodetypes="cccccccccc"
                  inkscape:connector-curvature="0"
-                 id="outline_embrace_divergence_out_arrow"
+                 id="outline.embrace_divergence_out_arrow"
                  d="m 883.35549,614.96966 0,87.61983 -204.068,0 0,21.90757 -23.16472,-28.97542 23.16472,-29.87902 0,21.16487 190,0 0,-71.83783 z"
                  style="fill:url(#linearGradient4573);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                  inkscape:label="#path4571" />
               <path
                  style="fill:url(#linearGradient4567);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                  d="m 883.35549,330.97 0,37.61949 -238.068,0 0,21.90757 -23.16472,-28.97542 23.16472,-29.87902 0,21.16487 224,0 0,-21.83749 z"
-                 id="outline_infinite_languages_out_arrow"
+                 id="outline.infinite_languages_out_arrow"
                  inkscape:connector-curvature="0"
                  sodipodi:nodetypes="cccccccccc"
                  inkscape:label="#path4563" />
               <path
                  style="fill:url(#linearGradient4569);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                  d="m 616.5,452.117 268.09526,0 0,32.068 21.90757,0 -28.97542,23.16472 -29.87902,-23.16472 21.16487,0 0,-18 -252.31326,0 z"
-                 id="outline_embrace_divergence_in_arrow"
+                 id="outline.embrace_divergence_in_arrow"
                  inkscape:connector-curvature="0"
                  sodipodi:nodetypes="cccccccccc"
                  inkscape:label="#path4565" />
               <path
                  sodipodi:nodetypes="cccccccccc"
                  inkscape:connector-curvature="0"
-                 id="outline_weighted_languages_out_arrow"
+                 id="outline.weighted_languages_out_arrow"
                  d="m 140.12277,330.97 0,37.61949 238.068,0 0,21.90757 23.16472,-28.97542 -23.16472,-29.87902 0,21.16487 -224,0 0,-21.83749 z"
                  style="fill:url(#linearGradient4557);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                  inkscape:label="#path4555" />
               <path
                  sodipodi:nodetypes="cccccccccc"
                  inkscape:connector-curvature="0"
-                 id="outline_escape_divergence_in_arrow"
+                 id="outline.escape_divergence_in_arrow"
                  d="m 407,452.117 -268.117,0 0,32.068 -21.90757,0 28.97542,23.16472 29.87902,-23.16472 -21.16487,0 0,-18 252.335,0 z"
                  style="fill:url(#linearGradient4561);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                  inkscape:label="#path4559" />
               <path
                  sodipodi:nodetypes="cccccccccc"
                  inkscape:connector-curvature="0"
-                 id="outline_infinite_languages_in_arrow"
+                 id="outline.infinite_languages_in_arrow"
                  d="m 616.5,168.117 264.09526,0 0,32.068 21.90757,0 -28.97542,23.16472 -29.87902,-23.16472 21.16487,0 0,-18.00034 L 616.5,182.185 z"
                  style="fill:url(#linearGradient4549);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                  inkscape:label="#path4547" />
               <path
                  style="fill:url(#linearGradient4545);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                  d="m 407,168.117 -268.117,0 0,32.068 -21.90757,0 28.97542,23.16472 29.87902,-23.16472 -21.16487,0 0,-18 252.335,0 z"
-                 id="outline_weighted_languages_in_arrow"
+                 id="outline.weighted_languages_in_arrow"
                  inkscape:connector-curvature="0"
                  sodipodi:nodetypes="cccccccccc"
                  inkscape:label="#path4537" />
               <g
-                 id="outline_languages"
+                 id="outline.languages"
                  inkscape:label="#g4623">
                 <rect
                    y="149.04193"
@@ -197,7 +197,7 @@
                      sodipodi:role="line">Languages</tspan></text>
               </g>
               <g
-                 id="outline_weighted_languages"
+                 id="outline.weighted_languages"
                  inkscape:label="#g4634">
                 <rect
                    style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -223,7 +223,7 @@
                      sodipodi:role="line">Languages</tspan></text>
               </g>
               <g
-                 id="outline_infinite_languages"
+                 id="outline.infinite_languages"
                  inkscape:label="#g4628">
                 <rect
                    y="230.71301"
@@ -249,7 +249,7 @@
                      sodipodi:role="line">Languages</tspan></text>
               </g>
               <g
-                 id="outline_infinite_weighted_languages"
+                 id="outline.infinite_weighted_languages"
                  inkscape:label="#g4640">
                 <rect
                    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
@@ -279,7 +279,7 @@
                      sodipodi:role="line">Languages</tspan></text>
               </g>
               <g
-                 id="outline_escape_divergence"
+                 id="outline.escape_divergence"
                  inkscape:label="#g4647">
                 <rect
                    y="514.71301"
@@ -305,7 +305,7 @@
                      sodipodi:role="line">Divergence</tspan></text>
               </g>
               <g
-                 id="outline_embrace_divergence"
+                 id="outline.embrace_divergence"
                  inkscape:label="#g4653">
                 <rect
                    style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -331,7 +331,7 @@
                      id="tspan3111">Divergence</tspan></text>
               </g>
               <g
-                 id="outline_infinite_matrix_product_states"
+                 id="outline.infinite_matrix_product_states"
                  inkscape:label="#g4659">
                 <rect
                    y="644.63446"

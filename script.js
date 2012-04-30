@@ -56,47 +56,6 @@ function makePunchLineActor() { // Punch line slide {{{
 
     return actor
 } // }}}
-function makeOutlineActor() { // Outline slide {{{
-    var actor = new UseActor("outline")
-
-    var labels = [
-        "languages",
-        "weighted_languages",
-        "weighted_languages_in_arrow",
-        "weighted_languages_out_arrow",
-        "infinite_languages",
-        "infinite_languages_in_arrow",
-        "infinite_languages_out_arrow",
-        "infinite_weighted_languages",
-        "escape_divergence",
-        "escape_divergence_in_arrow",
-        "embrace_divergence",
-        "embrace_divergence_in_arrow",
-        "embrace_divergence_out_arrow",
-        "infinite_matrix_product_states"
-    ]
-
-    var nodes = {}
-    var opacities = {}
-    labels.forEach(function(label) {
-        nodes[label] = document.getElementById("outline_" + label)
-        if(!nodes[label]) throw Error("unable to find an node with id '" + "outline_" + label + "'")
-        actor[label + "_opacity"] = 0
-    })
-
-    actor.non_focused_opacity = 1
-
-    appendToMethod(actor,"update",function() {
-        labels.forEach(function(label) {
-            nodes[label].setAttribute("opacity",Math.max(
-                actor.non_focused_opacity,
-                actor[label + "_opacity"]
-            ))
-        })
-    })
-
-    return actor
-} // }}}
 // }}} Actors
 
 // Title Management {{{
@@ -159,6 +118,29 @@ function hireAndFlashIn(time_to_enter,time_between_starts) { // {{{
     }
     return parallel.apply(null,animations)
 } // }}}
+function makePartFocusActor(name,labels) { return function() { // {{{
+    var actor = new UseActor(name)
+
+    var nodes = {}
+    labels.forEach(function(label) {
+        nodes[label] = document.getElementById(name + "." + label)
+        if(!nodes[label]) throw Error("unable to find an node with id '" + name + "." + label + "'")
+        actor[label + ".opacity"] = 0
+    })
+
+    actor.non_focused_opacity = 1
+
+    appendToMethod(actor,"update",function() {
+        labels.forEach(function(label) {
+            nodes[label].setAttribute("opacity",Math.max(
+                actor.non_focused_opacity,
+                actor[label + ".opacity"]
+            ))
+        })
+    })
+
+    return actor
+}} // }}}
 // }}}
 
     initializeSlick([].concat([
@@ -208,63 +190,78 @@ function hireAndFlashIn(time_to_enter,time_between_starts) { // {{{
     // Outline {{{
         rotateNextTitle(),
         fadeOutAndFire(0.5,"punch_line"),
-        hireAndFadeIn(0.5,"outline",makeOutlineActor),
+        hireAndFadeIn(0.5,"outline",makePartFocusActor("outline",[
+            "languages",
+            "weighted_languages",
+            "weighted_languages_in_arrow",
+            "weighted_languages_out_arrow",
+            "infinite_languages",
+            "infinite_languages_in_arrow",
+            "infinite_languages_out_arrow",
+            "infinite_weighted_languages",
+            "escape_divergence",
+            "escape_divergence_in_arrow",
+            "embrace_divergence",
+            "embrace_divergence_in_arrow",
+            "embrace_divergence_out_arrow",
+            "infinite_matrix_product_states"
+        ])),
         "",
-        set("outline","languages_opacity",1),
+        set("outline","languages.opacity",1),
         linear(0.5,"outline","non_focused_opacity",0.15),
         "",
         parallel(
-            linear(0.5,"outline","languages_opacity",0.5),
-            linear(0.5,"outline","weighted_languages_opacity",1),
-            linear(0.5,"outline","weighted_languages_in_arrow_opacity",1),
-            linear(0.5,"outline","infinite_languages_opacity",1),
-            linear(0.5,"outline","infinite_languages_in_arrow_opacity",1)
+            linear(0.5,"outline","languages.opacity",0.5),
+            linear(0.5,"outline","weighted_languages.opacity",1),
+            linear(0.5,"outline","weighted_languages_in_arrow.opacity",1),
+            linear(0.5,"outline","infinite_languages.opacity",1),
+            linear(0.5,"outline","infinite_languages_in_arrow.opacity",1)
         ),
         "",
         parallel(
-            linear(0.5,"outline","weighted_languages_opacity",0.5),
-            linear(0.5,"outline","weighted_languages_in_arrow_opacity",0.5),
-            linear(0.5,"outline","infinite_languages_opacity",0.5),
-            linear(0.5,"outline","infinite_languages_in_arrow_opacity",0.5),
-            linear(0.5,"outline","infinite_languages_out_arrow_opacity",1),
-            linear(0.5,"outline","weighted_languages_out_arrow_opacity",1),
-            linear(0.5,"outline","infinite_weighted_languages_opacity",1)
+            linear(0.5,"outline","weighted_languages.opacity",0.5),
+            linear(0.5,"outline","weighted_languages_in_arrow.opacity",0.5),
+            linear(0.5,"outline","infinite_languages.opacity",0.5),
+            linear(0.5,"outline","infinite_languages_in_arrow.opacity",0.5),
+            linear(0.5,"outline","infinite_languages_out_arrow.opacity",1),
+            linear(0.5,"outline","weighted_languages_out_arrow.opacity",1),
+            linear(0.5,"outline","infinite_weighted_languages.opacity",1)
         ),
         "",
         parallel(
-            linear(0.5,"outline","infinite_languages_out_arrow_opacity",0.5),
-            linear(0.5,"outline","weighted_languages_out_arrow_opacity",0.5),
-            linear(0.5,"outline","infinite_weighted_languages_opacity",0.5),
-            linear(0.5,"outline","escape_divergence_opacity",1),
-            linear(0.5,"outline","escape_divergence_in_arrow_opacity",1),
-            linear(0.5,"outline","embrace_divergence_opacity",1),
-            linear(0.5,"outline","embrace_divergence_in_arrow_opacity",1)
+            linear(0.5,"outline","infinite_languages_out_arrow.opacity",0.5),
+            linear(0.5,"outline","weighted_languages_out_arrow.opacity",0.5),
+            linear(0.5,"outline","infinite_weighted_languages.opacity",0.5),
+            linear(0.5,"outline","escape_divergence.opacity",1),
+            linear(0.5,"outline","escape_divergence_in_arrow.opacity",1),
+            linear(0.5,"outline","embrace_divergence.opacity",1),
+            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",1)
         ),
         "",
         parallel(
-            linear(0.5,"outline","escape_divergence_opacity",0.5),
-            linear(0.5,"outline","escape_divergence_in_arrow_opacity",0.5),
-            linear(0.5,"outline","embrace_divergence_opacity",0.5),
-            linear(0.5,"outline","embrace_divergence_in_arrow_opacity",0.5),
-            linear(0.5,"outline","embrace_divergence_out_arrow_opacity",1),
-            linear(0.5,"outline","infinite_matrix_product_states_opacity",1)
+            linear(0.5,"outline","escape_divergence.opacity",0.5),
+            linear(0.5,"outline","escape_divergence_in_arrow.opacity",0.5),
+            linear(0.5,"outline","embrace_divergence.opacity",0.5),
+            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",0.5),
+            linear(0.5,"outline","embrace_divergence_out_arrow.opacity",1),
+            linear(0.5,"outline","infinite_matrix_product_states.opacity",1)
         ),
         "",
         parallel(
-            linear(0.5,"outline","languages_opacity",1),
-            linear(0.5,"outline","weighted_languages_opacity",0),
-            linear(0.5,"outline","weighted_languages_in_arrow_opacity",0),
-            linear(0.5,"outline","infinite_languages_opacity",0),
-            linear(0.5,"outline","infinite_languages_in_arrow_opacity",0),
-            linear(0.5,"outline","infinite_languages_out_arrow_opacity",0),
-            linear(0.5,"outline","weighted_languages_out_arrow_opacity",0),
-            linear(0.5,"outline","infinite_weighted_languages_opacity",0),
-            linear(0.5,"outline","escape_divergence_opacity",0),
-            linear(0.5,"outline","escape_divergence_in_arrow_opacity",0),
-            linear(0.5,"outline","embrace_divergence_opacity",0),
-            linear(0.5,"outline","embrace_divergence_in_arrow_opacity",0),
-            linear(0.5,"outline","embrace_divergence_out_arrow_opacity",0),
-            linear(0.5,"outline","infinite_matrix_product_states_opacity",0)
+            linear(0.5,"outline","languages.opacity",1),
+            linear(0.5,"outline","weighted_languages.opacity",0),
+            linear(0.5,"outline","weighted_languages_in_arrow.opacity",0),
+            linear(0.5,"outline","infinite_languages.opacity",0),
+            linear(0.5,"outline","infinite_languages_in_arrow.opacity",0),
+            linear(0.5,"outline","infinite_languages_out_arrow.opacity",0),
+            linear(0.5,"outline","weighted_languages_out_arrow.opacity",0),
+            linear(0.5,"outline","infinite_weighted_languages.opacity",0),
+            linear(0.5,"outline","escape_divergence.opacity",0),
+            linear(0.5,"outline","escape_divergence_in_arrow.opacity",0),
+            linear(0.5,"outline","embrace_divergence.opacity",0),
+            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",0),
+            linear(0.5,"outline","embrace_divergence_out_arrow.opacity",0),
+            linear(0.5,"outline","infinite_matrix_product_states.opacity",0)
         ),
         "",
     // }}}
