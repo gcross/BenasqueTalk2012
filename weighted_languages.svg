@@ -78,18 +78,25 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1152"
+     inkscape:window-height="1025"
      id="namedview26763"
      showgrid="true"
      inkscape:zoom="0.85563217"
      inkscape:cx="777.45263"
-     inkscape:cy="271.55153"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cy="365.04965"
+     inkscape:window-x="-8"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
      showguides="true"
      inkscape:guide-bbox="true" />
+  <rect
+     style="fill:#d87a00;fill-opacity:0.19230772;stroke:none"
+     id="rect5329"
+     width="277.86456"
+     height="37.000366"
+     x="45.06366"
+     y="541.16235" />
   <g
      id="g10926"
      transform="translate(178,0)">
@@ -655,7 +662,7 @@
        sodipodi:role="line"
        id="tspan3136"
        x="17.799187"
-       y="569.98865">A power series P is a map of the form:</tspan></text>
+       y="569.98865">A weighted language P is a map of the form:</tspan></text>
   <text
      sodipodi:linespacing="110%"
      id="text3149"
@@ -671,13 +678,6 @@
        x="17.799187"
        sodipodi:role="line"
        id="tspan5238">it in terms of its set of non-zero weighted words.</tspan></text>
-  <rect
-     style="fill:#d87a00;fill-opacity:0.19230772;stroke:none"
-     id="rect5329"
-     width="187.87265"
-     height="32.325439"
-     x="45.06366"
-     y="545.83728" />
   <path
      style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
      d="m 450.88914,633 -107.88027,0 112.96896,0"
@@ -733,7 +733,7 @@
          height="62.807499"
          x="940.45966"
          y="896.92065" /></flowRegion><flowPara
-       id="flowPara5288"></flowPara></flowRoot>  <path
+       id="flowPara5288" /></flowRoot>  <path
      sodipodi:type="arc"
      style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;marker-end:none"
      id="path5303"

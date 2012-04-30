@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -119,14 +119,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1152"
+     inkscape:window-height="1025"
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="0.73058494"
-     inkscape:cx="544.45534"
+     inkscape:cx="300.13057"
      inkscape:cy="326.49799"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="-8"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
      showguides="true"
@@ -362,4 +362,34 @@
          x="511.22852"
          sodipodi:role="line">Product States</tspan></text>
   </g>
+  <text
+     xml:space="preserve"
+     style="font-size:29.16000175px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="41.146835"
+     y="655.88049"
+     id="outline_escape_divergence_to_quemirings"
+     sodipodi:linespacing="100%"
+     inkscape:label="#text3033"><tspan
+       sodipodi:role="line"
+       id="tspan3035"
+       x="41.146835"
+       y="655.88049">Run away from</tspan><tspan
+       sodipodi:role="line"
+       x="41.146835"
+       y="685.04047"
+       id="tspan3037">all semirings that</tspan><tspan
+       sodipodi:role="line"
+       x="41.146835"
+       y="714.2005"
+       id="tspan3039">don't have infinite</tspan><tspan
+       sodipodi:role="line"
+       x="41.146835"
+       y="743.36047"
+       id="tspan3041">sums and products.</tspan></text>
+  <path
+     id="outline_escape_divergence_to_quemirings_crossed_out"
+     d="m 102.68307,635.76989 -9.466263,11.16855 c 15.492983,12.94763 30.517873,26.66435 44.798813,40.72999 -16.54151,16.93337 -31.79026,34.30699 -44.798813,51.06816 l 10.960973,9.30021 c 13.55865,-16.39933 28.54357,-33.15606 44.5912,-49.57348 16.04763,16.41742 31.03255,33.17415 44.59121,49.57348 l 10.96097,-9.30021 c -13.0085,-16.76117 -28.25731,-34.13479 -44.79883,-51.06816 14.28101,-14.06564 29.30585,-27.78236 44.79883,-40.72999 l -9.46627,-11.16855 c -15.82158,12.78956 -31.36387,26.69145 -46.08591,41.10363 -14.72204,-14.41218 -30.26432,-28.31407 -46.08591,-41.10363 z"
+     style="fill:#ff0015;fill-opacity:1;stroke:#981100;stroke-width:2.65720534;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline"
+     inkscape:connector-curvature="0"
+     inkscape:label="#path127393" />
 </svg>
