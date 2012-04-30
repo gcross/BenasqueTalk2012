@@ -128,6 +128,7 @@ var titles = [ // Titles {{{
     "The Punch Line",
     "Outline",
     "Languages",
+    "Rational Operations",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -351,6 +352,74 @@ function hireAndFlashIn(time_to_enter,time_between_starts) {
             linear(0.5,styleFor("languages.language.example1a"),"opacity",1),
             linear(0.5,styleFor("languages.language.example1b"),"opacity",1),
             linear(0.5,styleFor("languages.language.example1c"),"opacity",1)
+        ),
+        "",
+    // }}}
+    // Rational Operations {{{
+        fadeOutAndFire(0.5,
+            "languages.borderlines",
+            "languages.alphabet",
+            "languages.alphabet.example1",
+            "languages.alphabet.example2",
+            "languages.word",
+            "languages.word.example1a",
+            "languages.word.example1b",
+            "languages.word.example1c",
+            "languages.word.example2a",
+            "languages.word.example2b",
+            "languages.word.example2c",
+            "languages.language",
+            "languages.language.example1a",
+            "languages.language.example1b",
+            "languages.language.example1c",
+            "languages.language.example2a",
+            "languages.language.example2b",
+            "languages.language.example2c"
+        ),
+        rotateNextTitle(),
+        hireAndFlashIn(0.5,0.25,
+            "rational_operations_box_1",
+            "rational_operations_box_2",
+            "rational_operations_box_3"
+        ),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "rational_operations_op_1",
+            "rational_operations_opdef_1"
+        ),
+        "",
+        hireAndFadeIn(0.5,"rational_operations_example_1"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "rational_operations_op_2",
+            "rational_operations_opdef_2"
+        ),
+        "",
+        hireAndFadeIn(0.5,"rational_operations_example_2"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "rational_operations_op_3",
+            "rational_operations_opdef_3"
+        ),
+        "",
+        hireAndFadeIn(0.5,"rational_operations_example_3"),
+        "",
+        hireAndFadeIn(0.5,"rational_language_definition"),
+        "",
+        fadeOutAndFire(0.5,
+            "rational_operations_box_1",
+            "rational_operations_box_2",
+            "rational_operations_box_3",
+            "rational_operations_op_1",
+            "rational_operations_opdef_1",
+            "rational_operations_example_1",
+            "rational_operations_op_2",
+            "rational_operations_opdef_2",
+            "rational_operations_example_2",
+            "rational_operations_op_3",
+            "rational_operations_opdef_3",
+            "rational_operations_example_3",
+            "rational_language_definition"
         ),
     // }}}
 // }}} Script
