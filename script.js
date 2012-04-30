@@ -147,7 +147,7 @@ window.addEventListener("load",function() {
     // }}} Initialization
 
 // Functions {{{
-function hireAndFlashIn(time_to_enter,time_between_starts) {
+function hireAndFlashIn(time_to_enter,time_between_starts) { // {{{
     animations = []
     var current_wait_time = 0
     for(var i = 2; i < arguments.length; ++i) {
@@ -158,7 +158,7 @@ function hireAndFlashIn(time_to_enter,time_between_starts) {
         current_wait_time += time_between_starts
     }
     return parallel.apply(null,animations)
-}
+} // }}}
 // }}}
 
     initializeSlick([].concat([
