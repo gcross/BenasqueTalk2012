@@ -94,6 +94,8 @@ var titles = [ // Titles {{{
     "Weighted Language",
     "Weighted Rational Operations",
     "Weighted Automata",
+    "Kleene's Theorem",
+    "Outline",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1257,7 +1259,40 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "weighted_automata.weight.result.0"
         ),
       // }}}
-
+      // Sum form {{{
+        "",
+        hireAndFadeInUseActor(0.5,"waas"),
+        "",
+        fadeOutAndFire(0.5,"waas"),
+      // }}}
+    // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        "",
+        hireAndFlashIn(0.75,0.375,
+            "weighted_kleene1",
+            "weighted_kleene2",
+            "weighted_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "weighted_kleene1",
+            "weighted_kleene2",
+            "weighted_kleene3"
+        ),
+    // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        fadeIn(0.5,"outline"),
+        "",
+        parallel(
+            linear(0.5,"outline","weighted_languages.opacity",0.5),
+            linear(0.5,"outline","weighted_languages_in_arrow.opacity",0.5),
+            linear(0.5,"outline","infinite_languages.opacity",1),
+            linear(0.5,"outline","infinite_languages_in_arrow.opacity",1)
+        ),
+        "",
+        fadeOut(0.5,"outline"),
     // }}}
 // }}} Script
     ]))
