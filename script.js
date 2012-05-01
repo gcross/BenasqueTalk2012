@@ -96,6 +96,7 @@ var titles = [ // Titles {{{
     "Weighted Automata",
     "Kleene's Theorem",
     "Outline",
+    "Infinite Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1293,6 +1294,50 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         ),
         "",
         fadeOut(0.5,"outline"),
+    // }}}
+    // Infinite languages {{{
+        rotateNextTitle(),
+        hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.alphabet"),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.alphabet.example"),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.words.finite"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "infinite_languages.words.finite.examples.1",
+            "infinite_languages.words.finite.examples.2"
+        ),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.words.infinite"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "infinite_languages.words.infinite.examples.1",
+            "infinite_languages.words.infinite.examples.2"
+        ),
+        "",
+        hireAndFadeInUseActor(0.5,"infinite_languages.words.nfinite"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "infinite_languages.words.nfinite.examples.1",
+            "infinite_languages.words.nfinite.examples.2"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "infinite_languages.borderlines",
+            "infinite_languages.alphabet",
+            "infinite_languages.alphabet.example",
+            "infinite_languages.words.finite",
+            "infinite_languages.words.finite.examples.1",
+            "infinite_languages.words.finite.examples.2",
+            "infinite_languages.words.infinite",
+            "infinite_languages.words.infinite.examples.1",
+            "infinite_languages.words.infinite.examples.2",
+            "infinite_languages.words.nfinite",
+            "infinite_languages.words.nfinite.examples.1",
+            "infinite_languages.words.nfinite.examples.2"
+        ),
     // }}}
 // }}} Script
     ]))
