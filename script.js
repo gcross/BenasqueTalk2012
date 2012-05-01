@@ -89,6 +89,7 @@ var titles = [ // Titles {{{
     "Languages",
     "Rational Operations",
     "Automata",
+    "Kleene's Theorem",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -696,6 +697,34 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         ),
         "",
       // }}}
+      // Fade out everything {{{
+        fadeOutAndFire(0.5,
+            "automata.automata",
+            "automata.marker",
+            "automata.automata.box",
+            "automata.criterion",
+            "automata.cross_mark",
+            "automata.5tuple",
+            "automata.5tuple.alphabet",
+            "automata.5tuple.states",
+            "automata.5tuple.transitions",
+            "automata.5tuple.initial",
+            "automata.5tuple.final",
+            "automata.input.1.0",
+            "automata.input.2.0",
+            "automata.input.3.0",
+            "automata.input.4.0"
+        ),
+      // }}}
+    // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        "",
+        hireAndFlashIn(0.75,0.375,
+            "kleene1",
+            "kleene2",
+            "kleene3"
+        ),
     // }}}
 // }}} Script
     ]))
