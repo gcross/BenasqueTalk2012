@@ -97,6 +97,7 @@ var titles = [ // Titles {{{
     "Kleene's Theorem",
     "Outline",
     "Infinite Languages",
+    "Rational Operations for Infinite Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1331,6 +1332,39 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "infinite_languages.words.nfinite",
             "infinite_languages.words.nfinite.examples.1",
             "infinite_languages.words.nfinite.examples.2"
+        ),
+    // }}}
+    // Rational infinite operations {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.5,0.25,
+            "infinite_rational_operations_box_1",
+            "infinite_rational_operations_box_2"
+        ),
+        "",
+        hireAndFadeInUseActor(0.5, "infinite_rational_operations_precondition_1"),
+        "",
+        hireAndFadeInUseActor(0.5, "infinite_rational_operations_definition_1"),
+        "",
+        hireAndFadeInUseActor(0.5, "infinite_rational_operations_precondition_2"),
+        "",
+        hireAndFadeInUseActor(0.5, "infinite_rational_operations_definition_2"),
+        "",
+        hireAndFadeInUseActor(0.5, "infinite_rational_operations_definition_3"),
+        "",
+        hireAndFadeInUseActor(0.5, "infinite_rational_operations_definition_4"),
+        "",
+        hireAndFadeIn(0.5,"infinite_rational_language_definition"),
+        "",
+        fadeOutAndFire(0.5,
+            "infinite_rational_operations_box_1",
+            "infinite_rational_operations_box_2",
+            "infinite_rational_operations_precondition_1",
+            "infinite_rational_operations_precondition_2",
+            "infinite_rational_operations_definition_1",
+            "infinite_rational_operations_definition_2",
+            "infinite_rational_operations_definition_3",
+            "infinite_rational_operations_definition_4",
+            "infinite_rational_language_definition"
         ),
     // }}}
 // }}} Script
