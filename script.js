@@ -90,6 +90,8 @@ var titles = [ // Titles {{{
     "Rational Operations",
     "Automata",
     "Kleene's Theorem",
+    "Outline",
+    "Weighted Language",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -268,7 +270,7 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         "",
     // }}}
     // Languages {{{
-        fadeOutAndFire(0.5,"outline"),
+        fadeOut(0.5,"outline"),
         rotateNextTitle(),
         hireAndFadeIn(0.5,"languages.borderlines"),
         "",
@@ -700,11 +702,12 @@ function makePartFocusActor(name,labels) { return function() { // {{{
       // Fade out everything {{{
         fadeOutAndFire(0.5,
             "automata.automata",
-            "automata.marker",
             "automata.automata.box",
+            "automata.marker",
             "automata.criterion",
             "automata.cross_mark",
             "automata.5tuple",
+            "automata.5tuple.cover",
             "automata.5tuple.alphabet",
             "automata.5tuple.states",
             "automata.5tuple.transitions",
@@ -724,6 +727,54 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "kleene1",
             "kleene2",
             "kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "kleene1",
+            "kleene2",
+            "kleene3"
+        ),
+    // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        fadeIn(0.5,"outline"),
+        "",
+        parallel(
+            linear(0.5,"outline","languages.opacity",0.5),
+            linear(0.5,"outline","weighted_languages.opacity",1),
+            linear(0.5,"outline","weighted_languages_in_arrow.opacity",1)
+        ),
+        "",
+        fadeOut(0.5,"outline"),
+    // }}}
+    // Weighted language {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"weighted_languages.borderlines"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.alphabet"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.alphabet.example"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.semiring.1"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.semiring.2"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.semiring.example"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.word"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "weighted_languages.word.example1",
+            "weighted_languages.word.example2",
+            "weighted_languages.word.example3"
+        ),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.language"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "weighted_languages.language.example1",
+            "weighted_languages.language.example2",
+            "weighted_languages.language.example3"
         ),
     // }}}
 // }}} Script
