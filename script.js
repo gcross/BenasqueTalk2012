@@ -92,6 +92,7 @@ var titles = [ // Titles {{{
     "Kleene's Theorem",
     "Outline",
     "Weighted Language",
+    "Weighted Rational Operations",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -775,6 +776,73 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "weighted_languages.language.example1",
             "weighted_languages.language.example2",
             "weighted_languages.language.example3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "weighted_languages.alphabet",
+            "weighted_languages.alphabet.example",
+            "weighted_languages.borderlines",
+            "weighted_languages.language",
+            "weighted_languages.language.example1",
+            "weighted_languages.language.example2",
+            "weighted_languages.language.example3",
+            "weighted_languages.semiring.1",
+            "weighted_languages.semiring.2",
+            "weighted_languages.semiring.example",
+            "weighted_languages.word",
+            "weighted_languages.word.example1",
+            "weighted_languages.word.example2",
+            "weighted_languages.word.example3"
+        ),
+    // }}}
+    // Rational weighted operations {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.5,0.25,
+            "weighted_rational_operations_box_1",
+            "weighted_rational_operations_box_2",
+            "weighted_rational_operations_box_3"
+        ),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "weighted_rational_operations_op_1",
+            "weighted_rational_operations_opdef_1"
+        ),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_operations_example_1"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "weighted_rational_operations_op_2",
+            "weighted_rational_operations_opdef_2"
+        ),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_operations_example_2"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "weighted_rational_operations_op_3",
+            "weighted_rational_operations_opdef_3"
+        ),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_operations_opdef_3_warning"),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_operations_example_3"),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_language_definition"),
+        "",
+        fadeOutAndFire(0.5,
+            "weighted_rational_operations_box_1",
+            "weighted_rational_operations_box_2",
+            "weighted_rational_operations_box_3",
+            "weighted_rational_operations_op_1",
+            "weighted_rational_operations_opdef_1",
+            "weighted_rational_operations_example_1",
+            "weighted_rational_operations_op_2",
+            "weighted_rational_operations_opdef_2",
+            "weighted_rational_operations_example_2",
+            "weighted_rational_operations_op_3",
+            "weighted_rational_operations_opdef_3",
+            "weighted_rational_operations_opdef_3_warning",
+            "weighted_rational_operations_example_3",
+            "weighted_rational_language_definition"
         ),
     // }}}
 // }}} Script
