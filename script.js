@@ -1703,6 +1703,30 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         "",
         hireAndFadeIn(0.5,"outline.escape_divergence_to_quemirings"),
         "",
+        parallel(
+            fadeOut(0.5,"outline"),
+            fadeOut(0.5,"outline.escape_divergence_to_quemirings")
+        ),
+        hireAndFadeIn(0.5,"divergence.backdrop"),
+        "",
+        hireAndFadeInUseActors(0.5,
+            "divergence.line",
+            "divergence.infinity"
+        ),
+        "",
+        hireAndFadeIn(0.5,"divergence.function"),
+        "",
+        fadeOutAndFire(0.5,
+            "divergence.backdrop",
+            "divergence.line",
+            "divergence.infinity",
+            "divergence.function"
+        ),
+        parallel(
+            fadeIn(0.5,"outline"),
+            fadeIn(0.5,"outline.escape_divergence_to_quemirings")
+        ),
+        "",
         hireAndFadeIn(0.5,"outline.escape_divergence_to_quemirings_crossed_out"),
         "",
         parallel(
