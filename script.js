@@ -98,6 +98,7 @@ var titles = [ // Titles {{{
     "Outline",
     "Infinite Languages",
     "Rational Operations for Infinite Languages",
+    "Infinite Automata",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1366,6 +1367,96 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "infinite_rational_operations_definition_4",
             "infinite_rational_language_definition"
         ),
+    // }}}
+    // Infinite automata {{{
+        rotateNextTitle(),
+      // Introduce the automata {{{
+        hireUseActors("infinite_automata.5tuple","infinite_automata.5tuple.cover"),
+        "",
+        linear(0.5,"infinite_automata.5tuple.cover","x",470),
+        hireAndFlashIn(0.5,0.25,
+            "infinite_automata.5tuple.alphabet",
+            "infinite_automata.5tuple.states",
+            "infinite_automata.5tuple.transitions",
+            "infinite_automata.5tuple.initial",
+            "infinite_automata.5tuple.final"
+        ),
+        hire("infinite_automata.automata",makePartFocusActor("infinite_automata.automata",[
+            "state.1",
+            "state.2",
+            "transitions",
+            "transitions.initial",
+        ])),
+        parallel(
+            decelerate(1,"infinite_automata.automata","x",520,0),
+            hireAndFadeInUseActor(1,"infinite_automata.automata.box")
+        ),
+        "",
+        hireAndFadeIn(1,"infinite_automata.criterion"),
+        "",
+        hireAndFadeIn(1,"infinite_automata.criterion.highlight",null,"infinite_automata.criterion"),
+      // }}}
+      // First example {{{
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "weighted_automata.input.1.0",
+            "weighted_automata.input.2.0",
+            "weighted_automata.input.3.0"
+        ),
+        "",
+        hireAndFadeIn(0.5,"weighted_automata.marker",null,"weighted_automata.automata"),
+        smooth(0.5,"weighted_automata.marker","x",124.169),
+        "",
+        hireAndFadeIn(0.5,"weighted_automata.reader"),
+        "",
+        parallel(
+            accelerate(0.25,"weighted_automata.marker","x",210.128),
+            accelerate(0.25,"weighted_automata.marker","y",-98.659)
+        ),
+        parallel(
+            decelerate(0.25,"weighted_automata.marker","x",124.169),
+            decelerate(0.25,"weighted_automata.marker","y",0)
+        ),
+        "",
+        smooth(0.5,"weighted_automata.reader","x",106),
+        "",
+        parallel(
+            accelerate(0.25,"weighted_automata.marker","x",210.128),
+            accelerate(0.25,"weighted_automata.marker","y",-98.659)
+        ),
+        parallel(
+            decelerate(0.25,"weighted_automata.marker","x",124.169),
+            decelerate(0.25,"weighted_automata.marker","y",0)
+        ),
+        "",
+        smooth(0.5,"weighted_automata.reader","x",212),
+        "",
+        smooth(0.5,"weighted_automata.marker","x",336.694),
+        "",
+        smooth(0.5,"weighted_automata.reader","x",318),
+        "",
+        parallel(
+            accelerate(0.25,"weighted_automata.marker","x",444.128),
+            accelerate(0.25,"weighted_automata.marker","y",-98.659)
+        ),
+        parallel(
+            decelerate(0.25,"weighted_automata.marker","x",336.694),
+            decelerate(0.25,"weighted_automata.marker","y",0)
+        ),
+        "",
+        fadeOut(0.5,"weighted_automata.reader"),
+        "",
+        hireUseActor("weighted_automata.check_mark"),
+        set(styleOf("weighted_automata.check_mark"),"opacity",0.9),
+        set("weighted_automata.check_mark","x",700),
+        set("weighted_automata.check_mark","y",550),
+        set("weighted_automata.check_mark","scale",0.05),
+        parallel(
+            linear(0.5,"weighted_automata.check_mark","x",0),
+            linear(0.5,"weighted_automata.check_mark","y",0),
+            linear(0.5,"weighted_automata.check_mark","scale",1)
+        ),
+      // }}}
     // }}}
 // }}} Script
     ]))
