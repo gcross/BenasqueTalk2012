@@ -13,7 +13,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="infinite_automata.svg">
+   sodipodi:docname="bucchi_automata.svg">
   <metadata
      id="metadata26767">
     <rdf:RDF>
@@ -153,7 +153,7 @@
   <path
      sodipodi:type="arc"
      style="fill:url(#radialGradient10047);fill-opacity:1;stroke:none"
-     id="infinite_automata.marker"
+     id="bucchi_automata.marker"
      sodipodi:cx="653.53021"
      sodipodi:cy="365.64868"
      sodipodi:rx="40.700279"
@@ -162,7 +162,7 @@
      transform="matrix(1.4641,0,0,1.4641,-429.48349,-175.04661)"
      inkscape:label="#path10039" />
   <g
-     id="infinite_automata.5tuple"
+     id="bucchi_automata.5tuple"
      inkscape:label="#g10938">
     <text
        sodipodi:linespacing="125%"
@@ -222,7 +222,7 @@
          y="171.67487">5-tuple of:</tspan></text>
   </g>
   <g
-     id="infinite_automata.5tuple.alphabet"
+     id="bucchi_automata.5tuple.alphabet"
      inkscape:label="#g10949">
     <path
        inkscape:connector-curvature="0"
@@ -253,7 +253,7 @@
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0" />
   </g>
   <g
-     id="infinite_automata.5tuple.states"
+     id="bucchi_automata.5tuple.states"
      inkscape:label="#g10956">
     <text
        xml:space="preserve"
@@ -286,7 +286,7 @@
        y="293.54633" />
   </g>
   <g
-     id="infinite_automata.5tuple.transitions"
+     id="bucchi_automata.5tuple.transitions"
      inkscape:label="#g10963">
     <text
        sodipodi:linespacing="125%"
@@ -327,7 +327,7 @@
        y="365.54633" />
   </g>
   <g
-     id="infinite_automata.5tuple.initial"
+     id="bucchi_automata.5tuple.initial"
      inkscape:label="#g10972">
     <text
        sodipodi:linespacing="125%"
@@ -360,7 +360,7 @@
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0" />
   </g>
   <g
-     id="infinite_automata.5tuple.final"
+     id="bucchi_automata.5tuple.final"
      inkscape:label="#g10979">
     <text
        xml:space="preserve"
@@ -393,18 +393,18 @@
        y="583.54633" />
   </g>
   <g
-     id="infinite_automata.automata"
+     id="bucchi_automata.automata"
      inkscape:label="#g3185">
     <path
        inkscape:label="#path6928"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="infinite_automata.automata.transitions.initial"
+       id="bucchi_automata.automata.transitions.initial"
        d="m 517.92513,360.41344 85.28215,0"
        style="fill:none;stroke:url(#linearGradient3177);stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#EmptyDiamondSstart);marker-end:url(#Arrow1Send)" />
     <g
        inkscape:label="#g11137"
-       id="infinite_automata.automata.transitions">
+       id="bucchi_automata.automata.transitions">
       <path
          inkscape:connector-curvature="0"
          id="path8792"
@@ -483,7 +483,7 @@
     </g>
     <g
        inkscape:label="#g11002"
-       id="infinite_automata.automata.state.1">
+       id="bucchi_automata.automata.state.1">
       <path
          sodipodi:type="arc"
          style="fill:#a1ff98;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
@@ -519,7 +519,7 @@
     </g>
     <g
        inkscape:label="#g11042"
-       id="infinite_automata.automata.state.2">
+       id="bucchi_automata.automata.state.2">
       <path
          d="m 621.41985,232.81239 c 0,23.43441 -18.99734,42.43176 -42.43175,42.43176 -23.43441,0 -42.43176,-18.99735 -42.43176,-42.43176 0,-23.43441 18.99735,-42.43175 42.43176,-42.43175 23.43441,0 42.43175,18.99734 42.43175,42.43175 z"
          sodipodi:ry="42.431755"
@@ -577,7 +577,7 @@
   </g>
   <rect
      style="fill:none;stroke:#ff0300;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-     id="infinite_automata.reader"
+     id="bucchi_automata.reader"
      width="95.354942"
      height="137.21808"
      x="546.31329"
@@ -585,7 +585,7 @@
      inkscape:label="#rect10049" />
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:none"
-     id="infinite_automata.5tuple.cover"
+     id="bucchi_automata.5tuple.cover"
      width="444.21448"
      height="46.514603"
      x="38.234497"
@@ -594,13 +594,13 @@
   <path
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 496,130.1777 0,510.71455 529.9357,0"
-     id="infinite_automata.automata.box"
+     id="bucchi_automata.automata.box"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="ccc"
      inkscape:label="#path6329" />
   <rect
      style="fill:#c6d9ff;fill-opacity:1;stroke:#002b80;stroke-opacity:1"
-     id="infinite_automata.criterion.highlight"
+     id="bucchi_automata.criterion.highlight"
      width="901.22046"
      height="33.723087"
      x="98.006401"
@@ -611,7 +611,7 @@
      style="font-size:25.53526306px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:110.00000238%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      x="512.89838"
      y="684.92944"
-     id="infinite_automata.criterion"
+     id="bucchi_automata.criterion"
      sodipodi:linespacing="110%"
      inkscape:label="#text6853"><tspan
        sodipodi:role="line"
@@ -631,7 +631,7 @@
      style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      x="593.48029"
      y="597.84644"
-     id="automata.input.1.0"
+     id="bucchi_automata.input.1.0"
      sodipodi:linespacing="125%"
      inkscape:label="#text6912"><tspan
        sodipodi:role="line"
@@ -640,7 +640,7 @@
        y="597.84644">0</tspan></text>
   <text
      sodipodi:linespacing="125%"
-     id="automata.input.2"
+     id="bucchi_automata.input.2"
      y="597.84644"
      x="699.48029"
      style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
@@ -655,7 +655,7 @@
      style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      x="805.48029"
      y="597.84644"
-     id="automata.input.3"
+     id="bucchi_automata.input.3"
      sodipodi:linespacing="125%"
      inkscape:label="#text6920"><tspan
        sodipodi:role="line"
@@ -664,7 +664,7 @@
        y="597.84644">0</tspan></text>
   <text
      sodipodi:linespacing="125%"
-     id="automata.input.4plus"
+     id="bucchi_automata.input.4plus"
      y="597.84644"
      x="869.48029"
      style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
@@ -676,7 +676,7 @@
        sodipodi:role="line">...</tspan></text>
   <text
      sodipodi:linespacing="125%"
-     id="automata.input.1.1"
+     id="bucchi_automata.input.1.1"
      y="597.84644"
      x="593.48029"
      style="font-size:125.53713989px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
@@ -689,12 +689,12 @@
   <path
      sodipodi:nodetypes="ccccccc"
      inkscape:connector-curvature="0"
-     id="infinite_automata.check_mark"
+     id="bucchi_automata.check_mark"
      d="m 635.92328,597.05774 16.335,-21.78 75.45705,49.77794 c 28.36724,-90.61544 78.96968,-150.87975 123.28545,-188.62544 l 19.0575,21.78 c -48.3735,37.72776 -114.80141,129.17238 -122.5125,212.355 z"
      style="fill:#54ff00;fill-opacity:1;stroke:#009800;stroke-width:5.44499969;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
      inkscape:label="#path127395" />
   <path
-     id="infinite_automata.cross_mark"
+     id="bucchi_automata.cross_mark"
      d="m 658.55401,446.47211 -19.39775,22.886 c 31.74737,26.53157 62.53558,54.6391 91.79931,83.46165 -33.89597,34.69896 -65.14289,70.30002 -91.79931,104.64611 l 22.46062,19.0575 c 27.78366,-33.60462 58.48995,-67.94161 91.37388,-101.58329 32.88393,33.64168 63.59022,67.97867 91.37387,101.58329 l 22.46067,-19.0575 C 840.16896,623.11978 808.92192,587.5187 775.02595,552.81976 804.2898,523.99721 835.07788,495.88968 866.8253,469.35811 l -19.3978,-22.886 c -32.42073,26.20766 -64.26914,54.69469 -94.43674,84.22735 -30.1676,-29.53266 -62.01601,-58.01969 -94.43675,-84.22735 z"
      style="fill:#ff0015;fill-opacity:1;stroke:#981100;stroke-width:5.44499969;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline"
      inkscape:connector-curvature="0"

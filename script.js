@@ -98,7 +98,7 @@ var titles = [ // Titles {{{
     "Outline",
     "Infinite Languages",
     "Rational Operations for Infinite Languages",
-    "Infinite Automata",
+    "Bucchi (Infinite) Automata",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -161,10 +161,13 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         "",
     // }}} Title
     // Punch line (first appearance) {{{
-        hire("standard_backdrop",default_value,"title_slide"),
-        hire(titles[nextTitleIndex()],default_value,"title_slide"),
-        hire("punch_line",makePunchLineActor,"title_slide"),
         fadeOutAndFire(1,"title_slide"),
+        hireAndFadeInUseActors(0.5,
+            "standard_backdrop",
+            titles[nextTitleIndex()]
+        ),
+        "",
+        hireAndFadeIn(0.5,"punch_line"),
         "",
         linear(1,"punch_line","top_set_opacity",1),
         "",
@@ -1371,90 +1374,290 @@ function makePartFocusActor(name,labels) { return function() { // {{{
     // Infinite automata {{{
         rotateNextTitle(),
       // Introduce the automata {{{
-        hireUseActors("infinite_automata.5tuple","infinite_automata.5tuple.cover"),
+        hireUseActors("bucchi_automata.5tuple","bucchi_automata.5tuple.cover"),
         "",
-        linear(0.5,"infinite_automata.5tuple.cover","x",470),
+        linear(0.5,"bucchi_automata.5tuple.cover","x",470),
         hireAndFlashIn(0.5,0.25,
-            "infinite_automata.5tuple.alphabet",
-            "infinite_automata.5tuple.states",
-            "infinite_automata.5tuple.transitions",
-            "infinite_automata.5tuple.initial",
-            "infinite_automata.5tuple.final"
+            "bucchi_automata.5tuple.alphabet",
+            "bucchi_automata.5tuple.states",
+            "bucchi_automata.5tuple.transitions",
+            "bucchi_automata.5tuple.initial",
+            "bucchi_automata.5tuple.final"
         ),
-        hire("infinite_automata.automata",makePartFocusActor("infinite_automata.automata",[
+        hire("bucchi_automata.automata",makePartFocusActor("bucchi_automata.automata",[
             "state.1",
             "state.2",
             "transitions",
             "transitions.initial",
         ])),
         parallel(
-            decelerate(1,"infinite_automata.automata","x",520,0),
-            hireAndFadeInUseActor(1,"infinite_automata.automata.box")
+            decelerate(1,"bucchi_automata.automata","x",520,0),
+            hireAndFadeInUseActor(1,"bucchi_automata.automata.box")
         ),
         "",
-        hireAndFadeIn(1,"infinite_automata.criterion"),
+        hireAndFadeIn(1,"bucchi_automata.criterion"),
         "",
-        hireAndFadeIn(1,"infinite_automata.criterion.highlight",null,"infinite_automata.criterion"),
+        hireAndFadeIn(1,"bucchi_automata.criterion.highlight",null,"bucchi_automata.criterion"),
       // }}}
       // First example {{{
         "",
         hireAndFlashIn(0.5,0.25,
-            "weighted_automata.input.1.0",
-            "weighted_automata.input.2.0",
-            "weighted_automata.input.3.0"
+            "bucchi_automata.input.1.0",
+            "bucchi_automata.input.2",
+            "bucchi_automata.input.3",
+            "bucchi_automata.input.4plus"
         ),
         "",
-        hireAndFadeIn(0.5,"weighted_automata.marker",null,"weighted_automata.automata"),
-        smooth(0.5,"weighted_automata.marker","x",124.169),
+        hireAndFadeIn(0.5,"bucchi_automata.marker",null,"bucchi_automata.automata"),
+        smooth(0.5,"bucchi_automata.marker","x",124.169),
         "",
-        hireAndFadeIn(0.5,"weighted_automata.reader"),
-        "",
+        hireAndFadeIn(0.5,"bucchi_automata.reader"),
         parallel(
-            accelerate(0.25,"weighted_automata.marker","x",210.128),
-            accelerate(0.25,"weighted_automata.marker","y",-98.659)
+            accelerate(0.25,"bucchi_automata.marker","x",210.128),
+            accelerate(0.25,"bucchi_automata.marker","y",-98.659)
         ),
         parallel(
-            decelerate(0.25,"weighted_automata.marker","x",124.169),
-            decelerate(0.25,"weighted_automata.marker","y",0)
+            decelerate(0.25,"bucchi_automata.marker","x",124.169),
+            decelerate(0.25,"bucchi_automata.marker","y",0)
         ),
-        "",
-        smooth(0.5,"weighted_automata.reader","x",106),
-        "",
+        smooth(0.5,"bucchi_automata.reader","x",106),
         parallel(
-            accelerate(0.25,"weighted_automata.marker","x",210.128),
-            accelerate(0.25,"weighted_automata.marker","y",-98.659)
+            accelerate(0.25,"bucchi_automata.marker","x",210.128),
+            accelerate(0.25,"bucchi_automata.marker","y",-98.659)
         ),
         parallel(
-            decelerate(0.25,"weighted_automata.marker","x",124.169),
-            decelerate(0.25,"weighted_automata.marker","y",0)
+            decelerate(0.25,"bucchi_automata.marker","x",124.169),
+            decelerate(0.25,"bucchi_automata.marker","y",0)
         ),
-        "",
-        smooth(0.5,"weighted_automata.reader","x",212),
-        "",
-        smooth(0.5,"weighted_automata.marker","x",336.694),
-        "",
-        smooth(0.5,"weighted_automata.reader","x",318),
-        "",
+        smooth(0.5,"bucchi_automata.reader","x",212),
         parallel(
-            accelerate(0.25,"weighted_automata.marker","x",444.128),
-            accelerate(0.25,"weighted_automata.marker","y",-98.659)
+            accelerate(0.25,"bucchi_automata.marker","x",210.128),
+            accelerate(0.25,"bucchi_automata.marker","y",-98.659)
         ),
         parallel(
-            decelerate(0.25,"weighted_automata.marker","x",336.694),
-            decelerate(0.25,"weighted_automata.marker","y",0)
+            decelerate(0.25,"bucchi_automata.marker","x",124.169),
+            decelerate(0.25,"bucchi_automata.marker","y",0)
+        ),
+        parallel(
+            accelerate(0.5,"bucchi_automata.reader","x",500),
+            parallel(
+                wait(0.5),
+                set("bucchi_automata.automata","state.1.opacity",1),
+                linear(0.75,"bucchi_automata.automata","non_focused_opacity",0.33)
+            ),
+            sequence(
+                parallel(
+                    accelerate(0.25,"bucchi_automata.marker","x",210.128),
+                    accelerate(0.25,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.25,"bucchi_automata.marker","x",124.169),
+                    decelerate(0.25,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.20,"bucchi_automata.marker","x",210.128),
+                    accelerate(0.20,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.20,"bucchi_automata.marker","x",124.169),
+                    decelerate(0.20,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.15,"bucchi_automata.marker","x",210.128),
+                    accelerate(0.15,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.15,"bucchi_automata.marker","x",124.169),
+                    decelerate(0.15,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                )
+            )
         ),
         "",
-        fadeOut(0.5,"weighted_automata.reader"),
+        fire("bucchi_automata.reader"),
         "",
-        hireUseActor("weighted_automata.check_mark"),
-        set(styleOf("weighted_automata.check_mark"),"opacity",0.9),
-        set("weighted_automata.check_mark","x",700),
-        set("weighted_automata.check_mark","y",550),
-        set("weighted_automata.check_mark","scale",0.05),
+        linear(0.75,"bucchi_automata.automata","non_focused_opacity",1),
+        set("bucchi_automata.automata","state.1.opacity",0),
+        "",
+/*        hireUseActor("bucchi_automata.check_mark"),
+        set(styleOf("bucchi_automata.check_mark"),"opacity",0.9),
+        set("bucchi_automata.check_mark","x",700),
+        set("bucchi_automata.check_mark","y",550),
+        set("bucchi_automata.check_mark","scale",0.05),
         parallel(
-            linear(0.5,"weighted_automata.check_mark","x",0),
-            linear(0.5,"weighted_automata.check_mark","y",0),
-            linear(0.5,"weighted_automata.check_mark","scale",1)
+            linear(0.5,"bucchi_automata.check_mark","x",0),
+            linear(0.5,"bucchi_automata.check_mark","y",0),
+            linear(0.5,"bucchi_automata.check_mark","scale",1)
+        ), */
+        hireUseActor("automata.cross_mark"),
+        set(styleOf("automata.cross_mark"),"opacity",0.9),
+        set("automata.cross_mark","x",700),
+        set("automata.cross_mark","y",550),
+        set("automata.cross_mark","scale",0.05),
+        parallel(
+            linear(0.5,"automata.cross_mark","x",0),
+            linear(0.5,"automata.cross_mark","y",0),
+            linear(0.5,"automata.cross_mark","scale",1)
+        ),
+        "",
+        fadeOutAndFire(0.5,"automata.cross_mark"),
+      // }}}
+      // Second example {{{
+        fadeOutAndFire(0.25,"bucchi_automata.input.1.0"),
+        hireAndFadeIn(0.25,"bucchi_automata.input.1.1"),
+        "",
+        hireAndFadeInUseActor(0.5,"bucchi_automata.reader"),
+        smooth(0.5,"bucchi_automata.marker","x",336.694),
+        smooth(0.5,"bucchi_automata.reader","x",106),
+        parallel(
+            accelerate(0.5,"bucchi_automata.reader","x",500),
+            parallel(
+                wait(0.5),
+                set("bucchi_automata.automata","state.2.opacity",1),
+                linear(0.75,"bucchi_automata.automata","non_focused_opacity",0.33)
+            ),
+            sequence(
+                parallel(
+                    accelerate(0.25,"bucchi_automata.marker","x",444.128),
+                    accelerate(0.25,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.25,"bucchi_automata.marker","x",336.694),
+                    decelerate(0.25,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.20,"bucchi_automata.marker","x",444.128),
+                    accelerate(0.20,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.20,"bucchi_automata.marker","x",336.694),
+                    decelerate(0.20,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.15,"bucchi_automata.marker","x",444.128),
+                    accelerate(0.15,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.15,"bucchi_automata.marker","x",336.694),
+                    decelerate(0.15,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
+                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
+                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                )
+            )
+        ),
+        fire("bucchi_automata.reader"),
+        "",
+        linear(0.75,"bucchi_automata.automata","non_focused_opacity",1),
+        set("bucchi_automata.automata","state.2.opacity",0),
+        "",
+        hireUseActor("bucchi_automata.check_mark"),
+        set(styleOf("bucchi_automata.check_mark"),"opacity",0.9),
+        set("bucchi_automata.check_mark","x",700),
+        set("bucchi_automata.check_mark","y",550),
+        set("bucchi_automata.check_mark","scale",0.05),
+        parallel(
+            linear(0.5,"bucchi_automata.check_mark","x",0),
+            linear(0.5,"bucchi_automata.check_mark","y",0),
+            linear(0.5,"bucchi_automata.check_mark","scale",1)
+        ),
+      // }}}
+      // Fade out everything {{{
+        "",
+        fadeOutAndFire(0.5,
+            "bucchi_automata.automata",
+            "bucchi_automata.automata.box",
+            "bucchi_automata.marker",
+            "bucchi_automata.criterion",
+            "bucchi_automata.criterion.highlight",
+            "bucchi_automata.check_mark",
+            "bucchi_automata.5tuple",
+            "bucchi_automata.5tuple.cover",
+            "bucchi_automata.5tuple.alphabet",
+            "bucchi_automata.5tuple.states",
+            "bucchi_automata.5tuple.transitions",
+            "bucchi_automata.5tuple.initial",
+            "bucchi_automata.5tuple.final",
+            "bucchi_automata.input.1.1",
+            "bucchi_automata.input.2",
+            "bucchi_automata.input.3",
+            "bucchi_automata.input.4plus"
         ),
       // }}}
     // }}}
