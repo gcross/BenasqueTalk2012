@@ -101,6 +101,7 @@ var titles = [ // Titles {{{
     "Bucchi (Infinite) Automata",
     "Kleen's Theorem for Infinite Languages",
     "Characterization Theorem for Infinite Languages",
+    "Outline",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1682,6 +1683,42 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "infinite_characterization_theorem_2",
             "infinite_characterization_theorem_3"
         ),
+    // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        fadeIn(0.5,"outline"),
+        "",
+        parallel(
+            linear(0.5,"outline","infinite_languages.opacity",0.5),
+            linear(0.5,"outline","infinite_languages_in_arrow.opacity",0.5),
+            linear(0.5,"outline","weighted_languages_out_arrow.opacity",1),
+            linear(0.5,"outline","infinite_languages_out_arrow.opacity",1),
+            linear(0.5,"outline","infinite_weighted_languages.opacity",1)
+        ),
+        "",
+        parallel(
+            linear(0.5,"outline","escape_divergence_in_arrow.opacity",1),
+            linear(0.5,"outline","escape_divergence.opacity",1)
+        ),
+        "",
+        hireAndFadeIn(0.5,"outline.escape_divergence_to_quemirings"),
+        "",
+        hireAndFadeIn(0.5,"outline.escape_divergence_to_quemirings_crossed_out"),
+        "",
+        parallel(
+            linear(0.5,"outline","escape_divergence_in_arrow.opacity",0.5),
+            linear(0.5,"outline","escape_divergence.opacity",0.5),
+            fadeOutAndFire(0.5,
+                "outline.escape_divergence_to_quemirings",
+                "outline.escape_divergence_to_quemirings_crossed_out"
+            )
+        ),
+        parallel(
+            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",1),
+            linear(0.5,"outline","embrace_divergence.opacity",1)
+        ),
+        "",
+        fadeOut(0.5,"outline"),
     // }}}
 // }}} Script
     ]))
