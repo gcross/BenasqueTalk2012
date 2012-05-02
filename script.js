@@ -102,6 +102,8 @@ var titles = [ // Titles {{{
     "Kleen's Theorem for Infinite Languages",
     "Characterization Theorem for Infinite Languages",
     "Outline",
+    "Diverging Languages",
+    "Rational Operations for Diverging Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1743,6 +1745,31 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         ),
         "",
         fadeOut(0.5,"outline"),
+    // }}}
+    // Diverging languages {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"diverging_languages.borderlines"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.alphabet"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.semiring"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.words.finite"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.words.infinite"),
+        "",
+        hireAndFadeIn(0.5,"diverging_languages.language"),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_languages.borderlines",
+            "diverging_languages.alphabet",
+            "diverging_languages.semiring",
+            "diverging_languages.words.finite",
+            "diverging_languages.words.infinite",
+            "diverging_languages.language"
+        ),
+    // }}}
+    // Rational operations on diverging languages {{{
     // }}}
 // }}} Script
     ]))
