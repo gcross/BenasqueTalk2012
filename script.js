@@ -1949,6 +1949,18 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         hireAndFadeIn(0.5,"diverging_automata.criterion.1"),
         "",
         hireAndFadeIn(0.5,"diverging_automata.criterion.2"),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_automata.5tuple",
+            "diverging_automata.5tuple.alphabet",
+            "diverging_automata.5tuple.states",
+            "diverging_automata.5tuple.transitions",
+            "diverging_automata.5tuple.initial",
+            "diverging_automata.5tuple.final",
+            "diverging_automata.criterion.1",
+            "diverging_automata.criterion.2"
+        ),
+        hireAndFadeIn(0.5,"daas"),
     // }}}
 // }}} Script
     ]))

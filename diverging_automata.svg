@@ -52,7 +52,7 @@
   <g
      id="diverging_automata.5tuple.alphabet"
      inkscape:label="#g10949"
-     transform="translate(0,28)">
+     transform="translate(0,36)">
     <path
        inkscape:connector-curvature="0"
        d="m 31.426288,199.42826 c 1.945551,1.75718 13.354681,15.13548 16.739251,18.99738 -3.38457,3.5249 -12.82583,14.1306 -15.4235,17.29421 l 34.32921,0 0,-9.17117 c -3.04452,1.73284 -5.06278,3.62496 -8.01414,5.56689 l -17.46364,0.0669 13.63598,-15.19791 0,-0.13103 -12.55946,-13.88773 c 3.93351,-0.14933 15.49282,0.20135 17.34403,0.0739 1.89666,1.58388 4.56633,3.881 6.81801,5.4288 l 0,-9.04014 -35.405741,0 z"
@@ -84,7 +84,7 @@
   <g
      id="diverging_automata.5tuple.states"
      inkscape:label="#g4533"
-     transform="translate(0,48)">
+     transform="translate(0,54)">
     <text
        xml:space="preserve"
        style="font-size:32.40000153px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#12ce00;fill-opacity:1;stroke:#064e00;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial"
@@ -118,7 +118,7 @@
   <g
      id="diverging_automata.5tuple.transitions"
      inkscape:label="#g4540"
-     transform="translate(0,68)">
+     transform="translate(0,72)">
     <text
        sodipodi:linespacing="125%"
        id="text6292"
@@ -163,7 +163,7 @@
   <g
      id="diverging_automata.5tuple.initial"
      inkscape:label="#g10972"
-     transform="translate(0,88)">
+     transform="translate(0,90)">
     <text
        sodipodi:linespacing="125%"
        id="text6304"
@@ -304,43 +304,43 @@
      xml:space="preserve"
      style="font-size:29.16000175px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      x="511.33185"
-     y="236.27559"
+     y="244.27559"
      id="diverging_automata.criterion.1"
      sodipodi:linespacing="125%"
      inkscape:label="#text4466"><tspan
        sodipodi:role="line"
        id="tspan4468"
        x="511.33185"
-       y="236.27559">The weights of a (finite) walk through</tspan><tspan
+       y="244.27559">The weights of a (finite) walk through</tspan><tspan
        sodipodi:role="line"
        x="511.33185"
-       y="272.72559"
+       y="280.72559"
        id="tspan4488">an automata is the product of all</tspan><tspan
        sodipodi:role="line"
        x="511.33185"
-       y="309.1756"
+       y="317.1756"
        id="tspan4490">the factors along the path multiplied</tspan><tspan
        sodipodi:role="line"
        x="511.33185"
-       y="345.62561"
+       y="353.62561"
        id="tspan4514">by the weights of the final state.</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:29.16000175px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      x="512.29309"
-     y="400.76355"
+     y="430.76355"
      id="diverging_automata.criterion.2"
      sodipodi:linespacing="125%"
      inkscape:label="#text4542"><tspan
        sodipodi:role="line"
        id="tspan4544"
        x="512.29309"
-       y="400.76355">For an input word <tspan
+       y="430.76355">For an input word <tspan
    style="font-style:italic;-inkscape-font-specification:Arial Italic"
    id="tspan4556">w</tspan> and an integer</tspan><tspan
        sodipodi:role="line"
        x="512.29309"
-       y="437.21356"
+       y="467.21356"
        id="tspan4546"><tspan
    style="font-style:italic;-inkscape-font-specification:Arial Italic"
    id="tspan4558">n</tspan>, a diverging automata maps (<tspan
@@ -350,16 +350,16 @@
    id="tspan4562">n</tspan>)</tspan><tspan
        sodipodi:role="line"
        x="512.29309"
-       y="473.66354"
+       y="503.66354"
        id="tspan4548">to the sum of the weights of all walks</tspan><tspan
        sodipodi:role="line"
        x="512.29309"
-       y="510.11356"
+       y="540.11359"
        id="tspan4550">through the automata for the word</tspan><tspan
        sodipodi:role="line"
        x="512.29309"
-       y="546.56354"
-       id="tspan4552"><tspan
+       y="576.56354"
+       id="tspan4554"><tspan
    style="font-style:italic;-inkscape-font-specification:Arial Italic"
    id="tspan4564">w</tspan>[0,<tspan
    style="font-style:italic;-inkscape-font-specification:Arial Italic"
@@ -370,12 +370,16 @@
    id="tspan4576">w</tspan>)</tspan><tspan
        sodipodi:role="line"
        x="512.29309"
-       y="583.01355"
-       id="tspan4554">which end on a state that the full</tspan><tspan
+       y="613.01355"
+       id="tspan4660">that start on the initial state and which</tspan><tspan
        sodipodi:role="line"
        x="512.29309"
-       y="619.46356"
-       id="tspan4572">infinite word <tspan
+       y="649.46356"
+       id="tspan4666">end on a state that the full infinite</tspan><tspan
+       sodipodi:role="line"
+       x="512.29309"
+       y="685.91357"
+       id="tspan4675">word <tspan
    style="font-style:italic;-inkscape-font-specification:Arial Italic"
    id="tspan4578">w</tspan> visits infinitely often.</tspan></text>
 </svg>
