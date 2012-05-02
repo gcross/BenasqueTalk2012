@@ -1125,12 +1125,12 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         parallel(
             sequence(
                 fadeOutAndFire(0.25,"weighted_automata.input.2.1"),
-                hireAndFadeIn(0.25,"weighted_automata.input.2.0",null,"weighted_automata.cross_mark")
+                hireAndFadeIn(0.25,"weighted_automata.input.2.0")
             ),
             sequence(
                 wait(0.125),
                 fadeOutAndFire(0.25,"weighted_automata.input.3.1"),
-                hireAndFadeIn(0.25,"weighted_automata.input.3.0",null,"weighted_automata.cross_mark")
+                hireAndFadeIn(0.25,"weighted_automata.input.3.0")
             )
         ),
         fadeOutAndFire(0.5,
