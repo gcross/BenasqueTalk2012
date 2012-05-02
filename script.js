@@ -1769,7 +1769,48 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "diverging_languages.language"
         ),
     // }}}
-    // Rational operations on diverging languages {{{
+    // Rational diverging operations {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.5,0.25,
+            "diverging_rational_operations_box_1",
+            "diverging_rational_operations_box_2",
+            "diverging_rational_operations_box_3",
+            "diverging_rational_operations_box_4"
+        ),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_1"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_1"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_2"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_2"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_3"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_3"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_precondition_4"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_4"),
+        "",
+        hireAndFadeInUseActor(0.5, "diverging_rational_operations_definition_5"),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_rational_operations_box_1",
+            "diverging_rational_operations_box_2",
+            "diverging_rational_operations_box_3",
+            "diverging_rational_operations_box_4",
+            "diverging_rational_operations_precondition_1",
+            "diverging_rational_operations_precondition_2",
+            "diverging_rational_operations_precondition_3",
+            "diverging_rational_operations_precondition_4",
+            "diverging_rational_operations_definition_1",
+            "diverging_rational_operations_definition_2",
+            "diverging_rational_operations_definition_3",
+            "diverging_rational_operations_definition_4",
+            "diverging_rational_operations_definition_5"
+        ),
     // }}}
 // }}} Script
     ]))
