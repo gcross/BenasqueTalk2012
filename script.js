@@ -104,6 +104,7 @@ var titles = [ // Titles {{{
     "Outline",
     "Diverging Languages",
     "Rational Operations for Diverging Languages",
+    "Diverging Automata",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1902,7 +1903,52 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         "",
         hireAndFadeIn(0.5,"diverging_rational_language_definition"),
         "",
-
+        fadeOutAndFire(0.5,
+            "diverging_rational_operations_definition_2",
+            "diverging_rational_operations_definition_5",
+            "diverging_rational_operations_definition_6",
+            "diverging_rational_operations_example_box",
+            "diverging_rational_operations_example_input_frame",
+            "diverging_rational_operations_example_input_1",
+            "diverging_rational_operations_example_input_2",
+            "diverging_rational_operations_example_input_3",
+            "diverging_rational_operations_example_letter_1",
+            "diverging_rational_operations_example_letter_2",
+            "diverging_rational_operations_example_letter_3",
+            "diverging_rational_operations_example_letter_4",
+            "diverging_rational_operations_example_letter_mapsto",
+            "diverging_rational_operations_example_output_box",
+            "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_output_0_mapsto",
+            "diverging_rational_operations_example_output_0_mapsto_0",
+            "diverging_rational_operations_example_output_1_mapsto",
+            "diverging_rational_operations_example_output_1_mapsto_1_2",
+            "diverging_rational_operations_example_output_2_mapsto",
+            "diverging_rational_operations_example_output_2_mapsto_5_4",
+            "diverging_rational_operations_example_output_3_mapsto",
+            "diverging_rational_operations_example_output_3_mapsto_0",
+            "diverging_rational_operations_example_output_4_mapsto",
+            "diverging_rational_operations_example_output_4_mapsto_5_2",
+            "diverging_rational_operations_example_output_dots",
+            "diverging_rational_operations_identity",
+            "diverging_rational_language_definition"
+        ),
+    // }}}
+    // Diverging automata {{{
+        rotateNextTitle(),
+        hireUseActors("diverging_automata.5tuple","diverging_automata.5tuple.cover"),
+        linear(0.5,"diverging_automata.5tuple.cover","x",470),
+        hireAndFlashIn(0.5,0.25,
+            "diverging_automata.5tuple.alphabet",
+            "diverging_automata.5tuple.states",
+            "diverging_automata.5tuple.transitions",
+            "diverging_automata.5tuple.initial",
+            "diverging_automata.5tuple.final"
+        ),
+        "",
+        hireAndFadeIn(0.5,"diverging_automata.criterion.1"),
+        "",
+        hireAndFadeIn(0.5,"diverging_automata.criterion.2"),
     // }}}
 // }}} Script
     ]))
