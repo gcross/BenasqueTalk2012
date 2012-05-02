@@ -8894,6 +8894,148 @@
        id="tspan11131">recognized by Bucchi automata</tspan></text>
 
         <!-- }}} -->
+        <!-- infinite characterization {{{ -->
+  <text
+     xml:space="preserve"
+     style="font-size:44px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="513.52539"
+     y="241.19299"
+     id="infinite_characterization_theorem_1"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text16149"><tspan
+       sodipodi:role="line"
+       x="513.52539"
+       y="241.19299"
+       id="tspan16157">The set of rational infinite languages is equal</tspan><tspan
+       sodipodi:role="line"
+       x="513.52539"
+       y="296.19299"
+       id="tspan16161">to the set of infinite languages taking the form:</tspan></text>
+  <g
+     id="infinite_characterization_theorem_2"
+     transform="matrix(1.331,0,0,1.331,-180.12002,-209.83593)"
+     inkscape:label="#g3796">
+    <text
+       class="punch_line_bottom_set"
+       inkscape:label="#text3906"
+       xml:space="preserve"
+       style="font-size:49.29932404px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bangla MN;-inkscape-font-specification:Bangla MN"
+       x="638.16949"
+       y="494.41812"
+       id="punch_line_s_operator"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3908"
+         x="638.16949"
+         y="494.41812">ω</tspan></text>
+    <path
+       class="punch_line_bottom_set"
+       inkscape:label="#path3910"
+       transform="matrix(0.6561,0,0,0.6561,381.32197,84.2452)"
+       d="m 280,658 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+       sodipodi:ry="10"
+       sodipodi:rx="10"
+       sodipodi:cy="658"
+       sodipodi:cx="270"
+       id="punch_line_dot_operator"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       sodipodi:type="arc" />
+    <text
+       class="punch_line_bottom_set punch_line_non_focus"
+       sodipodi:linespacing="125%"
+       id="text5990"
+       y="541.51508"
+       x="484.93091"
+       style="font-size:83.98079681px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       xml:space="preserve"><tspan
+         y="541.51508"
+         x="484.93091"
+         id="tspan5992"
+         sodipodi:role="line">X</tspan></text>
+    <text
+       class="punch_line_bottom_set punch_line_non_focus"
+       sodipodi:linespacing="125%"
+       id="text5994"
+       y="541.51508"
+       x="606.46503"
+       style="font-size:83.98079681px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       xml:space="preserve"><tspan
+         y="541.51508"
+         x="606.46503"
+         id="tspan5996"
+         sodipodi:role="line">Y</tspan></text>
+    <text
+       class="punch_line_bottom_set"
+       xml:space="preserve"
+       style="font-size:53.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Latin Modern Roman Unslanted;-inkscape-font-specification:Latin Modern Roman Unslanted"
+       x="518.62549"
+       y="556.19965"
+       id="text5293"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5295"
+         x="518.62549"
+         y="556.19965">i</tspan></text>
+    <text
+       class="punch_line_bottom_set"
+       sodipodi:linespacing="125%"
+       id="text5297"
+       y="556.19965"
+       x="618.62549"
+       style="font-size:53.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Latin Modern Roman Unslanted;-inkscape-font-specification:Latin Modern Roman Unslanted"
+       xml:space="preserve"><tspan
+         y="556.19965"
+         x="618.62549"
+         id="tspan5299"
+         sodipodi:role="line">i</tspan></text>
+    <g
+       transform="translate(271.41509,-102.88784)"
+       class="punch_line_bottom_set"
+       inkscape:label="#g5305"
+       id="punch_line_sum_operator">
+      <path
+         style="font-size:12px;fill:#000000;fill-opacity:1;stroke:none"
+         id="path608"
+         d="m 92.50214,580.20081 c 3.66089,3.30643 25.12918,28.48007 31.49786,35.74692 -6.36868,6.63271 -24.13406,26.58919 -29.02204,32.54208 l 64.59645,0 0,-17.25716 c -5.72881,3.26065 -9.52651,6.821 -15.08,10.47509 l -32.86092,0.12573 25.65852,-28.59756 0,-0.24654 -23.63287,-26.13223 c 7.4016,-0.28097 29.15249,0.37889 32.63584,0.13904 3.56891,2.98035 8.59236,7.30279 12.82929,10.21523 l 0,-17.0106 -66.62213,0 z"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-size:53.24000168px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Latin Modern Roman Unslanted;-inkscape-font-specification:Latin Modern Roman Unslanted"
+         x="123.21035"
+         y="693.08746"
+         id="text5289"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5291"
+           x="123.21035"
+           y="693.08746">i</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:26.24400139px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+         x="101.91116"
+         y="569.54572"
+         id="text5301"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5303"
+           x="101.91116"
+           y="569.54572">finite</tspan></text>
+    </g>
+  </g>
+  <text
+     sodipodi:linespacing="125%"
+     id="infinite_characterization_theorem_3"
+     y="695.69299"
+     x="513.83691"
+     style="font-size:44px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     xml:space="preserve"
+     inkscape:label="#text16389"><tspan
+       id="tspan16393"
+       y="695.69299"
+       x="513.83691"
+       sodipodi:role="line">where X and Y are (finite) rational languages.</tspan></text>
+
+        <!-- }}}} -->
     <!-- }}} Slides -->
     <!-- standard_backdrop {{{ -->
         <g id="standard_backdrop">

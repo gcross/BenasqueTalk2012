@@ -100,6 +100,7 @@ var titles = [ // Titles {{{
     "Rational Operations for Infinite Languages",
     "Bucchi (Infinite) Automata",
     "Kleen's Theorem for Infinite Languages",
+    "Characterization Theorem for Infinite Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1665,6 +1666,21 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "infinite_kleene1",
             "infinite_kleene2",
             "infinite_kleene3"
+        ),
+    // }}}
+    // Characterization Theorem {{{
+        rotateNextTitle(),
+        "",
+        hireAndFlashIn(0.75,0.375,
+            "infinite_characterization_theorem_1",
+            "infinite_characterization_theorem_2",
+            "infinite_characterization_theorem_3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "infinite_characterization_theorem_1",
+            "infinite_characterization_theorem_2",
+            "infinite_characterization_theorem_3"
         ),
     // }}}
 // }}} Script
