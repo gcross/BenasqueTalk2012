@@ -8844,6 +8844,56 @@
      inkscape:label="#path127393" />
 
         <!-- }}} -->
+        <!-- infinite kleen {{{ -->
+  <text
+     xml:space="preserve"
+     style="font-size:64.80000305px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="512.24341"
+     y="278.74426"
+     id="infinite_kleene1"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text5335"><tspan
+       sodipodi:role="line"
+       x="521.22931"
+       y="278.74426"
+       id="tspan5364">the set of rational </tspan><tspan
+       sodipodi:role="line"
+       x="512.24341"
+       y="359.74426"
+       id="tspan6418">infinite languages</tspan></text>
+  <g
+     id="infinite_kleene2"
+     transform="translate(0,9.595886)"
+     inkscape:label="#g5986">
+    <path
+       inkscape:connector-curvature="0"
+       id="path5474"
+       d="m 540,438 -90,0 80,0"
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 540,468 -90,0 80,0"
+       id="path5984"
+       inkscape:connector-curvature="0" />
+  </g>
+  <text
+     inkscape:label="#text5335"
+     sodipodi:linespacing="125%"
+     id="infinite_kleene3"
+     y="598.74426"
+     x="512.22229"
+     style="font-size:64.80000305px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     xml:space="preserve"><tspan
+       id="tspan11129"
+       y="598.74426"
+       x="512.22229"
+       sodipodi:role="line">the set of infinite languages</tspan><tspan
+       y="679.74426"
+       x="512.22229"
+       sodipodi:role="line"
+       id="tspan11131">recognized by Bucchi automata</tspan></text>
+
+        <!-- }}} -->
     <!-- }}} Slides -->
     <!-- standard_backdrop {{{ -->
         <g id="standard_backdrop">

@@ -99,6 +99,7 @@ var titles = [ // Titles {{{
     "Infinite Languages",
     "Rational Operations for Infinite Languages",
     "Bucchi (Infinite) Automata",
+    "Kleen's Theorem for Infinite Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1518,16 +1519,6 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         linear(0.75,"bucchi_automata.automata","non_focused_opacity",1),
         set("bucchi_automata.automata","state.1.opacity",0),
         "",
-/*        hireUseActor("bucchi_automata.check_mark"),
-        set(styleOf("bucchi_automata.check_mark"),"opacity",0.9),
-        set("bucchi_automata.check_mark","x",700),
-        set("bucchi_automata.check_mark","y",550),
-        set("bucchi_automata.check_mark","scale",0.05),
-        parallel(
-            linear(0.5,"bucchi_automata.check_mark","x",0),
-            linear(0.5,"bucchi_automata.check_mark","y",0),
-            linear(0.5,"bucchi_automata.check_mark","scale",1)
-        ), */
         hireUseActor("automata.cross_mark"),
         set(styleOf("automata.cross_mark"),"opacity",0.9),
         set("automata.cross_mark","x",700),
@@ -1660,6 +1651,21 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "bucchi_automata.input.4plus"
         ),
       // }}}
+    // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        "",
+        hireAndFlashIn(0.75,0.375,
+            "infinite_kleene1",
+            "infinite_kleene2",
+            "infinite_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "infinite_kleene1",
+            "infinite_kleene2",
+            "infinite_kleene3"
+        ),
     // }}}
 // }}} Script
     ]))
