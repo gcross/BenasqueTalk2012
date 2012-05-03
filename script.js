@@ -107,6 +107,8 @@ var titles = [ // Titles {{{
     "Diverging Automata",
     "Kleen's Theorem for Diverging Languages",
     "Characterization Theorem for Diverging Languages",
+    "Bidiverging Languages",
+    "Bidiverging Automata",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -2008,6 +2010,63 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "diverging_characterization_theorem_2",
             "diverging_characterization_theorem_3"
         ),
+    // }}}
+    // Bi-diverging languages {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"bidiverging_language"),
+        "",
+        hireAndFadeIn(0.5,"bidiverging_juxtaposition_operator"),
+        "",
+        hireAndFadeIn(0.5,"bidiverging_rational_language"),
+        "",
+        fadeOutAndFire(0.5,
+            "bidiverging_language",
+            "bidiverging_juxtaposition_operator",
+            "bidiverging_rational_language"
+        ),
+    // }}}
+    // Diverging automata {{{
+        rotateNextTitle(),
+        hireUseActors("bidiverging_automata.5tuple","bidiverging_automata.5tuple.cover"),
+        linear(0.5,"bidiverging_automata.5tuple.cover","x",470),
+        hireAndFlashIn(0.5,0.25,
+            "bidiverging_automata.5tuple.alphabet",
+            "bidiverging_automata.5tuple.states",
+            "bidiverging_automata.5tuple.transitions",
+            "bidiverging_automata.5tuple.initial",
+            "bidiverging_automata.5tuple.final"
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("bidiverging_automata.5tuple.alphabet"),"opacity",0.25),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.states"),"opacity",0.25),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.transitions"),"opacity",0.25),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.final"),"opacity",0.25)
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("bidiverging_automata.5tuple.alphabet"),"opacity",1),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.states"),"opacity",1),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.transitions"),"opacity",1),
+            linear(0.5,styleFor("bidiverging_automata.5tuple.final"),"opacity",1)
+        ),
+        hireAndFadeIn(0.5,"bidiverging_automata.criterion.1"),
+        "",
+        hireAndFadeIn(0.5,"bidiverging_automata.criterion.2"),
+        "",
+        fadeOutAndFire(0.5,
+            "bidiverging_automata.5tuple",
+            "bidiverging_automata.5tuple.alphabet",
+            "bidiverging_automata.5tuple.states",
+            "bidiverging_automata.5tuple.transitions",
+            "bidiverging_automata.5tuple.initial",
+            "bidiverging_automata.5tuple.final",
+            "bidiverging_automata.criterion.1",
+            "bidiverging_automata.criterion.2"
+        ),
+        hireAndFadeIn(0.5,"daas"),
+        "",
+        fadeOutAndFire(0.5,"daas"),
     // }}}
 // }}} Script
     ]))
