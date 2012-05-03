@@ -174,21 +174,31 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "standard_backdrop",
             titles[nextTitleIndex()]
         ),
+        parallel(
+            hireAndFadeIn(0.5,"punch_line_top_set"),
+            sequence(
+                wait(0.25),
+                hireAndFadeIn(0.5,"punch_line_equals")
+            ),
+            sequence(
+                wait(0.5),
+                hireAndFadeIn(0.5,"punch_line_bottom_set",makePartFocusActor("punch_line_bottom_set",[
+                    "delta_operators",
+                    "dot_operators",
+                    "sum_operator",
+                    "juxtaposition_operator",
+                    "rational"
+                ]))
+            )
+        ),
         "",
-        hireAndFadeIn(0.5,"punch_line"),
-        "",
-        linear(1,"punch_line","top_set_opacity",1),
-        "",
-        linear(1,"punch_line","equals_opacity",1),
-        "",
-        linear(1,"punch_line","bottom_set_opacity",1),
-        "",
-        set("punch_line","rational_power_series_opacity",1),
-        linear(0.5,"punch_line","non_focused_opacity",0.25),
+/*
+        set("punch_line_bottom_set","rational.opacity",1),
+        linear(0.5,"punch_line_bottom_set","non_focused_opacity",0.25),
         "",
         parallel(
-            linear(0.5,"punch_line","rational_power_series_opacity",1,0.25),
-            linear(0.5,"punch_line","s_operator_opacity",0.25,1)
+            linear(0.5,"punch_line","rational_power_series.opacity",0.25),
+            linear(0.5,"punch_line","delta_operators_opacity",0.25)
         ),
         "",
         parallel(
@@ -208,10 +218,15 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         "",
         linear(0.5,"punch_line","non_focused_opacity",1),
         "",
+*/
+        fadeOutAndFire(0.5,
+            "punch_line_top_set",
+            "punch_line_equals",
+            "punch_line_bottom_set"
+        ),
     // }}}
     // Outline {{{
         rotateNextTitle(),
-        fadeOutAndFire(0.5,"punch_line"),
         hireAndFadeIn(0.5,"outline",makePartFocusActor("outline",[
             "languages",
             "weighted_languages",
