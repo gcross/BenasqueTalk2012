@@ -109,6 +109,8 @@ var titles = [ // Titles {{{
     "Characterization Theorem for Diverging Languages",
     "Bidiverging Languages",
     "Bidiverging Automata",
+    "Kleen's Theorem for Bidiverging Languages",
+    "Characterization Theorem for Bidiverging Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -2025,7 +2027,7 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "bidiverging_rational_language"
         ),
     // }}}
-    // Diverging automata {{{
+    // Bidiverging automata {{{
         rotateNextTitle(),
         hireUseActors("bidiverging_automata.5tuple","bidiverging_automata.5tuple.cover"),
         linear(0.5,"bidiverging_automata.5tuple.cover","x",470),
@@ -2064,9 +2066,37 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "bidiverging_automata.criterion.1",
             "bidiverging_automata.criterion.2"
         ),
-        hireAndFadeIn(0.5,"daas"),
+        hireAndFadeIn(0.5,"baas"),
         "",
-        fadeOutAndFire(0.5,"daas"),
+        fadeOutAndFire(0.5,"baas"),
+    // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "bidiverging_kleene1",
+            "bidiverging_kleene2",
+            "bidiverging_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "bidiverging_kleene1",
+            "bidiverging_kleene2",
+            "bidiverging_kleene3"
+        ),
+    // }}}
+    // Characterization Theorem {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "bidiverging_characterization_theorem_1",
+            "bidiverging_characterization_theorem_2",
+            "bidiverging_characterization_theorem_3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "bidiverging_characterization_theorem_1",
+            "bidiverging_characterization_theorem_2",
+            "bidiverging_characterization_theorem_3"
+        ),
     // }}}
 // }}} Script
     ]))
