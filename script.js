@@ -9,7 +9,7 @@ function makePunchLineActor() { // Punch line slide {{{
         "rational_power_series",
         "s_operator",
         "reverse_s_operator",
-        ["dot_operator"],
+        "dot_operators",
         "sum_operator"
     ]
 
@@ -105,6 +105,8 @@ var titles = [ // Titles {{{
     "Diverging Languages",
     "Rational Operations for Diverging Languages",
     "Diverging Automata",
+    "Kleen's Theorem for Diverging Languages",
+    "Characterization Theorem for Diverging Languages",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1961,6 +1963,36 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "diverging_automata.criterion.2"
         ),
         hireAndFadeIn(0.5,"daas"),
+        "",
+        fadeOutAndFire(0.5,"daas"),
+    // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "diverging_kleene1",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_kleene1",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+    // }}}
+    // Characterization Theorem {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "diverging_characterization_theorem_1",
+            "diverging_characterization_theorem_2",
+            "diverging_characterization_theorem_3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_characterization_theorem_1",
+            "diverging_characterization_theorem_2",
+            "diverging_characterization_theorem_3"
+        ),
     // }}}
 // }}} Script
     ]))
