@@ -939,6 +939,21 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "imps_justification.the_bad.text",
             "imps_justification.the_beautiful.text"
         ),
+        hireAndFadeIn(0.5,"divergence.backdrop"),
+        "",
+        hireAndFadeInUseActors(0.5,
+            "divergence.line",
+            "divergence.infinity"
+        ),
+        "",
+        hireAndFadeIn(0.5,"divergence.function"),
+        "",
+        fadeOutAndFire(0.5,
+            "divergence.backdrop",
+            "divergence.line",
+            "divergence.infinity",
+            "divergence.function"
+        ),
     // }}}
     // Infinite languages {{{
         rotateNextTitle(),
