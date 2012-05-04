@@ -93,6 +93,7 @@ var titles = [ // Titles {{{
     "Weighted Language",
     "Rational Operations for Weighted Languages",
     "Kleene's Theorem",
+    "Infinite Matrix Product States",
     "Infinite Languages",
     "Rational Operations for Infinite Languages",
     "Bucchi (Infinite) Automata",
@@ -915,6 +916,30 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         ),
     // }}}
   // }}}
+  // Infinite system {{{
+    // IMPS {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.5,0.25,
+            "imps_justification.the_good.label",
+            "imps_justification.the_bad.label",
+            "imps_justification.the_beautiful.label"
+        ),
+        "",
+        hireAndFadeIn(0.5,"imps_justification.the_good.text"),
+        "",
+        hireAndFadeIn(0.5,"imps_justification.the_bad.text"),
+        "",
+        hireAndFadeIn(0.5,"imps_justification.the_beautiful.text"),
+        "",
+        fadeOutAndFire(0.5,
+            "imps_justification.the_good.label",
+            "imps_justification.the_bad.label",
+            "imps_justification.the_beautiful.label",
+            "imps_justification.the_good.text",
+            "imps_justification.the_bad.text",
+            "imps_justification.the_beautiful.text"
+        ),
+    // }}}
     // Infinite languages {{{
         rotateNextTitle(),
         hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
@@ -1549,6 +1574,7 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "diverging_characterization_theorem_3"
         ),
     // }}}
+  // }}}
 // }}} Script
     ]))
 },false)

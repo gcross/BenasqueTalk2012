@@ -6833,6 +6833,100 @@
        sodipodi:role="line">representable by  MPSs</tspan></text>
 
         <!-- }}} -->
+        <!-- imps justification {{{ -->
+  <text
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+     x="56.253937"
+     y="217.28735"
+     id="imps_justification.the_good.label"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text18450"><tspan
+       sodipodi:role="line"
+       id="tspan18452"
+       x="56.253937"
+       y="217.28735">The Good:</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="131.2887"
+     y="270.97485"
+     id="imps_justification.the_good.text"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text18458"><tspan
+       sodipodi:role="line"
+       id="tspan18460"
+       x="131.2887"
+       y="270.97485">They allows you to study systems in the bulk</tspan><tspan
+       sodipodi:role="line"
+       x="131.2887"
+       y="320.97485"
+       id="tspan18462">limit where the boundary effects are negligible.</tspan></text>
+  <text
+     sodipodi:linespacing="125%"
+     id="imps_justification.the_bad.label"
+     y="433.26392"
+     x="56.253937"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+     xml:space="preserve"
+     inkscape:label="#text18464"><tspan
+       y="433.26392"
+       x="56.253937"
+       id="tspan18466"
+       sodipodi:role="line">The Bad:</tspan></text>
+  <text
+     sodipodi:linespacing="125%"
+     id="imps_justification.the_bad.text"
+     y="488.02563"
+     x="131.2887"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     xml:space="preserve"
+     inkscape:label="#text18468"><tspan
+       id="tspan18472"
+       y="488.02563"
+       x="131.2887"
+       sodipodi:role="line">Most of the quantities associated with such</tspan><tspan
+       y="538.02563"
+       x="131.2887"
+       sodipodi:role="line"
+       id="tspan18476">systems are divergent.</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+     x="56.253937"
+     y="649.28833"
+     id="imps_justification.the_beautiful.label"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text18482"><tspan
+       sodipodi:role="line"
+       id="tspan18484"
+       x="56.253937"
+       y="649.28833">The Beautiful:</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="131.2887"
+     y="702.97583"
+     id="imps_justification.the_beautiful.text"
+     sodipodi:linespacing="125%"
+     inkscape:label="#text18486"><tspan
+       sodipodi:role="line"
+       x="131.2887"
+       y="702.97583"
+       id="tspan18496">The divergence doesn't matter!</tspan></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot18506"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Arial;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+       id="flowRegion18508"><rect
+         id="rect18510"
+         width="1575.45"
+         height="739.13379"
+         x="-461.27423"
+         y="116.46727" /></flowRegion><flowPara
+       id="flowPara18512"></flowPara></flowRoot>
+
+        <!-- }}} -->
         <!-- infinite languages {{{ -->
   <text
      xml:space="preserve"
