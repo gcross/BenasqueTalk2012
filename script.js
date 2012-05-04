@@ -111,6 +111,7 @@ var titles = [ // Titles {{{
     "Bidiverging Automata",
     "Kleen's Theorem for Bidiverging Languages",
     "Characterization Theorem for Bidiverging Languages",
+    "Outline",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -2099,6 +2100,22 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "bidiverging_characterization_theorem_2",
             "bidiverging_characterization_theorem_3"
         ),
+    // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        fadeIn(0.5,"outline"),
+        "",
+        parallel(
+            linear(0.5,"outline","weighted_languages_out_arrow.opacity",0.5),
+            linear(0.5,"outline","infinite_languages_out_arrow.opacity",0.5),
+            linear(0.5,"outline","infinite_weighted_languages.opacity",0.5),
+            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",0.5),
+            linear(0.5,"outline","embrace_divergence.opacity",0.5),
+            linear(0.5,"outline","embrace_divergence_out_arrow.opacity",1),
+            linear(0.5,"outline","infinite_matrix_product_states.opacity",1)
+        ),
+        "",
+        fadeOut(0.5,"outline"),
     // }}}
 // }}} Script
     ]))
