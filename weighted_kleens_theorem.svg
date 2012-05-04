@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,13 +56,13 @@
      sodipodi:linespacing="125%"
      inkscape:label="#text5335"><tspan
        sodipodi:role="line"
-       x="522.12756"
+       x="512.14319"
        y="276.10754"
-       id="tspan5364">the set of rational </tspan><tspan
+       id="tspan6418">the set of weighted languages</tspan><tspan
        sodipodi:role="line"
        x="512.14319"
        y="366.10754"
-       id="tspan6418">weighted languages</tspan></text>
+       id="tspan13294">recognized by automata</tspan></text>
   <g
      id="weighted_kleene2"
      transform="translate(0,9.595886)"
@@ -86,12 +86,28 @@
      x="512.14319"
      style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      xml:space="preserve"><tspan
-       id="tspan11129"
        y="596.10754"
-       x="512.14319"
-       sodipodi:role="line">the set of weighted languages</tspan><tspan
+       x="522.12756"
+       sodipodi:role="line"
+       id="tspan13279">the set of rational </tspan><tspan
        y="686.10754"
        x="512.14319"
        sodipodi:role="line"
-       id="tspan11131">recognized by automata</tspan></text>
+       id="tspan13281">weighted languages</tspan></text>
+  <text
+     inkscape:label="#text5335"
+     sodipodi:linespacing="125%"
+     id="weighted_kleene4"
+     y="276.10754"
+     x="512.14319"
+     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     xml:space="preserve"><tspan
+       id="tspan13298"
+       y="276.10754"
+       x="512.14319"
+       sodipodi:role="line">the set of variable-size states</tspan><tspan
+       id="tspan13300"
+       y="366.10754"
+       x="512.14319"
+       sodipodi:role="line">representable by  MPSs</tspan></text>
 </svg>

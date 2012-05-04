@@ -85,17 +85,14 @@ function rotateTitle(index) { // {{{
 // }}}
 var titles = [ // Titles {{{
     "The Punch Line",
-    "Outline",
-    "Languages",
-    "Rational Operations",
-    "Automata",
+    "Matrix Product States",
+    "Weighted Automata",
+    "Matrix Product States = Weighted Automata",
     "Kleene's Theorem",
-    "Outline",
+    "Language",
     "Weighted Language",
     "Rational Operations for Weighted Languages",
-    "Weighted Automata",
     "Kleene's Theorem",
-    "Outline",
     "Infinite Languages",
     "Rational Operations for Infinite Languages",
     "Bucchi (Infinite) Automata",
@@ -230,657 +227,25 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "punch_line_bottom_set"
         ),
     // }}}
-    // Outline {{{
+  // Finite system {{{
+    // Matrix product states{{{
         rotateNextTitle(),
-        hireAndFadeIn(0.5,"outline",makePartFocusActor("outline",[
-            "languages",
-            "weighted_languages",
-            "weighted_languages_in_arrow",
-            "weighted_languages_out_arrow",
-            "infinite_languages",
-            "infinite_languages_in_arrow",
-            "infinite_languages_out_arrow",
-            "infinite_weighted_languages",
-            "escape_divergence",
-            "escape_divergence_in_arrow",
-            "embrace_divergence",
-            "embrace_divergence_in_arrow",
-            "embrace_divergence_out_arrow",
-            "infinite_matrix_product_states"
-        ])),
-        "",
-        set("outline","languages.opacity",1),
-        linear(0.5,"outline","non_focused_opacity",0.15),
+        hireAndFadeInUseActors(0.5,"mps.definition","mps.wave_function.abstract"),
         "",
         parallel(
-            linear(0.5,"outline","languages.opacity",0.5),
-            linear(0.5,"outline","weighted_languages.opacity",1),
-            linear(0.5,"outline","weighted_languages_in_arrow.opacity",1),
-            linear(0.5,"outline","infinite_languages.opacity",1),
-            linear(0.5,"outline","infinite_languages_in_arrow.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,"outline","weighted_languages.opacity",0.5),
-            linear(0.5,"outline","weighted_languages_in_arrow.opacity",0.5),
-            linear(0.5,"outline","infinite_languages.opacity",0.5),
-            linear(0.5,"outline","infinite_languages_in_arrow.opacity",0.5),
-            linear(0.5,"outline","infinite_languages_out_arrow.opacity",1),
-            linear(0.5,"outline","weighted_languages_out_arrow.opacity",1),
-            linear(0.5,"outline","infinite_weighted_languages.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,"outline","infinite_languages_out_arrow.opacity",0.5),
-            linear(0.5,"outline","weighted_languages_out_arrow.opacity",0.5),
-            linear(0.5,"outline","infinite_weighted_languages.opacity",0.5),
-            linear(0.5,"outline","escape_divergence.opacity",1),
-            linear(0.5,"outline","escape_divergence_in_arrow.opacity",1),
-            linear(0.5,"outline","embrace_divergence.opacity",1),
-            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,"outline","escape_divergence.opacity",0.5),
-            linear(0.5,"outline","escape_divergence_in_arrow.opacity",0.5),
-            linear(0.5,"outline","embrace_divergence.opacity",0.5),
-            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",0.5),
-            linear(0.5,"outline","embrace_divergence_out_arrow.opacity",1),
-            linear(0.5,"outline","infinite_matrix_product_states.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,"outline","languages.opacity",1),
-            linear(0.5,"outline","weighted_languages.opacity",0),
-            linear(0.5,"outline","weighted_languages_in_arrow.opacity",0),
-            linear(0.5,"outline","infinite_languages.opacity",0),
-            linear(0.5,"outline","infinite_languages_in_arrow.opacity",0),
-            linear(0.5,"outline","infinite_languages_out_arrow.opacity",0),
-            linear(0.5,"outline","weighted_languages_out_arrow.opacity",0),
-            linear(0.5,"outline","infinite_weighted_languages.opacity",0),
-            linear(0.5,"outline","escape_divergence.opacity",0),
-            linear(0.5,"outline","escape_divergence_in_arrow.opacity",0),
-            linear(0.5,"outline","embrace_divergence.opacity",0),
-            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",0),
-            linear(0.5,"outline","embrace_divergence_out_arrow.opacity",0),
-            linear(0.5,"outline","infinite_matrix_product_states.opacity",0)
-        ),
-        "",
-    // }}}
-    // Languages {{{
-        fadeOut(0.5,"outline"),
-        rotateNextTitle(),
-        hireAndFadeIn(0.5,"languages.borderlines"),
-        "",
-        hireAndFadeIn(1,"languages.alphabet"),
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "languages.alphabet.example1",
-            "languages.alphabet.example2"
-        ),
-        "",
-        hireAndFadeIn(1,"languages.word"),
-        "",
-        linear(0.5,styleFor("languages.alphabet.example2"),"opacity",0.25),
-        hireAndFlashIn(0.5,0.1,
-            "languages.word.example1a",
-            "languages.word.example1b",
-            "languages.word.example1c"
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example1a"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example1b"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example1c"),"opacity",0.25)
-        ),
-        linear(0.5,styleFor("languages.alphabet.example2"),"opacity",1),
-        hireAndFlashIn(0.5,0.1,
-            "languages.word.example2a",
-            "languages.word.example2b",
-            "languages.word.example2c"
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example1a"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example1b"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example1c"),"opacity",1)
-        ),
-        wait(0.5),
-        hireAndFadeIn(0.5,"languages.language"),
-        "",
-        parallel(
-            linear(0.5,styleFor("languages.alphabet.example2"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example2a"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example2b"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example2c"),"opacity",0.25)
-        ),
-        hireAndFlashIn(0.5,0.1,
-            "languages.language.example1a",
-            "languages.language.example1b",
-            "languages.language.example1c"
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example1a"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example1b"),"opacity",0.25),
-            linear(0.5,styleFor("languages.word.example1c"),"opacity",0.25),
-            linear(0.5,styleFor("languages.language.example1a"),"opacity",0.25),
-            linear(0.5,styleFor("languages.language.example1b"),"opacity",0.25),
-            linear(0.5,styleFor("languages.language.example1c"),"opacity",0.25)
-        ),
-        parallel(
-            linear(0.5,styleFor("languages.alphabet.example2"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example2a"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example2b"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example2c"),"opacity",1)
-        ),
-        hireAndFlashIn(0.5,0.1,
-            "languages.language.example2a",
-            "languages.language.example2b",
-            "languages.language.example2c"
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example1a"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example1b"),"opacity",1),
-            linear(0.5,styleFor("languages.word.example1c"),"opacity",1),
-            linear(0.5,styleFor("languages.language.example1a"),"opacity",1),
-            linear(0.5,styleFor("languages.language.example1b"),"opacity",1),
-            linear(0.5,styleFor("languages.language.example1c"),"opacity",1)
-        ),
-        "",
-    // }}}
-    // Rational Operations {{{
-        fadeOutAndFire(0.5,
-            "languages.borderlines",
-            "languages.alphabet",
-            "languages.alphabet.example1",
-            "languages.alphabet.example2",
-            "languages.word",
-            "languages.word.example1a",
-            "languages.word.example1b",
-            "languages.word.example1c",
-            "languages.word.example2a",
-            "languages.word.example2b",
-            "languages.word.example2c",
-            "languages.language",
-            "languages.language.example1a",
-            "languages.language.example1b",
-            "languages.language.example1c",
-            "languages.language.example2a",
-            "languages.language.example2b",
-            "languages.language.example2c"
-        ),
-        rotateNextTitle(),
-        hireAndFlashIn(0.5,0.25,
-            "rational_operations_box_1",
-            "rational_operations_box_2",
-            "rational_operations_box_3"
-        ),
-        "",
-        hireAndFadeInUseActors(0.5,
-            "rational_operations_op_1",
-            "rational_operations_opeq_1",
-            "rational_operations_opdef_1"
-        ),
-        "",
-        hireAndFadeIn(0.5,"rational_operations_example_1"),
-        "",
-        hireAndFadeInUseActors(0.5,
-            "rational_operations_op_2",
-            "rational_operations_opeq_2",
-            "rational_operations_opdef_2"
-        ),
-        "",
-        hireAndFadeIn(0.5,"rational_operations_example_2"),
-        "",
-        hireAndFadeInUseActors(0.5,
-            "rational_operations_op_3",
-            "rational_operations_opeq_3",
-            "rational_operations_opdef_3"
-        ),
-        "",
-        hireAndFadeIn(0.5,"rational_operations_example_3"),
-        "",
-        hireAndFadeIn(0.5,"rational_language_definition"),
-        "",
-        fadeOutAndFire(0.5,
-            "rational_operations_box_1",
-            "rational_operations_box_2",
-            "rational_operations_box_3",
-            "rational_operations_op_1",
-            "rational_operations_opeq_1",
-            "rational_operations_opdef_1",
-            "rational_operations_example_1",
-            "rational_operations_op_2",
-            "rational_operations_opeq_2",
-            "rational_operations_opdef_2",
-            "rational_operations_example_2",
-            "rational_operations_op_3",
-            "rational_operations_opeq_3",
-            "rational_operations_opdef_3",
-            "rational_operations_example_3",
-            "rational_language_definition"
-        ),
-    // }}}
-    // Automata {{{
-        rotateNextTitle(),
-      // Introduce the automata {{{
-        hireUseActors("automata.5tuple","automata.5tuple.cover"),
-        "",
-        linear(0.5,"automata.5tuple.cover","x",470),
-        hireAndFlashIn(0.5,0.25,
-            "automata.5tuple.alphabet",
-            "automata.5tuple.states",
-            "automata.5tuple.transitions",
-            "automata.5tuple.initial",
-            "automata.5tuple.final"
-        ),
-        "",
-        hire("automata.automata",makePartFocusActor("automata.automata",[
-            "state.1",
-            "state.2",
-            "transitions",
-            "transitions.initial",
-        ])),
-        parallel(
-            decelerate(1,"automata.automata","x",520,0),
-            hireAndFadeInUseActor(1,"automata.automata.box")
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("automata.5tuple.states"),"opacity",0.33),
-            linear(0.5,styleFor("automata.5tuple.transitions"),"opacity",0.33),
-            linear(0.5,styleFor("automata.5tuple.initial"),"opacity",0.33),
-            linear(0.5,styleFor("automata.5tuple.final"),"opacity",0.33),
-            linear(0.5,"automata.automata","non_focused_opacity",0.33)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("automata.5tuple.alphabet"),"opacity",0.33),
-            linear(0.5,styleFor("automata.5tuple.states"),"opacity",1),
-            linear(0.5,"automata.automata","state.2.opacity",1),
-            linear(0.5,"automata.automata","state.1.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("automata.5tuple.states"),"opacity",0.33),
-            linear(0.5,styleFor("automata.5tuple.transitions"),"opacity",1),
-            linear(0.5,"automata.automata","state.1.opacity",0.33),
-            linear(0.5,"automata.automata","state.2.opacity",0.33),
-            linear(0.5,"automata.automata","transitions.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("automata.5tuple.transitions"),"opacity",0.33),
-            linear(0.5,styleFor("automata.5tuple.initial"),"opacity",1),
-            linear(0.5,"automata.automata","transitions.opacity",0.33),
-            linear(0.5,"automata.automata","state.1.opacity",1),
-            linear(0.5,"automata.automata","transitions.initial.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("automata.5tuple.initial"),"opacity",0.33),
-            linear(0.5,styleFor("automata.5tuple.final"),"opacity",1),
-            linear(0.5,"automata.automata","state.1.opacity",0.33),
-            linear(0.5,"automata.automata","transitions.initial.opacity",0.33),
-            linear(0.5,"automata.automata","state.2.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,"automata.automata","non_focused_opacity",1),
-            linear(0.5,styleFor("automata.5tuple.alphabet"),"opacity",1),
-            linear(0.5,styleFor("automata.5tuple.states"),"opacity",1),
-            linear(0.5,styleFor("automata.5tuple.transitions"),"opacity",1),
-            linear(0.5,styleFor("automata.5tuple.initial"),"opacity",1),
-            linear(0.5,styleFor("automata.5tuple.final"),"opacity",1)
-        ),
-        hireAndFadeIn(1,"automata.criterion"),
-      // }}}
-      // First example {{{
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "automata.input.1.0",
-            "automata.input.2.0",
-            "automata.input.3.1",
-            "automata.input.4.0"
-        ),
-        "",
-        hireAndFadeIn(0.5,"automata.marker",null,"automata.automata"),
-        smooth(0.5,"automata.marker","x",124.169),
-        "",
-        hireAndFadeIn(0.5,"automata.reader"),
-        "",
-        parallel(
-            accelerate(0.25,"automata.marker","x",210.128),
-            accelerate(0.25,"automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"automata.marker","x",124.169),
-            decelerate(0.25,"automata.marker","y",0)
-        ),
-        "",
-        smooth(0.5,"automata.reader","x",106),
-        "",
-        parallel(
-            accelerate(0.25,"automata.marker","x",210.128),
-            accelerate(0.25,"automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"automata.marker","x",124.169),
-            decelerate(0.25,"automata.marker","y",0)
-        ),
-        "",
-        smooth(0.5,"automata.reader","x",212),
-        "",
-        smooth(0.5,"automata.marker","x",336.694),
-        "",
-        smooth(0.5,"automata.reader","x",318),
-        "",
-        parallel(
-            accelerate(0.25,"automata.marker","x",444.128),
-            accelerate(0.25,"automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"automata.marker","x",336.694),
-            decelerate(0.25,"automata.marker","y",0)
-        ),
-        "",
-        fadeOut(0.5,"automata.reader"),
-        "",
-        hireUseActor("automata.check_mark"),
-        set(styleOf("automata.check_mark"),"opacity",0.9),
-        set("automata.check_mark","x",700),
-        set("automata.check_mark","y",550),
-        set("automata.check_mark","scale",0.05),
-        parallel(
-            linear(0.5,"automata.check_mark","x",0),
-            linear(0.5,"automata.check_mark","y",0),
-            linear(0.5,"automata.check_mark","scale",1)
-        ),
-      // }}}
-      // Second example {{{
-        "",
-        fadeOutAndFire(0.5,"automata.check_mark"),
-        "",
-        fadeOutAndFire(0.25,"automata.input.2.0"),
-        hireAndFadeIn(0.25,"automata.input.2.1"),
-        "",
-        smooth(0.5,"automata.marker","x",124.169),
-        "",
-        set("automata.reader","x",0),
-        fadeIn(0.5,"automata.reader"),
-        "",
-        parallel(
-            accelerate(0.25,"automata.marker","x",210.128),
-            accelerate(0.25,"automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"automata.marker","x",124.169),
-            decelerate(0.25,"automata.marker","y",0)
-        ),
-        "",
-        smooth(0.5,"automata.reader","x",106),
-        "",
-        smooth(0.5,"automata.marker","x",336.694),
-        "",
-        smooth(0.5,"automata.reader","x",212),
-        "",
-        parallel(
-            sequence(
-                linear(0.025,"automata.automata","x",20),
-                linear(0.05,"automata.automata","x",-20),
-                linear(0.05,"automata.automata","x",20),
-                linear(0.05,"automata.automata","x",-20),
-                linear(0.025,"automata.automata","x",0)
-            ),
-            sequence(
-                linear(0.025,"automata.automata","y",10),
-                linear(0.05,"automata.automata","y",-10),
-                linear(0.05,"automata.automata","y",10),
-                linear(0.05,"automata.automata","y",-10),
-                linear(0.05,"automata.automata","y",10),
-                linear(0.05,"automata.automata","y",-10),
-                linear(0.025,"automata.automata","y",0)
-            )
-        ),
-        "",
-        fadeOut(0.5,"automata.reader"),
-        hireUseActor("automata.cross_mark"),
-        set(styleOf("automata.cross_mark"),"opacity",0.9),
-        set("automata.cross_mark","x",700),
-        set("automata.cross_mark","y",550),
-        set("automata.cross_mark","scale",0.05),
-        parallel(
-            linear(0.5,"automata.cross_mark","x",0),
-            linear(0.5,"automata.cross_mark","y",0),
-            linear(0.5,"automata.cross_mark","scale",1)
-        ),
-      // }}}
-      // Third example {{{
-        "",
-        fadeOut(0.5,"automata.cross_mark"),
-        "",
-        parallel(
-            sequence(
-                fadeOutAndFire(0.25,"automata.input.2.1"),
-                hireAndFadeIn(0.25,"automata.input.2.0",null,"automata.cross_mark")
-            ),
-            sequence(
-                wait(0.125),
-                fadeOutAndFire(0.25,"automata.input.3.1"),
-                hireAndFadeIn(0.25,"automata.input.3.0",null,"automata.cross_mark")
-            )
-        ),
-        "",
-        smooth(0.5,"automata.marker","x",124.169),
-        "",
-        set("automata.reader","x",0),
-        fadeIn(0.5,"automata.reader"),
-        "",
-        parallel(
-            accelerate(0.25,"automata.marker","x",210.128),
-            accelerate(0.25,"automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"automata.marker","x",124.169),
-            decelerate(0.25,"automata.marker","y",0)
-        ),
-        "",
-        smooth(0.5,"automata.reader","x",106),
-        "",
-        parallel(
-            accelerate(0.25,"automata.marker","x",210.128),
-            accelerate(0.25,"automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"automata.marker","x",124.169),
-            decelerate(0.25,"automata.marker","y",0)
-        ),
-        "",
-        smooth(0.5,"automata.reader","x",212),
-        "",
-        parallel(
-            accelerate(0.25,"automata.marker","x",210.128),
-            accelerate(0.25,"automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"automata.marker","x",124.169),
-            decelerate(0.25,"automata.marker","y",0)
-        ),
-        "",
-        smooth(0.5,"automata.reader","x",318),
-        "",
-        parallel(
-            accelerate(0.25,"automata.marker","x",210.128),
-            accelerate(0.25,"automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"automata.marker","x",124.169),
-            decelerate(0.25,"automata.marker","y",0)
-        ),
-        "",
-        fadeOut(0.5,"automata.reader"),
-        "",
-        set("automata.automata","state.2.opacity",0),
-        set("automata.automata","state.1.opacity",1),
-        linear(0.5,"automata.automata","non_focused_opacity",0.25),
-        "",
-        linear(0.5,"automata.automata","non_focused_opacity",1),
-        "",
-        set(styleOf("automata.cross_mark"),"opacity",0.9),
-        set("automata.cross_mark","x",700),
-        set("automata.cross_mark","y",550),
-        set("automata.cross_mark","scale",0.05),
-        parallel(
-            linear(0.5,"automata.cross_mark","x",0),
-            linear(0.5,"automata.cross_mark","y",0),
-            linear(0.5,"automata.cross_mark","scale",1)
-        ),
-        "",
-      // }}}
-      // Fade out everything {{{
-        fadeOutAndFire(0.5,
-            "automata.automata",
-            "automata.automata.box",
-            "automata.marker",
-            "automata.criterion",
-            "automata.cross_mark",
-            "automata.5tuple",
-            "automata.5tuple.cover",
-            "automata.5tuple.alphabet",
-            "automata.5tuple.states",
-            "automata.5tuple.transitions",
-            "automata.5tuple.initial",
-            "automata.5tuple.final",
-            "automata.input.1.0",
-            "automata.input.2.0",
-            "automata.input.3.0",
-            "automata.input.4.0"
-        ),
-      // }}}
-    // }}}
-    // Kleene's Theorem {{{
-        rotateNextTitle(),
-        "",
-        hireAndFlashIn(0.75,0.375,
-            "kleene1",
-            "kleene2",
-            "kleene3"
+            fadeOutAndFire(0.5, "mps.wave_function.abstract"),
+            hireAndFadeInUseActor(0.5, "mps.wave_function.concrete")
         ),
         "",
         fadeOutAndFire(0.5,
-            "kleene1",
-            "kleene2",
-            "kleene3"
-        ),
-    // }}}
-    // Outline {{{
-        rotateNextTitle(),
-        fadeIn(0.5,"outline"),
-        "",
-        parallel(
-            linear(0.5,"outline","languages.opacity",0.5),
-            linear(0.5,"outline","weighted_languages.opacity",1),
-            linear(0.5,"outline","weighted_languages_in_arrow.opacity",1)
-        ),
-        "",
-        fadeOut(0.5,"outline"),
-    // }}}
-    // Weighted language {{{
-        rotateNextTitle(),
-        hireAndFadeIn(0.5,"weighted_languages.borderlines"),
-        "",
-        hireAndFadeIn(0.5,"weighted_languages.alphabet"),
-        "",
-        hireAndFadeIn(0.5,"weighted_languages.alphabet.example"),
-        "",
-        hireAndFadeIn(0.5,"weighted_languages.semiring.1"),
-        "",
-        hireAndFadeIn(0.5,"weighted_languages.semiring.2"),
-        "",
-        hireAndFadeIn(0.5,"weighted_languages.semiring.example"),
-        "",
-        hireAndFadeIn(0.5,"weighted_languages.word"),
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "weighted_languages.word.example1",
-            "weighted_languages.word.example2",
-            "weighted_languages.word.example3"
-        ),
-        "",
-        hireAndFadeIn(0.5,"weighted_languages.language"),
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "weighted_languages.language.example1",
-            "weighted_languages.language.example2",
-            "weighted_languages.language.example3"
-        ),
-        "",
-        fadeOutAndFire(0.5,
-            "weighted_languages.alphabet",
-            "weighted_languages.alphabet.example",
-            "weighted_languages.borderlines",
-            "weighted_languages.language",
-            "weighted_languages.language.example1",
-            "weighted_languages.language.example2",
-            "weighted_languages.language.example3",
-            "weighted_languages.semiring.1",
-            "weighted_languages.semiring.2",
-            "weighted_languages.semiring.example",
-            "weighted_languages.word",
-            "weighted_languages.word.example1",
-            "weighted_languages.word.example2",
-            "weighted_languages.word.example3"
-        ),
-    // }}}
-    // Rational weighted operations {{{
-        rotateNextTitle(),
-        hireAndFlashIn(0.5,0.25,
-            "weighted_rational_operations_box_1",
-            "weighted_rational_operations_box_2",
-            "weighted_rational_operations_box_3"
-        ),
-        "",
-        hireAndFadeInUseActor(0.5, "weighted_rational_operations_definition_1"),
-        "",
-        hireAndFadeIn(0.5,"weighted_rational_operations_example_1"),
-        "",
-        hireAndFadeInUseActor(0.5, "weighted_rational_operations_definition_2"),
-        "",
-        hireAndFadeIn(0.5,"weighted_rational_operations_example_2"),
-        "",
-        hireAndFadeInUseActor(0.5, "weighted_rational_operations_definition_3"),
-        "",
-        hireAndFadeIn(0.5,"weighted_rational_operations_opdef_3_warning"),
-        "",
-        hireAndFadeIn(0.5,"weighted_rational_operations_example_3"),
-        "",
-        hireAndFadeIn(0.5,"weighted_rational_language_definition"),
-        "",
-        fadeOutAndFire(0.5,
-            "weighted_rational_operations_box_1",
-            "weighted_rational_operations_box_2",
-            "weighted_rational_operations_box_3",
-            "weighted_rational_operations_definition_1",
-            "weighted_rational_operations_definition_2",
-            "weighted_rational_operations_definition_3",
-            "weighted_rational_operations_example_1",
-            "weighted_rational_operations_example_2",
-            "weighted_rational_operations_example_3",
-            "weighted_rational_operations_opdef_3_warning",
-            "weighted_rational_language_definition"
+            "mps.definition",
+            "mps.wave_function.concrete"
         ),
     // }}}
     // Weighted automata {{{
         rotateNextTitle(),
       // Introduce the automata {{{
         hireUseActors("weighted_automata.5tuple","weighted_automata.5tuple.cover"),
-        "",
         linear(0.5,"weighted_automata.5tuple.cover","x",470),
         hireAndFlashIn(0.5,0.25,
             "weighted_automata.5tuple.alphabet",
@@ -888,18 +253,6 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "weighted_automata.5tuple.transitions",
             "weighted_automata.5tuple.initial",
             "weighted_automata.5tuple.final"
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("weighted_automata.5tuple.alphabet"),"opacity",0.25),
-            linear(0.5,styleFor("weighted_automata.5tuple.states"),"opacity",0.25),
-            linear(0.5,styleFor("weighted_automata.5tuple.initial"),"opacity",0.25)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("weighted_automata.5tuple.alphabet"),"opacity",1),
-            linear(0.5,styleFor("weighted_automata.5tuple.states"),"opacity",1),
-            linear(0.5,styleFor("weighted_automata.5tuple.initial"),"opacity",1)
         ),
         "",
         hire("weighted_automata.automata",makePartFocusActor("weighted_automata.automata",[
@@ -1287,41 +640,281 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "weighted_automata.weight.result.0"
         ),
       // }}}
-      // Sum form {{{
+    // }}}
+    // Connect automata to MPS {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"mac.mps"),
         "",
-        hireAndFadeInUseActor(0.5,"waas"),
+        hireAndFlashIn(0.5,0.25,
+            "mac.mps.1",
+            "mac.mps.2",
+            "mac.mps.3",
+            "mac.mps.rest"
+        ),
         "",
-        fadeOutAndFire(0.5,"waas"),
-      // }}}
+        hireAndFadeInUseActors(0.5,
+            "mac.walk.1",
+            "mac.indices.1"
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("mac.walk.1"),"opacity",0.5),
+            fadeOutAndFire(0.5,"mac.indices.1"),
+            hireAndFadeInUseActors(0.5,
+                "mac.walk.2",
+                "mac.indices.2"
+            )
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("mac.walk.2"),"opacity",0.5),
+            fadeOutAndFire(0.5,"mac.indices.2"),
+            hireAndFadeInUseActors(0.5,
+                "mac.walk.3",
+                "mac.indices.3"
+            )
+        ),
+        "",
+        parallel(
+            fadeOutAndFire(0.5,"mac.indices.3"),
+            linear(0.5,styleFor("mac.walk.1"),"opacity",1),
+            linear(0.5,styleFor("mac.walk.2"),"opacity",1)
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "mac.mps",
+            "mac.mps.1",
+            "mac.mps.2",
+            "mac.mps.3",
+            "mac.mps.rest",
+            "mac.walk.1",
+            "mac.walk.2",
+            "mac.walk.3"
+        ),
     // }}}
     // Kleene's Theorem {{{
         rotateNextTitle(),
-        "",
         hireAndFlashIn(0.75,0.375,
             "weighted_kleene1",
             "weighted_kleene2",
             "weighted_kleene3"
         ),
         "",
+        fadeOutAndFire(0.5,"weighted_kleene1"),
+        hireAndFadeIn(0.5,"weighted_kleene4"),
+        "",
         fadeOutAndFire(0.5,
-            "weighted_kleene1",
+            "weighted_kleene4",
             "weighted_kleene2",
             "weighted_kleene3"
         ),
     // }}}
-    // Outline {{{
+    // Languages {{{
         rotateNextTitle(),
-        fadeIn(0.5,"outline"),
+        hireAndFadeIn(0.5,"languages.borderlines"),
         "",
-        parallel(
-            linear(0.5,"outline","weighted_languages.opacity",0.5),
-            linear(0.5,"outline","weighted_languages_in_arrow.opacity",0.5),
-            linear(0.5,"outline","infinite_languages.opacity",1),
-            linear(0.5,"outline","infinite_languages_in_arrow.opacity",1)
+        hireAndFadeIn(1,"languages.alphabet"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "languages.alphabet.example1",
+            "languages.alphabet.example2"
         ),
         "",
-        fadeOut(0.5,"outline"),
+        hireAndFadeIn(1,"languages.word"),
+        "",
+        linear(0.5,styleFor("languages.alphabet.example2"),"opacity",0.25),
+        hireAndFlashIn(0.5,0.1,
+            "languages.word.example1a",
+            "languages.word.example1b",
+            "languages.word.example1c"
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1a"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1b"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1c"),"opacity",0.25)
+        ),
+        linear(0.5,styleFor("languages.alphabet.example2"),"opacity",1),
+        hireAndFlashIn(0.5,0.1,
+            "languages.word.example2a",
+            "languages.word.example2b",
+            "languages.word.example2c"
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1a"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1b"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1c"),"opacity",1)
+        ),
+        wait(0.5),
+        hireAndFadeIn(0.5,"languages.language"),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example2"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example2a"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example2b"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example2c"),"opacity",0.25)
+        ),
+        hireAndFlashIn(0.5,0.1,
+            "languages.language.example1a",
+            "languages.language.example1b",
+            "languages.language.example1c"
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1a"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1b"),"opacity",0.25),
+            linear(0.5,styleFor("languages.word.example1c"),"opacity",0.25),
+            linear(0.5,styleFor("languages.language.example1a"),"opacity",0.25),
+            linear(0.5,styleFor("languages.language.example1b"),"opacity",0.25),
+            linear(0.5,styleFor("languages.language.example1c"),"opacity",0.25)
+        ),
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example2"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example2a"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example2b"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example2c"),"opacity",1)
+        ),
+        hireAndFlashIn(0.5,0.1,
+            "languages.language.example2a",
+            "languages.language.example2b",
+            "languages.language.example2c"
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("languages.alphabet.example1"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1a"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1b"),"opacity",1),
+            linear(0.5,styleFor("languages.word.example1c"),"opacity",1),
+            linear(0.5,styleFor("languages.language.example1a"),"opacity",1),
+            linear(0.5,styleFor("languages.language.example1b"),"opacity",1),
+            linear(0.5,styleFor("languages.language.example1c"),"opacity",1)
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "languages.borderlines",
+            "languages.alphabet",
+            "languages.alphabet.example1",
+            "languages.alphabet.example2",
+            "languages.word",
+            "languages.word.example1a",
+            "languages.word.example1b",
+            "languages.word.example1c",
+            "languages.word.example2a",
+            "languages.word.example2b",
+            "languages.word.example2c",
+            "languages.language",
+            "languages.language.example1a",
+            "languages.language.example1b",
+            "languages.language.example1c",
+            "languages.language.example2a",
+            "languages.language.example2b",
+            "languages.language.example2c"
+        ),
     // }}}
+    // Weighted language {{{
+        rotateNextTitle(),
+        hireAndFadeIn(0.5,"weighted_languages.borderlines"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.alphabet"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.alphabet.example"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.semiring.1"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.semiring.2"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.semiring.example"),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.word"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "weighted_languages.word.example1",
+            "weighted_languages.word.example2",
+            "weighted_languages.word.example3"
+        ),
+        "",
+        hireAndFadeIn(0.5,"weighted_languages.language"),
+        "",
+        hireAndFlashIn(0.5,0.25,
+            "weighted_languages.language.example1",
+            "weighted_languages.language.example2",
+            "weighted_languages.language.example3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "weighted_languages.alphabet",
+            "weighted_languages.alphabet.example",
+            "weighted_languages.borderlines",
+            "weighted_languages.language",
+            "weighted_languages.language.example1",
+            "weighted_languages.language.example2",
+            "weighted_languages.language.example3",
+            "weighted_languages.semiring.1",
+            "weighted_languages.semiring.2",
+            "weighted_languages.semiring.example",
+            "weighted_languages.word",
+            "weighted_languages.word.example1",
+            "weighted_languages.word.example2",
+            "weighted_languages.word.example3"
+        ),
+    // }}}
+    // Rational weighted operations {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.5,0.25,
+            "weighted_rational_operations_box_1",
+            "weighted_rational_operations_box_2",
+            "weighted_rational_operations_box_3"
+        ),
+        "",
+        hireAndFadeInUseActor(0.5, "weighted_rational_operations_definition_1"),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_operations_example_1"),
+        "",
+        hireAndFadeInUseActor(0.5, "weighted_rational_operations_definition_2"),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_operations_example_2"),
+        "",
+        hireAndFadeInUseActor(0.5, "weighted_rational_operations_definition_3"),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_operations_opdef_3_warning"),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_operations_example_3"),
+        "",
+        hireAndFadeIn(0.5,"weighted_rational_language_definition"),
+        "",
+        fadeOutAndFire(0.5,
+            "weighted_rational_operations_box_1",
+            "weighted_rational_operations_box_2",
+            "weighted_rational_operations_box_3",
+            "weighted_rational_operations_definition_1",
+            "weighted_rational_operations_definition_2",
+            "weighted_rational_operations_definition_3",
+            "weighted_rational_operations_example_1",
+            "weighted_rational_operations_example_2",
+            "weighted_rational_operations_example_3",
+            "weighted_rational_operations_opdef_3_warning",
+            "weighted_rational_language_definition"
+        ),
+    // }}}
+    // Kleene's Theorem (encore) {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "weighted_kleene4",
+            "weighted_kleene2",
+            "weighted_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "weighted_kleene4",
+            "weighted_kleene2",
+            "weighted_kleene3"
+        ),
+    // }}}
+  // }}}
     // Infinite languages {{{
         rotateNextTitle(),
         hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
@@ -1365,7 +958,8 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "infinite_languages.words.nfinite.examples.1",
             "infinite_languages.words.nfinite.examples.2"
         ),
-    // }}}
+
+// }}}
     // Rational infinite operations {{{
         rotateNextTitle(),
         hireAndFlashIn(0.5,0.25,
@@ -1709,66 +1303,6 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "infinite_characterization_theorem_3"
         ),
     // }}}
-    // Outline {{{
-        rotateNextTitle(),
-        fadeIn(0.5,"outline"),
-        "",
-        parallel(
-            linear(0.5,"outline","infinite_languages.opacity",0.5),
-            linear(0.5,"outline","infinite_languages_in_arrow.opacity",0.5),
-            linear(0.5,"outline","weighted_languages_out_arrow.opacity",1),
-            linear(0.5,"outline","infinite_languages_out_arrow.opacity",1),
-            linear(0.5,"outline","infinite_weighted_languages.opacity",1)
-        ),
-        "",
-        parallel(
-            linear(0.5,"outline","escape_divergence_in_arrow.opacity",1),
-            linear(0.5,"outline","escape_divergence.opacity",1)
-        ),
-        "",
-        hireAndFadeIn(0.5,"outline.escape_divergence_to_quemirings"),
-        "",
-        parallel(
-            fadeOut(0.5,"outline"),
-            fadeOut(0.5,"outline.escape_divergence_to_quemirings")
-        ),
-        hireAndFadeIn(0.5,"divergence.backdrop"),
-        "",
-        hireAndFadeInUseActors(0.5,
-            "divergence.line",
-            "divergence.infinity"
-        ),
-        "",
-        hireAndFadeIn(0.5,"divergence.function"),
-        "",
-        fadeOutAndFire(0.5,
-            "divergence.backdrop",
-            "divergence.line",
-            "divergence.infinity",
-            "divergence.function"
-        ),
-        parallel(
-            fadeIn(0.5,"outline"),
-            fadeIn(0.5,"outline.escape_divergence_to_quemirings")
-        ),
-        "",
-        hireAndFadeIn(0.5,"outline.escape_divergence_to_quemirings_crossed_out"),
-        "",
-        parallel(
-            linear(0.5,"outline","escape_divergence_in_arrow.opacity",0.5),
-            linear(0.5,"outline","escape_divergence.opacity",0.5),
-            fadeOutAndFire(0.5,
-                "outline.escape_divergence_to_quemirings",
-                "outline.escape_divergence_to_quemirings_crossed_out"
-            )
-        ),
-        parallel(
-            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",1),
-            linear(0.5,"outline","embrace_divergence.opacity",1)
-        ),
-        "",
-        fadeOut(0.5,"outline"),
-    // }}}
     // Diverging languages {{{
         rotateNextTitle(),
         hireAndFadeIn(0.5,"diverging_languages.borderlines"),
@@ -2014,108 +1548,6 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "diverging_characterization_theorem_2",
             "diverging_characterization_theorem_3"
         ),
-    // }}}
-    // Bi-diverging languages {{{
-        rotateNextTitle(),
-        hireAndFadeIn(0.5,"bidiverging_language"),
-        "",
-        hireAndFadeIn(0.5,"bidiverging_juxtaposition_operator"),
-        "",
-        hireAndFadeIn(0.5,"bidiverging_rational_language"),
-        "",
-        fadeOutAndFire(0.5,
-            "bidiverging_language",
-            "bidiverging_juxtaposition_operator",
-            "bidiverging_rational_language"
-        ),
-    // }}}
-    // Bidiverging automata {{{
-        rotateNextTitle(),
-        hireUseActors("bidiverging_automata.5tuple","bidiverging_automata.5tuple.cover"),
-        linear(0.5,"bidiverging_automata.5tuple.cover","x",470),
-        hireAndFlashIn(0.5,0.25,
-            "bidiverging_automata.5tuple.alphabet",
-            "bidiverging_automata.5tuple.states",
-            "bidiverging_automata.5tuple.transitions",
-            "bidiverging_automata.5tuple.initial",
-            "bidiverging_automata.5tuple.final"
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("bidiverging_automata.5tuple.alphabet"),"opacity",0.25),
-            linear(0.5,styleFor("bidiverging_automata.5tuple.states"),"opacity",0.25),
-            linear(0.5,styleFor("bidiverging_automata.5tuple.transitions"),"opacity",0.25),
-            linear(0.5,styleFor("bidiverging_automata.5tuple.final"),"opacity",0.25)
-        ),
-        "",
-        parallel(
-            linear(0.5,styleFor("bidiverging_automata.5tuple.alphabet"),"opacity",1),
-            linear(0.5,styleFor("bidiverging_automata.5tuple.states"),"opacity",1),
-            linear(0.5,styleFor("bidiverging_automata.5tuple.transitions"),"opacity",1),
-            linear(0.5,styleFor("bidiverging_automata.5tuple.final"),"opacity",1)
-        ),
-        hireAndFadeIn(0.5,"bidiverging_automata.criterion.1"),
-        "",
-        hireAndFadeIn(0.5,"bidiverging_automata.criterion.2"),
-        "",
-        fadeOutAndFire(0.5,
-            "bidiverging_automata.5tuple",
-            "bidiverging_automata.5tuple.alphabet",
-            "bidiverging_automata.5tuple.cover",
-            "bidiverging_automata.5tuple.states",
-            "bidiverging_automata.5tuple.transitions",
-            "bidiverging_automata.5tuple.initial",
-            "bidiverging_automata.5tuple.final",
-            "bidiverging_automata.criterion.1",
-            "bidiverging_automata.criterion.2"
-        ),
-        hireAndFadeIn(0.5,"baas"),
-        "",
-        fadeOutAndFire(0.5,"baas"),
-    // }}}
-    // Kleene's Theorem {{{
-        rotateNextTitle(),
-        hireAndFlashIn(0.75,0.375,
-            "bidiverging_kleene1",
-            "bidiverging_kleene2",
-            "bidiverging_kleene3"
-        ),
-        "",
-        fadeOutAndFire(0.5,
-            "bidiverging_kleene1",
-            "bidiverging_kleene2",
-            "bidiverging_kleene3"
-        ),
-    // }}}
-    // Characterization Theorem {{{
-        rotateNextTitle(),
-        hireAndFlashIn(0.75,0.375,
-            "bidiverging_characterization_theorem_1",
-            "bidiverging_characterization_theorem_2",
-            "bidiverging_characterization_theorem_3"
-        ),
-        "",
-        fadeOutAndFire(0.5,
-            "bidiverging_characterization_theorem_1",
-            "bidiverging_characterization_theorem_2",
-            "bidiverging_characterization_theorem_3"
-        ),
-    // }}}
-    // Outline {{{
-        rotateNextTitle(),
-        fadeIn(0.5,"outline"),
-        "",
-        parallel(
-            linear(0.5,"outline","weighted_languages_out_arrow.opacity",0.5),
-            linear(0.5,"outline","infinite_languages_out_arrow.opacity",0.5),
-            linear(0.5,"outline","infinite_weighted_languages.opacity",0.5),
-            linear(0.5,"outline","embrace_divergence_in_arrow.opacity",0.5),
-            linear(0.5,"outline","embrace_divergence.opacity",0.5),
-            linear(0.5,"outline","embrace_divergence_out_arrow.opacity",1),
-            linear(0.5,"outline","infinite_matrix_product_states.opacity",1)
-        ),
-        "",
-        fadeOut(0.5,"outline"),
     // }}}
 // }}} Script
     ]))

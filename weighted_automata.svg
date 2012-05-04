@@ -90,16 +90,6 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient8340"
-       id="linearGradient4979"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-10,80)"
-       x1="546.18597"
-       y1="320.41342"
-       x2="614.6073"
-       y2="320.41342" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient8340"
        id="linearGradient5044"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-10,80)"
@@ -151,9 +141,9 @@
      inkscape:window-height="1152"
      id="namedview26763"
      showgrid="false"
-     inkscape:zoom="1.7198899"
-     inkscape:cx="1065.8497"
-     inkscape:cy="527.63037"
+     inkscape:zoom="1.2161458"
+     inkscape:cx="663.75976"
+     inkscape:cy="295.05734"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -253,7 +243,7 @@
          id="tspan6276"
          y="263.01636"
          x="107.69459"
-         sodipodi:role="line">(i.e., the alphabet)</tspan></text>
+         sodipodi:role="line">(in this case, 0 or 1)</tspan></text>
     <rect
        y="187.54631"
        x="18.714554"
@@ -1033,17 +1023,6 @@
        x="886.41205"
        y="184.54933">1</tspan></text>
   <path
-     sodipodi:type="arc"
-     style="fill:#000000;fill-opacity:1;stroke:none"
-     id="weighted_automata.weight.dot.1"
-     sodipodi:cx="722.79413"
-     sodipodi:cy="185.67551"
-     sodipodi:rx="4.8762298"
-     sodipodi:ry="4.8762298"
-     d="m 727.67036,185.67551 a 4.8762298,4.8762298 0 1 1 -9.75246,0 4.8762298,4.8762298 0 1 1 9.75246,0 z"
-     transform="matrix(0.81,0,0,0.81,136.72059,22.508417)"
-     inkscape:label="#path9261" />
-  <path
      transform="matrix(0.81,0,0,0.81,186.72059,22.508417)"
      d="m 727.67036,185.67551 a 4.8762298,4.8762298 0 1 1 -9.75246,0 4.8762298,4.8762298 0 1 1 9.75246,0 z"
      sodipodi:ry="4.8762298"
@@ -1219,4 +1198,15 @@
        x="788.58685"
        id="tspan3571"
        sodipodi:role="line">0</tspan></text>
+  <path
+     inkscape:label="#path9263"
+     sodipodi:type="arc"
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     id="weighted_automata.weight.dot.1"
+     sodipodi:cx="722.79413"
+     sodipodi:cy="185.67551"
+     sodipodi:rx="4.8762298"
+     sodipodi:ry="4.8762298"
+     d="m 727.67036,185.67551 a 4.8762298,4.8762298 0 1 1 -9.75246,0 4.8762298,4.8762298 0 1 1 9.75246,0 z"
+     transform="matrix(0.81,0,0,0.81,136.72059,22.508417)" />
 </svg>
