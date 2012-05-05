@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -76,6 +76,26 @@
        y2="252.14394"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(0,60)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7586"
+       id="linearGradient3006"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,60)"
+       x1="676.41919"
+       y1="357.89142"
+       x2="926.55438"
+       y2="252.14394" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7586"
+       id="linearGradient3008"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,60)"
+       x1="676.41919"
+       y1="357.89142"
+       x2="926.55438"
+       y2="252.14394" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -100,7 +120,7 @@
      showguides="true"
      inkscape:guide-bbox="true" />
   <path
-     style="fill:none;stroke:url(#linearGradient7592);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+     style="fill:none;stroke:url(#linearGradient3006);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
      d="M 156.147,651.323 926.05439,310.72831"
      id="divergence.line"
      inkscape:connector-curvature="0"
@@ -109,7 +129,7 @@
   <g
      style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Dialog"
      id="divergence.infinity"
-     transform="matrix(0.25418659,0,0,0.25418659,899.23903,230.21368)"
+     transform="matrix(0.25418659,0,0,0.25418659,901.23903,230.21368)"
      inkscape:label="#g11552">
     <g
        id="g11542">
@@ -169,4 +189,11 @@
        id="tspan7990"
        x="437.72955"
        y="283.42715">E(n)</tspan></text>
+  <path
+     inkscape:label="#path6241"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     id="divergence.curve"
+     d="m 156.147,651.323 c 246.30331,-1.89559 513.65092,29.0487 769.90739,-340.59469"
+     style="fill:none;stroke:url(#linearGradient3008);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none" />
 </svg>

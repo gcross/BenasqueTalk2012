@@ -948,9 +948,14 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         "",
         hireAndFadeIn(0.5,"divergence.function"),
         "",
+        parallel(
+            fadeOutAndFire(0.5,"divergence.line"),
+            hireAndFadeIn(0.5,"divergence.curve")
+        ),
+        "",
         fadeOutAndFire(0.5,
             "divergence.backdrop",
-            "divergence.line",
+            "divergence.curve",
             "divergence.infinity",
             "divergence.function"
         ),
