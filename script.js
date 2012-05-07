@@ -154,21 +154,11 @@ var titles = [ // Titles {{{
     "Kleene's Theorem",
     "Infinite Matrix Product States",
     "Diverging Automata",
+    "Kleene's Theorem for Diverging Languages",
     "Infinite Languages",
-    "Rational Operations for Infinite Languages",
-    "Bucchi (Infinite) Automata",
-    "Kleen's Theorem for Infinite Languages",
-    "Characterization Theorem for Infinite Languages",
-    "Outline",
     "Diverging Languages",
     "Rational Operations for Diverging Languages",
-    "Kleen's Theorem for Diverging Languages",
     "Characterization Theorem for Diverging Languages",
-    "Bidiverging Languages",
-    "Bidiverging Automata",
-    "Kleen's Theorem for Bidiverging Languages",
-    "Characterization Theorem for Bidiverging Languages",
-    "Outline",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1605,6 +1595,20 @@ window.addEventListener("load",function() {
             "diverging_automata.input.4plus"
         ),
   // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "diverging_kleene1",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_kleene1",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+    // }}}
     // Infinite languages {{{
         rotateNextTitle(),
         hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
@@ -1650,349 +1654,6 @@ window.addEventListener("load",function() {
         ),
 
 // }}}
-    // Rational infinite operations {{{
-        rotateNextTitle(),
-        hireAndFlashIn(0.5,0.25,
-            "infinite_rational_operations_box_1",
-            "infinite_rational_operations_box_2"
-        ),
-        "",
-        hireAndFadeInUseActor(0.5, "infinite_rational_operations_precondition_1"),
-        "",
-        hireAndFadeInUseActor(0.5, "infinite_rational_operations_definition_1"),
-        "",
-        hireAndFadeInUseActor(0.5, "infinite_rational_operations_precondition_2"),
-        "",
-        hireAndFadeInUseActor(0.5, "infinite_rational_operations_definition_2"),
-        "",
-        hireAndFadeInUseActor(0.5, "infinite_rational_operations_definition_3"),
-        "",
-        hireAndFadeInUseActor(0.5, "infinite_rational_operations_definition_4"),
-        "",
-        hireAndFadeIn(0.5,"infinite_rational_language_definition"),
-        "",
-        fadeOutAndFire(0.5,
-            "infinite_rational_operations_box_1",
-            "infinite_rational_operations_box_2",
-            "infinite_rational_operations_precondition_1",
-            "infinite_rational_operations_precondition_2",
-            "infinite_rational_operations_definition_1",
-            "infinite_rational_operations_definition_2",
-            "infinite_rational_operations_definition_3",
-            "infinite_rational_operations_definition_4",
-            "infinite_rational_language_definition"
-        ),
-    // }}}
-    // Infinite automata {{{
-        rotateNextTitle(),
-      // Introduce the automata {{{
-        hireUseActors("diverging_automata.5tuple","diverging_automata.5tuple.cover"),
-        "",
-        linear(0.5,"diverging_automata.5tuple.cover","x",470),
-        hireAndFlashIn(0.5,0.25,
-            "diverging_automata.5tuple.alphabet",
-            "diverging_automata.5tuple.states",
-            "diverging_automata.5tuple.transitions",
-            "diverging_automata.5tuple.initial",
-            "diverging_automata.5tuple.final"
-        ),
-        hire("diverging_automata.automata",makePartFocusActor("diverging_automata.automata",[
-            "state.1",
-            "state.2",
-            "transitions",
-            "transitions.initial",
-        ])),
-        parallel(
-            decelerate(1,"diverging_automata.automata","x",520,0),
-            hireAndFadeInUseActor(1,"diverging_automata.automata.box")
-        ),
-        "",
-        hireAndFadeIn(1,"diverging_automata.criterion"),
-        "",
-        hireAndFadeIn(1,"diverging_automata.criterion.highlight",null,"diverging_automata.criterion"),
-      // }}}
-      // First example {{{
-        "",
-        hireAndFlashIn(0.5,0.25,
-            "diverging_automata.input.1.0",
-            "diverging_automata.input.2",
-            "diverging_automata.input.3",
-            "diverging_automata.input.4plus"
-        ),
-        "",
-        hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
-        smooth(0.5,"diverging_automata.marker","x",124.169),
-        "",
-        hireAndFadeIn(0.5,"diverging_automata.reader"),
-        parallel(
-            accelerate(0.25,"diverging_automata.marker","x",210.128),
-            accelerate(0.25,"diverging_automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"diverging_automata.marker","x",124.169),
-            decelerate(0.25,"diverging_automata.marker","y",0)
-        ),
-        smooth(0.5,"diverging_automata.reader","x",106),
-        parallel(
-            accelerate(0.25,"diverging_automata.marker","x",210.128),
-            accelerate(0.25,"diverging_automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"diverging_automata.marker","x",124.169),
-            decelerate(0.25,"diverging_automata.marker","y",0)
-        ),
-        smooth(0.5,"diverging_automata.reader","x",212),
-        parallel(
-            accelerate(0.25,"diverging_automata.marker","x",210.128),
-            accelerate(0.25,"diverging_automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"diverging_automata.marker","x",124.169),
-            decelerate(0.25,"diverging_automata.marker","y",0)
-        ),
-        parallel(
-            accelerate(0.5,"diverging_automata.reader","x",500),
-            parallel(
-                wait(0.5),
-                set("diverging_automata.automata","state.1.opacity",1),
-                linear(0.75,"diverging_automata.automata","non_focused_opacity",0.33)
-            ),
-            sequence(
-                parallel(
-                    accelerate(0.25,"diverging_automata.marker","x",210.128),
-                    accelerate(0.25,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.25,"diverging_automata.marker","x",124.169),
-                    decelerate(0.25,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.20,"diverging_automata.marker","x",210.128),
-                    accelerate(0.20,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.20,"diverging_automata.marker","x",124.169),
-                    decelerate(0.20,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.15,"diverging_automata.marker","x",210.128),
-                    accelerate(0.15,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.15,"diverging_automata.marker","x",124.169),
-                    decelerate(0.15,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",210.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",124.169),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",210.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",124.169),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",210.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",124.169),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",210.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",124.169),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",210.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",124.169),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                )
-            )
-        ),
-        "",
-        fire("diverging_automata.reader"),
-        "",
-        linear(0.75,"diverging_automata.automata","non_focused_opacity",1),
-        set("diverging_automata.automata","state.1.opacity",0),
-        "",
-        hireUseActor("automata.cross_mark"),
-        set(styleOf("automata.cross_mark"),"opacity",0.9),
-        set("automata.cross_mark","x",700),
-        set("automata.cross_mark","y",550),
-        set("automata.cross_mark","scale",0.05),
-        parallel(
-            linear(0.5,"automata.cross_mark","x",0),
-            linear(0.5,"automata.cross_mark","y",0),
-            linear(0.5,"automata.cross_mark","scale",1)
-        ),
-        "",
-        fadeOutAndFire(0.5,"automata.cross_mark"),
-      // }}}
-      // Second example {{{
-        fadeOutAndFire(0.25,"diverging_automata.input.1.0"),
-        hireAndFadeIn(0.25,"diverging_automata.input.1.1"),
-        "",
-        hireAndFadeInUseActor(0.5,"diverging_automata.reader"),
-        smooth(0.5,"diverging_automata.marker","x",336.694),
-        smooth(0.5,"diverging_automata.reader","x",106),
-        parallel(
-            accelerate(0.5,"diverging_automata.reader","x",500),
-            parallel(
-                wait(0.5),
-                set("diverging_automata.automata","state.2.opacity",1),
-                linear(0.75,"diverging_automata.automata","non_focused_opacity",0.33)
-            ),
-            sequence(
-                parallel(
-                    accelerate(0.25,"diverging_automata.marker","x",444.128),
-                    accelerate(0.25,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.25,"diverging_automata.marker","x",336.694),
-                    decelerate(0.25,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.20,"diverging_automata.marker","x",444.128),
-                    accelerate(0.20,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.20,"diverging_automata.marker","x",336.694),
-                    decelerate(0.20,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.15,"diverging_automata.marker","x",444.128),
-                    accelerate(0.15,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.15,"diverging_automata.marker","x",336.694),
-                    decelerate(0.15,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",444.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",336.694),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",444.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",336.694),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",444.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",336.694),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",444.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",336.694),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                ),
-                parallel(
-                    accelerate(0.10,"diverging_automata.marker","x",444.128),
-                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
-                ),
-                parallel(
-                    decelerate(0.10,"diverging_automata.marker","x",336.694),
-                    decelerate(0.10,"diverging_automata.marker","y",0)
-                )
-            )
-        ),
-        fire("diverging_automata.reader"),
-        "",
-        linear(0.75,"diverging_automata.automata","non_focused_opacity",1),
-        set("diverging_automata.automata","state.2.opacity",0),
-        "",
-        hireUseActor("diverging_automata.check_mark"),
-        set(styleOf("diverging_automata.check_mark"),"opacity",0.9),
-        set("diverging_automata.check_mark","x",700),
-        set("diverging_automata.check_mark","y",550),
-        set("diverging_automata.check_mark","scale",0.05),
-        parallel(
-            linear(0.5,"diverging_automata.check_mark","x",0),
-            linear(0.5,"diverging_automata.check_mark","y",0),
-            linear(0.5,"diverging_automata.check_mark","scale",1)
-        ),
-      // }}}
-      // Fade out everything {{{
-        "",
-        fadeOutAndFire(0.5,
-            "diverging_automata.automata",
-            "diverging_automata.automata.box",
-            "diverging_automata.marker",
-            "diverging_automata.criterion",
-            "diverging_automata.criterion.highlight",
-            "diverging_automata.check_mark",
-            "diverging_automata.5tuple",
-            "diverging_automata.5tuple.cover",
-            "diverging_automata.5tuple.alphabet",
-            "diverging_automata.5tuple.states",
-            "diverging_automata.5tuple.transitions",
-            "diverging_automata.5tuple.initial",
-            "diverging_automata.5tuple.final",
-            "diverging_automata.input.1.1",
-            "diverging_automata.input.2",
-            "diverging_automata.input.3",
-            "diverging_automata.input.4plus"
-        ),
-      // }}}
-    // }}}
-    // Kleene's Theorem {{{
-        rotateNextTitle(),
-        "",
-        hireAndFlashIn(0.75,0.375,
-            "infinite_kleene1",
-            "infinite_kleene2",
-            "infinite_kleene3"
-        ),
-        "",
-        fadeOutAndFire(0.5,
-            "infinite_kleene1",
-            "infinite_kleene2",
-            "infinite_kleene3"
-        ),
-    // }}}
-    // Characterization Theorem {{{
-        rotateNextTitle(),
-        "",
-        hireAndFlashIn(0.75,0.375,
-            "infinite_characterization_theorem_1",
-            "infinite_characterization_theorem_2",
-            "infinite_characterization_theorem_3"
-        ),
-        "",
-        fadeOutAndFire(0.5,
-            "infinite_characterization_theorem_1",
-            "infinite_characterization_theorem_2",
-            "infinite_characterization_theorem_3"
-        ),
-    // }}}
     // Diverging languages {{{
         rotateNextTitle(),
         hireAndFadeIn(0.5,"diverging_languages.borderlines"),
@@ -2178,51 +1839,6 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_example_output_dots",
             "diverging_rational_operations_identity",
             "diverging_rational_language_definition"
-        ),
-    // }}}
-    // Diverging automata {{{
-        rotateNextTitle(),
-        hireUseActors("diverging_automata.5tuple","diverging_automata.5tuple.cover"),
-        linear(0.5,"diverging_automata.5tuple.cover","x",470),
-        hireAndFlashIn(0.5,0.25,
-            "diverging_automata.5tuple.alphabet",
-            "diverging_automata.5tuple.states",
-            "diverging_automata.5tuple.transitions",
-            "diverging_automata.5tuple.initial",
-            "diverging_automata.5tuple.final"
-        ),
-        "",
-        hireAndFadeIn(0.5,"diverging_automata.criterion.1"),
-        "",
-        hireAndFadeIn(0.5,"diverging_automata.criterion.2"),
-        "",
-        fadeOutAndFire(0.5,
-            "diverging_automata.5tuple",
-            "diverging_automata.5tuple.alphabet",
-            "diverging_automata.5tuple.cover",
-            "diverging_automata.5tuple.states",
-            "diverging_automata.5tuple.transitions",
-            "diverging_automata.5tuple.initial",
-            "diverging_automata.5tuple.final",
-            "diverging_automata.criterion.1",
-            "diverging_automata.criterion.2"
-        ),
-        hireAndFadeIn(0.5,"daas"),
-        "",
-        fadeOutAndFire(0.5,"daas"),
-    // }}}
-    // Kleene's Theorem {{{
-        rotateNextTitle(),
-        hireAndFlashIn(0.75,0.375,
-            "diverging_kleene1",
-            "diverging_kleene2",
-            "diverging_kleene3"
-        ),
-        "",
-        fadeOutAndFire(0.5,
-            "diverging_kleene1",
-            "diverging_kleene2",
-            "diverging_kleene3"
         ),
     // }}}
     // Characterization Theorem {{{
