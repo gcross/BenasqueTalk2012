@@ -1,3 +1,42 @@
+// Functions {{{
+function hireAndFlashIn(time_to_enter,time_between_starts) { // {{{
+    animations = []
+    var current_wait_time = 0
+    for(var i = 2; i < arguments.length; ++i) {
+        animations.push(sequence(
+            wait(current_wait_time),
+            hireAndFadeIn(time_to_enter,arguments[i])
+        ))
+        current_wait_time += time_between_starts
+    }
+    return parallel.apply(null,animations)
+} // }}}
+function makePartFocusActor(name,labels) { return function() { // {{{
+    var actor = new UseActor(name)
+
+    var nodes = {}
+    labels.forEach(function(label) {
+        nodes[label] = document.getElementById(name + "." + label)
+        if(!nodes[label]) throw Error("unable to find an node with id '" + name + "." + label + "'")
+        actor[label + ".opacity"] = 0
+    })
+    actor.nodes = nodes
+
+    actor.non_focused_opacity = 1
+
+    appendToMethod(actor,"update",function() {
+        labels.forEach(function(label) {
+            nodes[label].setAttribute("opacity",Math.max(
+                actor.non_focused_opacity,
+                actor[label + ".opacity"]
+            ))
+        })
+    })
+
+    return actor
+}} // }}}
+// }}}
+
 // Actors {{{
 function makePunchLineActor() { // Punch line slide {{{
     var actor = new UseActor("punch_line")
@@ -56,6 +95,26 @@ function makePunchLineActor() { // Punch line slide {{{
 
     return actor
 } // }}}
+function makeDivergingAutomataActor() { return function() { //
+    actor = makePartFocusActor("diverging_automata.automata",[
+        "final_weights.1",
+        "final_weights.2",
+        "state.1",
+        "state.2",
+        "transitions",
+        "transitions.initial",
+    ])()
+    actor["final_weights.1.opacity_override"] = 1
+    actor["final_weights.2.opacity_override"] = 1
+    appendToMethod(actor,"update",function() {
+        for(i = 1; i <= 2; ++i) {
+            label = "final_weights." + i
+            node = actor.nodes[label]
+            node.setAttribute("opacity",actor[label + ".opacity_override"]*node.getAttribute("opacity"))
+        }
+    })
+    return actor
+}}
 // }}} Actors
 
 // Title Management {{{
@@ -94,6 +153,7 @@ var titles = [ // Titles {{{
     "Rational Operations for Weighted Languages",
     "Kleene's Theorem",
     "Infinite Matrix Product States",
+    "Diverging Automata",
     "Infinite Languages",
     "Rational Operations for Infinite Languages",
     "Bucchi (Infinite) Automata",
@@ -102,7 +162,6 @@ var titles = [ // Titles {{{
     "Outline",
     "Diverging Languages",
     "Rational Operations for Diverging Languages",
-    "Diverging Automata",
     "Kleen's Theorem for Diverging Languages",
     "Characterization Theorem for Diverging Languages",
     "Bidiverging Languages",
@@ -126,44 +185,6 @@ window.addEventListener("load",function() {
         }
     })()
     // }}} Initialization
-
-// Functions {{{
-function hireAndFlashIn(time_to_enter,time_between_starts) { // {{{
-    animations = []
-    var current_wait_time = 0
-    for(var i = 2; i < arguments.length; ++i) {
-        animations.push(sequence(
-            wait(current_wait_time),
-            hireAndFadeIn(time_to_enter,arguments[i])
-        ))
-        current_wait_time += time_between_starts
-    }
-    return parallel.apply(null,animations)
-} // }}}
-function makePartFocusActor(name,labels) { return function() { // {{{
-    var actor = new UseActor(name)
-
-    var nodes = {}
-    labels.forEach(function(label) {
-        nodes[label] = document.getElementById(name + "." + label)
-        if(!nodes[label]) throw Error("unable to find an node with id '" + name + "." + label + "'")
-        actor[label + ".opacity"] = 0
-    })
-
-    actor.non_focused_opacity = 1
-
-    appendToMethod(actor,"update",function() {
-        labels.forEach(function(label) {
-            nodes[label].setAttribute("opacity",Math.max(
-                actor.non_focused_opacity,
-                actor[label + ".opacity"]
-            ))
-        })
-    })
-
-    return actor
-}} // }}}
-// }}}
 
     initializeSlick([].concat([
 // Script {{{
@@ -960,6 +981,234 @@ function makePartFocusActor(name,labels) { return function() { // {{{
             "divergence.function"
         ),
     // }}}
+  // Diverging automata {{{
+        rotateNextTitle(),
+      // Introduce the automata {{{
+        hireUseActors("diverging_automata.5tuple","diverging_automata.5tuple.cover"),
+        linear(0.5,"diverging_automata.5tuple.cover","x",470),
+        hireAndFlashIn(0.5,0.25,
+            "diverging_automata.5tuple.alphabet",
+            "diverging_automata.5tuple.states",
+            "diverging_automata.5tuple.transitions",
+            "diverging_automata.5tuple.initial",
+            "diverging_automata.5tuple.final"
+        ),
+        hire("diverging_automata.automata",makeDivergingAutomataActor()),
+        parallel(
+            decelerate(1,"diverging_automata.automata","x",520,0),
+            hireAndFadeInUseActor(1,"diverging_automata.automata.box")
+        ),
+        "",
+        hireAndFadeIn(1,"diverging_automata.criterion"),
+      // }}}
+    // First example {{{
+        hireAndFlashIn(0.5,0.25,
+            "diverging_automata.input.1.1",
+            "diverging_automata.input.2.0",
+            "diverging_automata.input.3.0",
+            "diverging_automata.input.4plus"
+        ),
+        "",
+        hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
+        smooth(0.5,"diverging_automata.marker","x",124.169),
+        "",
+        hireAndFadeIn(0.5,"diverging_automata.reader"),
+        "",
+        smooth(0.5,"diverging_automata.marker","x",336.694),
+        "",
+        smooth(0.5,"diverging_automata.reader","x",106),
+        "",
+        parallel(
+            accelerate(0.5,"diverging_automata.reader","x",500),
+            parallel(
+                wait(0.5),
+                set("diverging_automata.automata","state.2.opacity",1),
+                linear(0.75,"diverging_automata.automata","non_focused_opacity",0.33)
+            ),
+            sequence(
+                parallel(
+                    accelerate(0.25,"diverging_automata.marker","x",444.128),
+                    accelerate(0.25,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.25,"diverging_automata.marker","x",336.694),
+                    decelerate(0.25,"diverging_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.20,"diverging_automata.marker","x",444.128),
+                    accelerate(0.20,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.20,"diverging_automata.marker","x",336.694),
+                    decelerate(0.20,"diverging_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.15,"diverging_automata.marker","x",444.128),
+                    accelerate(0.15,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.15,"diverging_automata.marker","x",336.694),
+                    decelerate(0.15,"diverging_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
+                ),
+                parallel(
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
+                )
+            )
+        ),
+        fire("diverging_automata.reader"),
+        "",
+        linear(0.5,"diverging_automata.automata","final_weights.2.opacity",1),
+        "",
+        parallel(
+            linear(0.5,"diverging_automata.automata","non_focused_opacity",1),
+            linear(0.5,"diverging_automata.automata","final_weights.1.opacity_override",0)
+        ),
+        set("diverging_automata.automata","state.2.opacity",0),
+        "",
+        smooth(0.5,"diverging_automata.marker","x",124.169),
+        "",
+        hireAndFadeInUseActors(0.5,
+            "diverging_automata.weight.input.0",
+            "diverging_automata.weight.mapsto"
+        ),
+        "",
+        hireAndFadeIn(0.5,"diverging_automata.weight.1.0"),
+        "",
+        sequence(
+            fadeOutAndFire(0.25,"diverging_automata.weight.input.0"),
+            hireAndFadeIn(0.25,"diverging_automata.weight.input.1")
+        ),
+        fadeOutAndFire(0.5,"diverging_automata.weight.1.0"),
+        "",
+        hireAndFadeIn(0.5,"diverging_automata.reader"),
+        "",
+        parallel(
+            smooth(0.5,"diverging_automata.marker","x",336.694),
+            hireAndFadeIn(0.25,"diverging_automata.weight.1.1")
+        ),
+        "",
+        set("diverging_automata.automata","final_weights.2.opacity",1),
+        linear(0.5,"diverging_automata.automata","non_focused_opacity",0.33),
+        "",
+        hireAndFadeInUseActors(0.5,
+                "diverging_automata.weight.equals",
+                "diverging_automata.weight.result.1",
+                "diverging_automata.weight.dot.3",
+                "diverging_automata.weight.4.1"
+        ),
+        "",
+        linear(0.5,"diverging_automata.automata","non_focused_opacity",1),
+        set("diverging_automata.automata","final_weights.2.opacity",0),
+        "",
+        sequence(
+            fadeOutAndFire(0.25,"diverging_automata.weight.input.1"),
+            hireAndFadeIn(0.25,"diverging_automata.weight.input.2")
+        ),
+        "",
+        smooth(0.5,"diverging_automata.reader","x",106),
+        "",
+        parallel(
+            sequence(
+                parallel(
+                    accelerate(0.25,"diverging_automata.marker","x",444.128),
+                    accelerate(0.25,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.25,"diverging_automata.marker","x",336.694),
+                    decelerate(0.25,"diverging_automata.marker","y",0)
+                )
+            ),
+            fadeOutAndFire(0.25,"diverging_automata.weight.result.1"),
+            hireAndFadeInUseActors(0.5,
+                "diverging_automata.weight.2.1_3",
+                "diverging_automata.weight.dot.1",
+                "diverging_automata.weight.result.1_3"
+            )
+        ),
+        "",
+        smooth(0.5,"diverging_automata.reader","x",212),
+        "",
+        parallel(
+            sequence(
+                parallel(
+                    accelerate(0.25,"diverging_automata.marker","x",444.128),
+                    accelerate(0.25,"diverging_automata.marker","y",-98.659)
+                ),
+                parallel(
+                    decelerate(0.25,"diverging_automata.marker","x",336.694),
+                    decelerate(0.25,"diverging_automata.marker","y",0)
+                )
+            ),
+            fadeOutAndFire(0.25,"diverging_automata.weight.result.1_3"),
+            hireAndFadeInUseActors(0.5,
+                "diverging_automata.weight.3.1_3",
+                "diverging_automata.weight.dot.2",
+                "diverging_automata.weight.result.1_9"
+            )
+        ),
+        "",
+        sequence(
+            fadeOutAndFire(0.25,"diverging_automata.weight.input.2"),
+            hireAndFadeIn(0.25,"diverging_automata.weight.input.n")
+        ),
+        "",
+        parallel(
+            fadeOutAndFire(0.25,
+                "diverging_automata.weight.1.1",
+                "diverging_automata.weight.2.1_3",
+                "diverging_automata.weight.dot.1",
+                "diverging_automata.weight.3.1_3",
+                "diverging_automata.weight.dot.2",
+                "diverging_automata.weight.4.1",
+                "diverging_automata.weight.dot.3",
+                "diverging_automata.weight.result.1_9"
+            ),
+            hireAndFadeInUseActors(0.5,
+                "diverging_automata.weight.result.1_3",
+                "diverging_automata.weight.result.to_the_n"
+            ),
+            accelerate(0.5,"diverging_automata.reader","x",500)
+        ),
+    // }}}
+        "",
+  // }}}
     // Infinite languages {{{
         rotateNextTitle(),
         hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
@@ -1041,149 +1290,149 @@ function makePartFocusActor(name,labels) { return function() { // {{{
     // Infinite automata {{{
         rotateNextTitle(),
       // Introduce the automata {{{
-        hireUseActors("bucchi_automata.5tuple","bucchi_automata.5tuple.cover"),
+        hireUseActors("diverging_automata.5tuple","diverging_automata.5tuple.cover"),
         "",
-        linear(0.5,"bucchi_automata.5tuple.cover","x",470),
+        linear(0.5,"diverging_automata.5tuple.cover","x",470),
         hireAndFlashIn(0.5,0.25,
-            "bucchi_automata.5tuple.alphabet",
-            "bucchi_automata.5tuple.states",
-            "bucchi_automata.5tuple.transitions",
-            "bucchi_automata.5tuple.initial",
-            "bucchi_automata.5tuple.final"
+            "diverging_automata.5tuple.alphabet",
+            "diverging_automata.5tuple.states",
+            "diverging_automata.5tuple.transitions",
+            "diverging_automata.5tuple.initial",
+            "diverging_automata.5tuple.final"
         ),
-        hire("bucchi_automata.automata",makePartFocusActor("bucchi_automata.automata",[
+        hire("diverging_automata.automata",makePartFocusActor("diverging_automata.automata",[
             "state.1",
             "state.2",
             "transitions",
             "transitions.initial",
         ])),
         parallel(
-            decelerate(1,"bucchi_automata.automata","x",520,0),
-            hireAndFadeInUseActor(1,"bucchi_automata.automata.box")
+            decelerate(1,"diverging_automata.automata","x",520,0),
+            hireAndFadeInUseActor(1,"diverging_automata.automata.box")
         ),
         "",
-        hireAndFadeIn(1,"bucchi_automata.criterion"),
+        hireAndFadeIn(1,"diverging_automata.criterion"),
         "",
-        hireAndFadeIn(1,"bucchi_automata.criterion.highlight",null,"bucchi_automata.criterion"),
+        hireAndFadeIn(1,"diverging_automata.criterion.highlight",null,"diverging_automata.criterion"),
       // }}}
       // First example {{{
         "",
         hireAndFlashIn(0.5,0.25,
-            "bucchi_automata.input.1.0",
-            "bucchi_automata.input.2",
-            "bucchi_automata.input.3",
-            "bucchi_automata.input.4plus"
+            "diverging_automata.input.1.0",
+            "diverging_automata.input.2",
+            "diverging_automata.input.3",
+            "diverging_automata.input.4plus"
         ),
         "",
-        hireAndFadeIn(0.5,"bucchi_automata.marker",null,"bucchi_automata.automata"),
-        smooth(0.5,"bucchi_automata.marker","x",124.169),
+        hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
+        smooth(0.5,"diverging_automata.marker","x",124.169),
         "",
-        hireAndFadeIn(0.5,"bucchi_automata.reader"),
+        hireAndFadeIn(0.5,"diverging_automata.reader"),
         parallel(
-            accelerate(0.25,"bucchi_automata.marker","x",210.128),
-            accelerate(0.25,"bucchi_automata.marker","y",-98.659)
+            accelerate(0.25,"diverging_automata.marker","x",210.128),
+            accelerate(0.25,"diverging_automata.marker","y",-98.659)
         ),
         parallel(
-            decelerate(0.25,"bucchi_automata.marker","x",124.169),
-            decelerate(0.25,"bucchi_automata.marker","y",0)
+            decelerate(0.25,"diverging_automata.marker","x",124.169),
+            decelerate(0.25,"diverging_automata.marker","y",0)
         ),
-        smooth(0.5,"bucchi_automata.reader","x",106),
+        smooth(0.5,"diverging_automata.reader","x",106),
         parallel(
-            accelerate(0.25,"bucchi_automata.marker","x",210.128),
-            accelerate(0.25,"bucchi_automata.marker","y",-98.659)
-        ),
-        parallel(
-            decelerate(0.25,"bucchi_automata.marker","x",124.169),
-            decelerate(0.25,"bucchi_automata.marker","y",0)
-        ),
-        smooth(0.5,"bucchi_automata.reader","x",212),
-        parallel(
-            accelerate(0.25,"bucchi_automata.marker","x",210.128),
-            accelerate(0.25,"bucchi_automata.marker","y",-98.659)
+            accelerate(0.25,"diverging_automata.marker","x",210.128),
+            accelerate(0.25,"diverging_automata.marker","y",-98.659)
         ),
         parallel(
-            decelerate(0.25,"bucchi_automata.marker","x",124.169),
-            decelerate(0.25,"bucchi_automata.marker","y",0)
+            decelerate(0.25,"diverging_automata.marker","x",124.169),
+            decelerate(0.25,"diverging_automata.marker","y",0)
+        ),
+        smooth(0.5,"diverging_automata.reader","x",212),
+        parallel(
+            accelerate(0.25,"diverging_automata.marker","x",210.128),
+            accelerate(0.25,"diverging_automata.marker","y",-98.659)
         ),
         parallel(
-            accelerate(0.5,"bucchi_automata.reader","x",500),
+            decelerate(0.25,"diverging_automata.marker","x",124.169),
+            decelerate(0.25,"diverging_automata.marker","y",0)
+        ),
+        parallel(
+            accelerate(0.5,"diverging_automata.reader","x",500),
             parallel(
                 wait(0.5),
-                set("bucchi_automata.automata","state.1.opacity",1),
-                linear(0.75,"bucchi_automata.automata","non_focused_opacity",0.33)
+                set("diverging_automata.automata","state.1.opacity",1),
+                linear(0.75,"diverging_automata.automata","non_focused_opacity",0.33)
             ),
             sequence(
                 parallel(
-                    accelerate(0.25,"bucchi_automata.marker","x",210.128),
-                    accelerate(0.25,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.25,"diverging_automata.marker","x",210.128),
+                    accelerate(0.25,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.25,"bucchi_automata.marker","x",124.169),
-                    decelerate(0.25,"bucchi_automata.marker","y",0)
+                    decelerate(0.25,"diverging_automata.marker","x",124.169),
+                    decelerate(0.25,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.20,"bucchi_automata.marker","x",210.128),
-                    accelerate(0.20,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.20,"diverging_automata.marker","x",210.128),
+                    accelerate(0.20,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.20,"bucchi_automata.marker","x",124.169),
-                    decelerate(0.20,"bucchi_automata.marker","y",0)
+                    decelerate(0.20,"diverging_automata.marker","x",124.169),
+                    decelerate(0.20,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.15,"bucchi_automata.marker","x",210.128),
-                    accelerate(0.15,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.15,"diverging_automata.marker","x",210.128),
+                    accelerate(0.15,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.15,"bucchi_automata.marker","x",124.169),
-                    decelerate(0.15,"bucchi_automata.marker","y",0)
+                    decelerate(0.15,"diverging_automata.marker","x",124.169),
+                    decelerate(0.15,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",210.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",124.169),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",210.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",124.169),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",210.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",124.169),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",210.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",124.169),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",210.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",210.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",124.169),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",124.169),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 )
             )
         ),
         "",
-        fire("bucchi_automata.reader"),
+        fire("diverging_automata.reader"),
         "",
-        linear(0.75,"bucchi_automata.automata","non_focused_opacity",1),
-        set("bucchi_automata.automata","state.1.opacity",0),
+        linear(0.75,"diverging_automata.automata","non_focused_opacity",1),
+        set("diverging_automata.automata","state.1.opacity",0),
         "",
         hireUseActor("automata.cross_mark"),
         set(styleOf("automata.cross_mark"),"opacity",0.9),
@@ -1199,122 +1448,122 @@ function makePartFocusActor(name,labels) { return function() { // {{{
         fadeOutAndFire(0.5,"automata.cross_mark"),
       // }}}
       // Second example {{{
-        fadeOutAndFire(0.25,"bucchi_automata.input.1.0"),
-        hireAndFadeIn(0.25,"bucchi_automata.input.1.1"),
+        fadeOutAndFire(0.25,"diverging_automata.input.1.0"),
+        hireAndFadeIn(0.25,"diverging_automata.input.1.1"),
         "",
-        hireAndFadeInUseActor(0.5,"bucchi_automata.reader"),
-        smooth(0.5,"bucchi_automata.marker","x",336.694),
-        smooth(0.5,"bucchi_automata.reader","x",106),
+        hireAndFadeInUseActor(0.5,"diverging_automata.reader"),
+        smooth(0.5,"diverging_automata.marker","x",336.694),
+        smooth(0.5,"diverging_automata.reader","x",106),
         parallel(
-            accelerate(0.5,"bucchi_automata.reader","x",500),
+            accelerate(0.5,"diverging_automata.reader","x",500),
             parallel(
                 wait(0.5),
-                set("bucchi_automata.automata","state.2.opacity",1),
-                linear(0.75,"bucchi_automata.automata","non_focused_opacity",0.33)
+                set("diverging_automata.automata","state.2.opacity",1),
+                linear(0.75,"diverging_automata.automata","non_focused_opacity",0.33)
             ),
             sequence(
                 parallel(
-                    accelerate(0.25,"bucchi_automata.marker","x",444.128),
-                    accelerate(0.25,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.25,"diverging_automata.marker","x",444.128),
+                    accelerate(0.25,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.25,"bucchi_automata.marker","x",336.694),
-                    decelerate(0.25,"bucchi_automata.marker","y",0)
+                    decelerate(0.25,"diverging_automata.marker","x",336.694),
+                    decelerate(0.25,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.20,"bucchi_automata.marker","x",444.128),
-                    accelerate(0.20,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.20,"diverging_automata.marker","x",444.128),
+                    accelerate(0.20,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.20,"bucchi_automata.marker","x",336.694),
-                    decelerate(0.20,"bucchi_automata.marker","y",0)
+                    decelerate(0.20,"diverging_automata.marker","x",336.694),
+                    decelerate(0.20,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.15,"bucchi_automata.marker","x",444.128),
-                    accelerate(0.15,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.15,"diverging_automata.marker","x",444.128),
+                    accelerate(0.15,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.15,"bucchi_automata.marker","x",336.694),
-                    decelerate(0.15,"bucchi_automata.marker","y",0)
+                    decelerate(0.15,"diverging_automata.marker","x",336.694),
+                    decelerate(0.15,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 ),
                 parallel(
-                    accelerate(0.10,"bucchi_automata.marker","x",444.128),
-                    accelerate(0.10,"bucchi_automata.marker","y",-98.659)
+                    accelerate(0.10,"diverging_automata.marker","x",444.128),
+                    accelerate(0.10,"diverging_automata.marker","y",-98.659)
                 ),
                 parallel(
-                    decelerate(0.10,"bucchi_automata.marker","x",336.694),
-                    decelerate(0.10,"bucchi_automata.marker","y",0)
+                    decelerate(0.10,"diverging_automata.marker","x",336.694),
+                    decelerate(0.10,"diverging_automata.marker","y",0)
                 )
             )
         ),
-        fire("bucchi_automata.reader"),
+        fire("diverging_automata.reader"),
         "",
-        linear(0.75,"bucchi_automata.automata","non_focused_opacity",1),
-        set("bucchi_automata.automata","state.2.opacity",0),
+        linear(0.75,"diverging_automata.automata","non_focused_opacity",1),
+        set("diverging_automata.automata","state.2.opacity",0),
         "",
-        hireUseActor("bucchi_automata.check_mark"),
-        set(styleOf("bucchi_automata.check_mark"),"opacity",0.9),
-        set("bucchi_automata.check_mark","x",700),
-        set("bucchi_automata.check_mark","y",550),
-        set("bucchi_automata.check_mark","scale",0.05),
+        hireUseActor("diverging_automata.check_mark"),
+        set(styleOf("diverging_automata.check_mark"),"opacity",0.9),
+        set("diverging_automata.check_mark","x",700),
+        set("diverging_automata.check_mark","y",550),
+        set("diverging_automata.check_mark","scale",0.05),
         parallel(
-            linear(0.5,"bucchi_automata.check_mark","x",0),
-            linear(0.5,"bucchi_automata.check_mark","y",0),
-            linear(0.5,"bucchi_automata.check_mark","scale",1)
+            linear(0.5,"diverging_automata.check_mark","x",0),
+            linear(0.5,"diverging_automata.check_mark","y",0),
+            linear(0.5,"diverging_automata.check_mark","scale",1)
         ),
       // }}}
       // Fade out everything {{{
         "",
         fadeOutAndFire(0.5,
-            "bucchi_automata.automata",
-            "bucchi_automata.automata.box",
-            "bucchi_automata.marker",
-            "bucchi_automata.criterion",
-            "bucchi_automata.criterion.highlight",
-            "bucchi_automata.check_mark",
-            "bucchi_automata.5tuple",
-            "bucchi_automata.5tuple.cover",
-            "bucchi_automata.5tuple.alphabet",
-            "bucchi_automata.5tuple.states",
-            "bucchi_automata.5tuple.transitions",
-            "bucchi_automata.5tuple.initial",
-            "bucchi_automata.5tuple.final",
-            "bucchi_automata.input.1.1",
-            "bucchi_automata.input.2",
-            "bucchi_automata.input.3",
-            "bucchi_automata.input.4plus"
+            "diverging_automata.automata",
+            "diverging_automata.automata.box",
+            "diverging_automata.marker",
+            "diverging_automata.criterion",
+            "diverging_automata.criterion.highlight",
+            "diverging_automata.check_mark",
+            "diverging_automata.5tuple",
+            "diverging_automata.5tuple.cover",
+            "diverging_automata.5tuple.alphabet",
+            "diverging_automata.5tuple.states",
+            "diverging_automata.5tuple.transitions",
+            "diverging_automata.5tuple.initial",
+            "diverging_automata.5tuple.final",
+            "diverging_automata.input.1.1",
+            "diverging_automata.input.2",
+            "diverging_automata.input.3",
+            "diverging_automata.input.4plus"
         ),
       // }}}
     // }}}
