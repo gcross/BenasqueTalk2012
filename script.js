@@ -159,6 +159,8 @@ var titles = [ // Titles {{{
     "Diverging Languages",
     "Rational Operations for Diverging Languages",
     "Characterization Theorem for Diverging Languages",
+    "Kleene's Theorem for Diverging Languages",
+    "Conclusion",
 ] // }}} Titles
 
 window.addEventListener("load",function() {
@@ -1074,6 +1076,32 @@ window.addEventListener("load",function() {
             "weighted_kleene4",
             "weighted_kleene2",
             "weighted_kleene3"
+        ),
+        hireAndFadeInUseActors(0.5,
+            "wtree.result",
+            "wtree.box"
+        ),
+        "",
+        hireAndFadeIn(0.5,"wtree.automata"),
+        "",
+        hireAndFadeIn(0.5,"wtree.tree",makePartFocusActor("wtree.tree",["1","2","3"])),
+        "",
+        set("wtree.tree","1.opacity",1),
+        linear(0.5,"wtree.tree","non_focused_opacity",0.33),
+        "",
+        linear(0.5,"wtree.tree","2.opacity",1),
+        "",
+        linear(0.5,"wtree.tree","3.opacity",1),
+        linear(0.5,"wtree.tree","non_focused_opacity",1),
+        set("wtree.tree","1.opacity",0),
+        set("wtree.tree","2.opacity",0),
+        set("wtree.tree","3.opacity",0),
+        "",
+        fadeOutAndFire(0.5,
+            "wtree.result",
+            "wtree.box",
+            "wtree.automata",
+            "wtree.tree"
         ),
     // }}}
   // }}}
