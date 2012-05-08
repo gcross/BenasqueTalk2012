@@ -95,7 +95,7 @@ function makePunchLineActor() { // Punch line slide {{{
 
     return actor
 } // }}}
-function makeDivergingAutomataActor() { return function() { //
+function makeDivergingAutomataActor() { return function() { // {{{
     actor = makePartFocusActor("diverging_automata.automata",[
         "final_weights.1",
         "final_weights.2",
@@ -114,7 +114,7 @@ function makeDivergingAutomataActor() { return function() { //
         }
     })
     return actor
-}}
+}} // }}}
 // }}} Actors
 
 // Title Management {{{
