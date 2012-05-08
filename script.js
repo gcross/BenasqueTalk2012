@@ -167,6 +167,7 @@ var titles = [ // Titles {{{
     "Kleene's Theorem",
     "Outline",
     "Infinite Matrix Product States",
+    "Divergence",
     "Diverging Automata",
     "Kleene's Theorem for Diverging Languages",
     "Infinite Languages",
@@ -1165,6 +1166,7 @@ window.addEventListener("load",function() {
             "imps_justification.the_bad.text",
             "imps_justification.the_beautiful.text"
         ),
+        rotateNextTitle(),
         hireAndFadeIn(0.5,"divergence.backdrop"),
         "",
         parallel(
@@ -1181,6 +1183,20 @@ window.addEventListener("load",function() {
             "divergence.curve",
             "divergence.infinity",
             "divergence.function"
+        ),
+        "",
+        hireUseActors("divergence.divergence","divergence.divergence.cover"),
+        linear(0.5,"divergence.divergence.cover","x",440),
+        fire("divergence.divergence.cover"),
+        "",
+        hireAndFadeIn(0.5,"divergence.escape"),
+        "",
+        hireAndFadeIn(0.5,"divergence.embrace"),
+        "",
+        fadeOutAndFire(0.5,
+            "divergence.divergence",
+            "divergence.escape",
+            "divergence.embrace"
         ),
     // }}}
   // Diverging automata {{{
