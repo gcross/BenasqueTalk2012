@@ -156,6 +156,7 @@ function rotateTitle(index) { // {{{
 // }}}
 var titles = [ // Titles {{{
     "The Punch Line",
+    "Outline",
     "Matrix Product States",
     "Weighted Automata",
     "Matrix Product States = Weighted Automata",
@@ -164,6 +165,7 @@ var titles = [ // Titles {{{
     "Weighted Language",
     "Rational Operations for Weighted Languages",
     "Kleene's Theorem",
+    "Outline",
     "Infinite Matrix Product States",
     "Diverging Automata",
     "Kleene's Theorem for Diverging Languages",
@@ -245,6 +247,14 @@ window.addEventListener("load",function() {
             "punch_line_equals",
             "punch_line_bottom_set"
         ),
+    // }}}
+    // Outline {{{
+        rotateNextTitle(),
+        hireAndFadeInUseActors(0.5,"outline_1","outline_2"),
+        "",
+        linear(0.5,styleFor("outline_2"),"opacity",0.33),
+        "",
+        fadeOutAndFire(0.5,"outline_1","outline_2"),
     // }}}
   // Finite system {{{
     // Matrix product states{{{
@@ -1117,6 +1127,21 @@ window.addEventListener("load",function() {
         ),
     // }}}
   // }}}
+      // Outline {{{
+        rotateNextTitle(),
+        hireUseActors(0.5,"outline_1","outline_2"),
+        parallel(
+            linear(0.5,styleFor("outline_1"),"opacity",0,1),
+            linear(0.5,styleFor("outline_2"),"opacity",0,0.33)
+        ),
+        "",
+        parallel(
+            linear(0.5,styleFor("outline_1"),"opacity",0.33),
+            linear(0.5,styleFor("outline_2"),"opacity",1)
+        ),
+        "",
+        fadeOutAndFire(0.5,"outline_1","outline_2"),
+      // }}}
   // Infinite system {{{
     // IMPS {{{
         rotateNextTitle(),
