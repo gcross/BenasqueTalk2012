@@ -1938,12 +1938,14 @@ window.addEventListener("load",function() {
                 ]))
             )
         ),
+/*
         "",
         fadeOutAndFire(0.5,
             "punch_line_top_set",
             "punch_line_equals",
             "punch_line_bottom_set"
         ),
+*/
     // }}}
   // }}}
 // }}} Script
