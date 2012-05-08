@@ -197,42 +197,35 @@ window.addEventListener("load",function() {
             sequence(
                 wait(0.5),
                 hireAndFadeIn(0.5,"punch_line_bottom_set",makePartFocusActor("punch_line_bottom_set",[
-                    "delta_operators",
-                    "dot_operators",
+                    "delta_operator",
+                    "dot_operator",
                     "sum_operator",
-                    "juxtaposition_operator",
+                    "variables",
                     "rational"
                 ]))
             )
         ),
         "",
-/*
         set("punch_line_bottom_set","rational.opacity",1),
         linear(0.5,"punch_line_bottom_set","non_focused_opacity",0.25),
         "",
         parallel(
-            linear(0.5,"punch_line","rational_power_series.opacity",0.25),
-            linear(0.5,"punch_line","delta_operators_opacity",0.25)
+            linear(0.5,"punch_line_bottom_set","rational.opacity",0.25),
+            linear(0.5,"punch_line_bottom_set","delta_operator.opacity",1)
         ),
         "",
         parallel(
-            linear(0.5,"punch_line","s_operator_opacity",1,0.25),
-            linear(0.5,"punch_line","reverse_s_operator_opacity",0.25,1)
+            linear(0.5,"punch_line_bottom_set","delta_operator.opacity",1,0.25),
+            linear(0.5,"punch_line_bottom_set","dot_operator.opacity",0.25,1)
         ),
         "",
         parallel(
-            linear(0.5,"punch_line","reverse_s_operator_opacity",1,0.25),
-            linear(0.5,"punch_line","dot_operator_opacity",0.25,1)
+            linear(0.5,"punch_line_bottom_set","dot_operator.opacity",1,0.25),
+            linear(0.5,"punch_line_bottom_set","sum_operator.opacity",0.25,1)
         ),
         "",
-        parallel(
-            linear(0.5,"punch_line","dot_operator_opacity",1,0.25),
-            linear(0.5,"punch_line","sum_operator_opacity",0.25,1)
-        ),
+        linear(0.5,"punch_line_bottom_set","non_focused_opacity",1),
         "",
-        linear(0.5,"punch_line","non_focused_opacity",1),
-        "",
-*/
         fadeOutAndFire(0.5,
             "punch_line_top_set",
             "punch_line_equals",
@@ -1853,6 +1846,46 @@ window.addEventListener("load",function() {
             "diverging_characterization_theorem_1",
             "diverging_characterization_theorem_2",
             "diverging_characterization_theorem_3"
+        ),
+    // }}}
+    // Kleene's Theorem {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "diverging_kleene1",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_kleene1",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+    // }}}
+    // Punch line (final appearance) {{{
+        rotateNextTitle(),
+        parallel(
+            hireAndFadeIn(0.5,"punch_line_top_set"),
+            sequence(
+                wait(0.25),
+                hireAndFadeIn(0.5,"punch_line_equals")
+            ),
+            sequence(
+                wait(0.5),
+                hireAndFadeIn(0.5,"punch_line_bottom_set",makePartFocusActor("punch_line_bottom_set",[
+                    "delta_operator",
+                    "dot_operator",
+                    "sum_operator",
+                    "variables",
+                    "rational"
+                ]))
+            )
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "punch_line_top_set",
+            "punch_line_equals",
+            "punch_line_bottom_set"
         ),
     // }}}
   // }}}
