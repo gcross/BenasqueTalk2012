@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -70,8 +70,8 @@
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="1.0332031"
-     inkscape:cx="697.46129"
-     inkscape:cy="296.8404"
+     inkscape:cx="659.53026"
+     inkscape:cy="180.69673"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -896,12 +896,12 @@
   </g>
   <g
      id="diverging_rational_operations_definition_5"
-     inkscape:label="#g5871">
+     inkscape:label="#g8039">
     <rect
        y="686.88123"
        x="234.52493"
        height="61.05603"
-       width="724.35333"
+       width="677.89587"
        id="rect16050"
        style="fill:#1fd800;fill-opacity:0.06730772;stroke:#1fd800;stroke-opacity:1" />
     <rect
@@ -980,7 +980,7 @@
        class="punch_line_bottom_set punch_line_non_focus" />
     <path
        inkscape:connector-curvature="0"
-       d="m 934.91532,738.7812 0,3.84946 1.37841,0 c 3.57526,0 5.97311,-0.6594 7.19358,-1.97823 1.20613,-1.31878 1.80917,-3.94745 1.80917,-7.88601 l 0,-6.38903 c 0,-2.69104 0.38767,-4.55339 1.16304,-5.58704 0.761,-1.03365 2.14658,-1.55049 4.15675,-1.55049 l 1.33535,0 0,-3.82271 -1.33535,0 c -2.02454,0 -3.41729,-0.50791 -4.17828,-1.52374 -0.76103,-1.01584 -1.14151,-2.86036 -1.14151,-5.53359 l 0,-6.41575 c 0,-3.93856 -0.60305,-6.55833 -1.80918,-7.8593 -1.22045,-1.3188 -3.61831,-1.97819 -7.19357,-1.97819 l -1.37841,0 0,3.82273 1.50764,0 c 2.01017,0 3.32397,0.39205 3.94138,1.17621 0.60304,0.76633 0.9046,2.41481 0.9046,4.94547 l 0,6.62961 c 0,2.79799 0.33023,4.82964 0.99074,6.09498 0.64612,1.26532 1.75888,2.12076 3.33832,2.5663 -1.59377,0.48118 -2.71375,1.35444 -3.35986,2.61976 -0.64613,1.26533 -0.9692,3.28807 -0.9692,6.06825 l 0,6.6296 c 0,2.54845 -0.30156,4.2059 -0.9046,4.97219 -0.61741,0.76633 -1.93121,1.14952 -3.94138,1.14952 l -1.50764,0 z"
+       d="m 884.91532,738.7812 0,3.84946 1.37841,0 c 3.57526,0 5.97311,-0.6594 7.19358,-1.97823 1.20613,-1.31878 1.80917,-3.94745 1.80917,-7.88601 l 0,-6.38903 c 0,-2.69104 0.38767,-4.55339 1.16304,-5.58704 0.761,-1.03365 2.14658,-1.55049 4.15675,-1.55049 l 1.33535,0 0,-3.82271 -1.33535,0 c -2.02454,0 -3.41729,-0.50791 -4.17828,-1.52374 -0.76103,-1.01584 -1.14151,-2.86036 -1.14151,-5.53359 l 0,-6.41575 c 0,-3.93856 -0.60305,-6.55833 -1.80918,-7.8593 -1.22045,-1.3188 -3.61831,-1.97819 -7.19357,-1.97819 l -1.37841,0 0,3.82273 1.50764,0 c 2.01017,0 3.32397,0.39205 3.94138,1.17621 0.60304,0.76633 0.9046,2.41481 0.9046,4.94547 l 0,6.62961 c 0,2.79799 0.33023,4.82964 0.99074,6.09498 0.64612,1.26532 1.75888,2.12076 3.33832,2.5663 -1.59377,0.48118 -2.71375,1.35444 -3.35986,2.61976 -0.64613,1.26533 -0.9692,3.28807 -0.9692,6.06825 l 0,6.6296 c 0,2.54845 -0.30156,4.2059 -0.9046,4.97219 -0.61741,0.76633 -1.93121,1.14952 -3.94138,1.14952 l -1.50764,0 z"
        id="path16042"
        style="font-size:12px;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;marker-end:none;font-family:Bitstream Vera Sans Mono"
        class="punch_line_bottom_set punch_line_non_focus" />
@@ -1024,26 +1024,17 @@
          y="733.43573">3</tspan></text>
     <text
        sodipodi:linespacing="125%"
-       id="text16064"
-       y="735.59576"
-       x="566.75195"
-       style="font-size:25.20988464px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       xml:space="preserve"><tspan
-         y="735.59576"
-         x="566.75195"
-         id="tspan16066"
-         sodipodi:role="line">i</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
        id="text5851"
-       y="729.45068"
-       x="504.17395"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       y="728.41553"
+       x="501.1554"
+       style="font-size:34px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        xml:space="preserve"><tspan
-         y="729.45068"
-         x="504.17395"
+         y="728.41553"
+         x="501.1554"
          id="tspan5853"
-         sodipodi:role="line">X(x ) is non-zero for all i</tspan></text>
+         sodipodi:role="line">X(x<tspan
+   id="tspan8037"
+   style="font-size:65%;baseline-shift:sub">i</tspan>) is non-zero for all i</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text5855"
