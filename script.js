@@ -158,8 +158,8 @@ var titles = [ // Titles {{{
     "Infinite Languages",
     "Diverging Languages",
     "Rational Operations for Diverging Languages",
-    "Characterization Theorem for Diverging Languages",
     "Kleene's Theorem for Diverging Languages",
+    "Characterization Theorem for Diverging Languages",
     "Conclusion",
 ] // }}} Titles
 
@@ -1624,8 +1624,11 @@ window.addEventListener("load",function() {
             "diverging_kleene3"
         ),
         "",
+        fadeOutAndFire(0.5,"diverging_kleene1"),
+        hireAndFadeIn(0.5,"diverging_kleene4"),
+        "",
         fadeOutAndFire(0.5,
-            "diverging_kleene1",
+            "diverging_kleene4",
             "diverging_kleene2",
             "diverging_kleene3"
         ),
@@ -1862,6 +1865,46 @@ window.addEventListener("load",function() {
             "diverging_rational_language_definition"
         ),
     // }}}
+    // Kleene's Theorem (encore) {{{
+        rotateNextTitle(),
+        hireAndFlashIn(0.75,0.375,
+            "diverging_kleene4",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+        "",
+        fadeOutAndFire(0.5,
+            "diverging_kleene4",
+            "diverging_kleene2",
+            "diverging_kleene3"
+        ),
+        hireAndFadeInUseActors(0.5,
+            "dtree.result",
+            "dtree.box"
+        ),
+        "",
+        hireAndFadeIn(0.5,"dtree.automata"),
+        "",
+        hireAndFadeIn(0.5,"dtree.tree",makePartFocusActor("dtree.tree",["1","2","3"])),
+        "",
+        set("dtree.tree","1.opacity",1),
+        linear(0.5,"dtree.tree","non_focused_opacity",0.33),
+        "",
+        linear(0.5,"dtree.tree","2.opacity",1),
+        "",
+        linear(0.5,"dtree.tree","3.opacity",1),
+        linear(0.5,"dtree.tree","non_focused_opacity",1),
+        set("dtree.tree","1.opacity",0),
+        set("dtree.tree","2.opacity",0),
+        set("dtree.tree","3.opacity",0),
+        "",
+        fadeOutAndFire(0.5,
+            "dtree.result",
+            "dtree.box",
+            "dtree.automata",
+            "dtree.tree"
+        ),
+    // }}}
     // Characterization Theorem {{{
         rotateNextTitle(),
         hireAndFlashIn(0.75,0.375,
@@ -1874,20 +1917,6 @@ window.addEventListener("load",function() {
             "diverging_characterization_theorem_1",
             "diverging_characterization_theorem_2",
             "diverging_characterization_theorem_3"
-        ),
-    // }}}
-    // Kleene's Theorem {{{
-        rotateNextTitle(),
-        hireAndFlashIn(0.75,0.375,
-            "diverging_kleene1",
-            "diverging_kleene2",
-            "diverging_kleene3"
-        ),
-        "",
-        fadeOutAndFire(0.5,
-            "diverging_kleene1",
-            "diverging_kleene2",
-            "diverging_kleene3"
         ),
     // }}}
     // Punch line (final appearance) {{{

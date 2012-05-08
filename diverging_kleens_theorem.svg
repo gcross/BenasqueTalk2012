@@ -21,7 +21,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,31 +41,31 @@
      id="namedview26763"
      showgrid="true"
      inkscape:zoom="0.73058495"
-     inkscape:cx="479.08643"
-     inkscape:cy="260.81104"
+     inkscape:cx="643.33838"
+     inkscape:cy="366.00674"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <text
      xml:space="preserve"
-     style="font-size:64.80000305px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     x="512.24341"
-     y="278.74426"
+     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     x="512.14319"
+     y="276.10754"
      id="diverging_kleene1"
      sodipodi:linespacing="125%"
      inkscape:label="#text5335"><tspan
        sodipodi:role="line"
-       x="521.22937"
-       y="278.74426"
-       id="tspan5364">the set of rational </tspan><tspan
+       x="512.14319"
+       y="276.10754"
+       id="tspan6418">the set of diverging languages</tspan><tspan
        sodipodi:role="line"
-       x="512.24341"
-       y="359.74426"
-       id="tspan6418">diverging languages</tspan></text>
+       x="512.14319"
+       y="366.10754"
+       id="tspan13294">recognized by automata</tspan></text>
   <g
      id="diverging_kleene2"
-     transform="translate(0,9.595886)"
+     transform="translate(0,9.59589)"
      inkscape:label="#g5986">
     <path
        inkscape:connector-curvature="0"
@@ -82,16 +82,32 @@
      inkscape:label="#text5335"
      sodipodi:linespacing="125%"
      id="diverging_kleene3"
-     y="598.74426"
-     x="512.22229"
-     style="font-size:64.80000305px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     y="596.10754"
+     x="512.14319"
+     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
      xml:space="preserve"><tspan
-       id="tspan11129"
-       y="598.74426"
-       x="512.22229"
-       sodipodi:role="line">the set of infinite languages</tspan><tspan
-       y="679.74426"
-       x="512.22229"
+       y="596.10754"
+       x="522.12756"
        sodipodi:role="line"
-       id="tspan11131">recognized by diverging automata</tspan></text>
+       id="tspan13279">the set of rational </tspan><tspan
+       y="686.10754"
+       x="512.14319"
+       sodipodi:role="line"
+       id="tspan13281">diverging languages</tspan></text>
+  <text
+     inkscape:label="#text5335"
+     sodipodi:linespacing="125%"
+     id="diverging_kleene4"
+     y="276.10754"
+     x="512.14319"
+     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+     xml:space="preserve"><tspan
+       id="tspan13298"
+       y="276.10754"
+       x="512.14319"
+       sodipodi:role="line">the set of states representable</tspan><tspan
+       id="tspan13300"
+       y="366.10754"
+       x="512.14319"
+       sodipodi:role="line">by an infinite MPS</tspan></text>
 </svg>
