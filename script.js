@@ -115,6 +115,18 @@ function makeDivergingAutomataActor() { return function() { // {{{
     })
     return actor
 }} // }}}
+function makeDivergenceCurveActor() { return function() { // {{{
+    actor = new UseActor("divergence.curve")
+    actor.curviness = 0
+    node = document.getElementById("divergence.curve")
+    appendToMethod(actor,"update",function() {
+        var c1 =  246.30331*this.curviness + 156.147
+        var c2 = -256.25647*this.curviness + 926.05439
+        var c3 =  340.59469*this.curviness + 310.72831
+        node.setAttribute("d","M 156.147,651.323 C " + c1 + ",651.323 " + c2 + "," + c3 + " 926.05439,310.72831")
+    })
+    return actor
+}} // }}}
 // }}} Actors
 
 // Title Management {{{
@@ -1130,17 +1142,14 @@ window.addEventListener("load",function() {
         ),
         hireAndFadeIn(0.5,"divergence.backdrop"),
         "",
-        hireAndFadeInUseActors(0.5,
-            "divergence.line",
-            "divergence.infinity"
+        parallel(
+            hireAndFadeInUseActor(0.5,"divergence.infinity"),
+            hireAndFadeIn(0.5,"divergence.curve",makeDivergenceCurveActor())
         ),
         "",
         hireAndFadeIn(0.5,"divergence.function"),
         "",
-        parallel(
-            fadeOutAndFire(0.5,"divergence.line"),
-            hireAndFadeIn(0.5,"divergence.curve")
-        ),
+        linear(0.5,"divergence.curve","curviness",1),
         "",
         fadeOutAndFire(0.5,
             "divergence.backdrop",
