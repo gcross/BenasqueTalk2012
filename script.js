@@ -1169,10 +1169,11 @@ window.addEventListener("load",function() {
         rotateNextTitle(),
         hireAndFadeIn(0.5,"divergence.backdrop"),
         "",
-        parallel(
-            hireAndFadeInUseActor(0.5,"divergence.infinity"),
-            hireAndFadeIn(0.5,"divergence.curve",makeDivergenceCurveActor())
-        ),
+        hireUseActor("divergence.cover","divergence.backdrop"),
+        hireUseActor("divergence.infinity","divergence.cover"),
+        hire("divergence.curve",makeDivergenceCurveActor(),"divergence.cover"),
+        linear(0.5,"divergence.cover","x",800),
+        fire("divergence.cover"),
         "",
         hireAndFadeIn(0.5,"divergence.function"),
         "",
