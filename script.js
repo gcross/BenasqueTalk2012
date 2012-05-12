@@ -224,6 +224,7 @@ window.addEventListener("load",function() {
             )
         ),
         "",
+/*
         set("punch_line_bottom_set","rational.opacity",1),
         linear(0.5,"punch_line_bottom_set","non_focused_opacity",0.25),
         "",
@@ -244,6 +245,7 @@ window.addEventListener("load",function() {
         "",
         linear(0.5,"punch_line_bottom_set","non_focused_opacity",1),
         "",
+*/
         fadeOutAndFire(0.5,
             "punch_line_top_set",
             "punch_line_equals",
