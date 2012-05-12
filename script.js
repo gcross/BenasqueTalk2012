@@ -1223,6 +1223,8 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(0.5,"divergence.embrace"),
         "",
+        linear(0.5,styleFor("divergence.escape"),"opacity",0.33),
+        "",
         fadeOutAndFire(0.5,
             "divergence.divergence",
             "divergence.escape",
