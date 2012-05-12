@@ -5439,11 +5439,10 @@
      inkscape:guide-bbox="true" />
   <g
      id="weighted_rational_language_definition"
-     transform="translate(-4.6113992,-4)"
-     inkscape:label="#g8229">
+     inkscape:label="#g3251">
     <rect
-       y="639.49817"
-       x="221.32837"
+       y="635.49817"
+       x="182.71696"
        height="37.562744"
        width="435.39502"
        id="rect5329"
@@ -5451,22 +5450,22 @@
     <text
        sodipodi:linespacing="110%"
        id="text5305"
-       y="669.42389"
-       x="23.661655"
+       y="665.42389"
+       x="19.050257"
        style="font-size:35.38160706px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:110.00000238%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        xml:space="preserve"><tspan
-         id="tspan5325"
-         y="669.42389"
-         x="23.661655"
-         sodipodi:role="line">The class of rational weighted languages is the smallest class</tspan><tspan
-         id="tspan5327"
-         y="708.34363"
-         x="23.661655"
-         sodipodi:role="line">of weighted languages that contains all functions nonzero for</tspan><tspan
+         y="665.42389"
+         x="19.050257"
+         sodipodi:role="line"
+         id="tspan3229">The set of rational weighted languages is the smallest set that</tspan><tspan
          id="tspan8223"
-         y="747.26343"
-         x="23.661655"
-         sodipodi:role="line">only 0 or 1 word and closed over the rational operations above.</tspan></text>
+         y="704.34363"
+         x="19.050257"
+         sodipodi:role="line">includes all languages nonzero for at most 1 word and which</tspan><tspan
+         id="tspan3249"
+         y="743.26343"
+         x="19.050257"
+         sodipodi:role="line">is closed over finite applications of the rational operations.</tspan></text>
   </g>
   <flowRoot
      xml:space="preserve"
