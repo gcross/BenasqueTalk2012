@@ -666,7 +666,7 @@ window.addEventListener("load",function() {
         ),
       // }}}
     // }}}
-    // Connect automata to MPS {{{
+    // MPS => Automata {{{
         rotateNextTitle(),
         hireAndFadeIn(0.5,"mac.mps"),
         "",
@@ -716,6 +716,9 @@ window.addEventListener("load",function() {
             "mac.walk.2",
             "mac.walk.3"
         ),
+    // }}}
+    // Automata => MPS {{{
+        rotateNextTitle(),
         parallel(
             hireAndFadeIn(0.5,"mac.automata",makePartFocusActor("mac.automata",[
                 "initial",
@@ -733,97 +736,107 @@ window.addEventListener("load",function() {
             )
         ),
         "",
-        hireAndFadeIn(0.5,"mac.initial",makePartFocusActor("mac.initial",[
-            "q1",
-            "q2",
-        ])),
-        "",
-        set("mac.initial","q1.opacity",1),
-        set("mac.automata","initial.opacity",1),
-        set("mac.automata","state.1.opacity",1),
-        parallel(
-            linear(0.5,"mac.initial","non_focused_opacity",0.33),
-            linear(0.5,"mac.automata","non_focused_opacity",0.33)
+        hireAndFadeInUseActors(0.5,
+            "mac.initial",
+            "mac.initial.row.q1",
+            "mac.initial.row.q2"
         ),
         "",
+        set("mac.automata","initial.opacity",1),
+        set("mac.automata","state.1.opacity",1),
+        linear(0.5,"mac.automata","non_focused_opacity",0.33),
+        "",
+        hireAndFadeIn(0.5,"mac.initial.q1"),
+        "",
         parallel(
-            linear(0.5,"mac.initial","non_focused_opacity",1),
+            hireAndFadeIn(0.5,"mac.initial.q2"),
             linear(0.5,"mac.automata","non_focused_opacity",1)
         ),
         set("mac.initial","q1.opacity",0),
         set("mac.automata","initial.opacity",0),
         set("mac.automata","state.1.opacity",0),
         "",
-        hireAndFadeIn(0.5,"mac.final",makePartFocusActor("mac.final",[
-            "q1",
-            "q2",
-        ])),
-        "",
-        set("mac.final","q1.opacity",1),
-        set("mac.automata","state.1.opacity",1),
-        set("mac.automata","final_weights.1.opacity",1),
-        parallel(
-            linear(0.5,"mac.final","non_focused_opacity",0.33),
-            linear(0.5,"mac.automata","non_focused_opacity",0.33)
+        hireAndFadeInUseActors(0.5,
+            "mac.final",
+            "mac.final.row.q1",
+            "mac.final.row.q2"
         ),
         "",
+        set("mac.automata","state.1.opacity",1),
+        set("mac.automata","state.2.opacity",1),
+        set("mac.automata","final_weights.1.opacity",1),
+        set("mac.automata","final_weights.2.opacity",1),
+        linear(0.5,"mac.automata","non_focused_opacity",0.33),
+        "",
         parallel(
-            linear(0.5,"mac.final","q1.opacity",0),
+            linear(0.5,"mac.automata","state.2.opacity",0),
+            linear(0.5,"mac.automata","final_weights.2.opacity",0),
+            linear(0.5,styleFor("mac.final.row.q2"),"opacity",0.33)
+        ),
+        "",
+        hireAndFadeIn(0.5,"mac.final.q1"),
+        "",
+        parallel(
+            linear(0.5,"mac.automata","state.2.opacity",1),
+            linear(0.5,"mac.automata","final_weights.2.opacity",1),
             linear(0.5,"mac.automata","state.1.opacity",0),
             linear(0.5,"mac.automata","final_weights.1.opacity",0),
-            linear(0.5,"mac.final","q2.opacity",1),
-            linear(0.5,"mac.automata","state.2.opacity",1),
-            linear(0.5,"mac.automata","final_weights.2.opacity",1)
+            linear(0.5,styleFor("mac.final.row.q1"),"opacity",0.33),
+            linear(0.5,styleFor("mac.final.row.q2"),"opacity",1)
         ),
         "",
+        hireAndFadeIn(0.5,"mac.final.q2"),
+        "",
         parallel(
-            linear(0.5,"mac.final","non_focused_opacity",1),
+            linear(0.5,styleFor("mac.final.row.q1"),"opacity",1),
             linear(0.5,"mac.automata","non_focused_opacity",1)
         ),
-        set("mac.final","q2.opacity",0),
         set("mac.automata","state.2.opacity",0),
         set("mac.automata","final_weights.2.opacity",0),
         "",
-        hireAndFadeIn(0.5,"mac.transitions.0",makePartFocusActor("mac.transitions.0",[
-            "row.q1",
-            "row.q2",
-            "col.q1",
-            "col.q2",
-            "q1q1",
-            "q1q2",
-            "q2q1",
-            "q2q2"
-        ])),
+        hireAndFadeInUseActors(0.5,
+            "mac.transitions.0",
+            "mac.transitions.0.row.q1",
+            "mac.transitions.0.row.q2",
+            "mac.transitions.0.col.q1",
+            "mac.transitions.0.col.q2"
+        ),
         "",
         set("mac.automata","transitions.0.q1q1.opacity",1),
         set("mac.automata","transitions.0.q2q2.opacity",1),
         linear(0.5,"mac.automata","non_focused_opacity",0.33),
         "",
-        set("mac.transitions.0","q1q1.opacity",1),
-        set("mac.transitions.0","row.q1.opacity",1),
-        set("mac.transitions.0","col.q1.opacity",1),
         parallel(
+            linear(0.5,styleFor("mac.transitions.0.col.q2"),"opacity",0.33),
+            linear(0.5,styleFor("mac.transitions.0.row.q2"),"opacity",0.33),
             linear(0.5,"mac.automata","state.1.opacity",1),
             linear(0.5,"mac.automata","transitions.0.q2q2.opacity",0),
             linear(0.5,"mac.transitions.0","non_focused_opacity",0.33)
         ),
         "",
+        hireAndFadeIn(0.5,"mac.transitions.0.q1q1"),
+        "",
         parallel(
-            linear(0.5,"mac.transitions.0","q1q1.opacity",0),
-            linear(0.5,"mac.transitions.0","row.q1.opacity",0),
-            linear(0.5,"mac.transitions.0","col.q1.opacity",0),
-            linear(0.5,"mac.transitions.0","q2q2.opacity",1),
-            linear(0.5,"mac.transitions.0","row.q2.opacity",1),
-            linear(0.5,"mac.transitions.0","col.q2.opacity",1),
+            linear(0.5,styleFor("mac.transitions.0.row.q1"),"opacity",0.33),
+            linear(0.5,styleFor("mac.transitions.0.col.q1"),"opacity",0.33),
+            linear(0.5,styleFor("mac.transitions.0.row.q2"),"opacity",1),
+            linear(0.5,styleFor("mac.transitions.0.col.q2"),"opacity",1),
             linear(0.5,"mac.automata","state.1.opacity",0),
             linear(0.5,"mac.automata","state.2.opacity",1),
             linear(0.5,"mac.automata","transitions.0.q1q1.opacity",0),
             linear(0.5,"mac.automata","transitions.0.q2q2.opacity",1)
         ),
         "",
+        hireAndFadeIn(0.5,"mac.transitions.0.q2q2"),
+        "",
         parallel(
             linear(0.5,"mac.automata","non_focused_opacity",1),
-            linear(0.5,"mac.transitions.0","non_focused_opacity",1)
+            linear(0.5,styleFor("mac.transitions.0.row.q1"),"opacity",1),
+            linear(0.5,styleFor("mac.transitions.0.col.q1"),"opacity",1),
+            hireAndFadeInUseActors(0.5,
+                "mac.transitions.0.q1q2",
+                "mac.transitions.0.q2q1"
+            )
         ),
         set("mac.transitions.0","q2q2.opacity",0),
         set("mac.transitions.0","row.q2.opacity",0),
@@ -831,47 +844,68 @@ window.addEventListener("load",function() {
         set("mac.automata","state.2.opacity",0),
         set("mac.automata","transitions.0.q2q2.opacity",0),
         "",
-        hireAndFadeIn(0.5,"mac.transitions.1",makePartFocusActor("mac.transitions.1",[
-            "row.q1",
-            "row.q2",
-            "col.q1",
-            "col.q2",
-            "q1q1",
-            "q1q2",
-            "q2q1",
-            "q2q2"
-        ])),
+        hireAndFadeInUseActors(0.5,
+            "mac.transitions.1",
+            "mac.transitions.1.row.q1",
+            "mac.transitions.1.row.q2",
+            "mac.transitions.1.col.q1",
+            "mac.transitions.1.col.q2"
+        ),
         "",
-        set("mac.transitions.1","q1q2.opacity",1),
-        set("mac.transitions.1","row.q1.opacity",1),
-        set("mac.transitions.1","col.q2.opacity",1),
         set("mac.automata","state.1.opacity",1),
         set("mac.automata","state.2.opacity",1),
         set("mac.automata","transitions.1.opacity",1),
         parallel(
-            linear(0.5,"mac.transitions.1","non_focused_opacity",0.33),
+            linear(0.5,styleFor("mac.transitions.1.row.q2"),"opacity",0.33),
+            linear(0.5,styleFor("mac.transitions.1.col.q1"),"opacity",0.33),
             linear(0.5,"mac.automata","non_focused_opacity",0.33)
         ),
         "",
+        hireAndFadeIn(0.5,"mac.transitions.1.q1q2"),
+        "",
         parallel(
-            linear(0.5,"mac.transitions.1","non_focused_opacity",1),
-            linear(0.5,"mac.automata","non_focused_opacity",1)
+            linear(0.5,styleFor("mac.transitions.1.row.q2"),"opacity",1),
+            linear(0.5,styleFor("mac.transitions.1.col.q1"),"opacity",1),
+            linear(0.5,"mac.automata","non_focused_opacity",1),
+            hireAndFadeInUseActors(0.5,
+                "mac.transitions.1.q1q1",
+                "mac.transitions.1.q2q1",
+                "mac.transitions.1.q2q2"
+            )
         ),
-        set("mac.transitions.1","q1q2.opacity",0),
-        set("mac.transitions.1","row.q1.opacity",0),
-        set("mac.transitions.1","col.q2.opacity",0),
-        set("mac.automata","state.1.opacity",0),
-        set("mac.automata","state.2.opacity",0),
-        set("mac.automata","transitions.1.opacity",0),
         "",
         fadeOutAndFire(0.5,
             "mac.automata",
             "mac.automata.box",
             "mac.def",
             "mac.initial",
+            "mac.initial.row.q1",
+            "mac.initial.row.q2",
+            "mac.initial.q1",
+            "mac.initial.q2",
             "mac.final",
+            "mac.final.row.q1",
+            "mac.final.row.q2",
+            "mac.final.q1",
+            "mac.final.q2",
             "mac.transitions.0",
-            "mac.transitions.1"
+            "mac.transitions.0.col.q1",
+            "mac.transitions.0.col.q2",
+            "mac.transitions.0.row.q1",
+            "mac.transitions.0.row.q2",
+            "mac.transitions.0.q1q1",
+            "mac.transitions.0.q1q2",
+            "mac.transitions.0.q2q1",
+            "mac.transitions.0.q2q2",
+            "mac.transitions.1",
+            "mac.transitions.1.col.q1",
+            "mac.transitions.1.col.q2",
+            "mac.transitions.1.row.q1",
+            "mac.transitions.1.row.q2",
+            "mac.transitions.1.q1q1",
+            "mac.transitions.1.q1q2",
+            "mac.transitions.1.q2q1",
+            "mac.transitions.1.q2q2"
         ),
     // }}}
     // Kleene's Theorem {{{
@@ -1722,7 +1756,6 @@ window.addEventListener("load",function() {
             "infinite_languages.words.nfinite.examples.1",
             "infinite_languages.words.nfinite.examples.2"
         ),
-
 // }}}
     // Diverging languages {{{
         rotateNextTitle(),
