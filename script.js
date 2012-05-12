@@ -1248,6 +1248,7 @@ window.addEventListener("load",function() {
         ),
         "",
         hireAndFadeIn(1,"diverging_automata.criterion"),
+        "",
       // }}}
     // First example {{{
         hireAndFlashIn(0.5,0.25,
