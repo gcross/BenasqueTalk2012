@@ -1260,10 +1260,13 @@ window.addEventListener("load",function() {
             "diverging_automata.input.4plus"
         ),
         "",
-        hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
-        smooth(0.5,"diverging_automata.marker","x",124.169),
-        "",
-        hireAndFadeIn(0.5,"diverging_automata.reader"),
+        parallel(
+            sequence(
+                hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
+                smooth(0.5,"diverging_automata.marker","x",124.169)
+            ),
+            hireAndFadeIn(0.5,"diverging_automata.reader")
+        ),
         "",
         smooth(0.5,"diverging_automata.marker","x",336.694),
         "",
@@ -1362,13 +1365,14 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(0.5,"diverging_automata.weight.1.0"),
         "",
-        sequence(
-            fadeOutAndFire(0.25,"diverging_automata.weight.input.0"),
-            hireAndFadeIn(0.25,"diverging_automata.weight.input.1")
+        parallel(
+            sequence(
+                fadeOutAndFire(0.25,"diverging_automata.weight.input.0"),
+                hireAndFadeIn(0.25,"diverging_automata.weight.input.1")
+            ),
+            fadeOutAndFire(0.5,"diverging_automata.weight.1.0"),
+            hireAndFadeIn(0.5,"diverging_automata.reader")
         ),
-        fadeOutAndFire(0.5,"diverging_automata.weight.1.0"),
-        "",
-        hireAndFadeIn(0.5,"diverging_automata.reader"),
         "",
         parallel(
             smooth(0.5,"diverging_automata.marker","x",336.694),
@@ -1388,12 +1392,13 @@ window.addEventListener("load",function() {
         linear(0.5,"diverging_automata.automata","non_focused_opacity",1),
         set("diverging_automata.automata","final_weights.2.opacity",0),
         "",
-        sequence(
-            fadeOutAndFire(0.25,"diverging_automata.weight.input.1"),
-            hireAndFadeIn(0.25,"diverging_automata.weight.input.2")
+        parallel(
+            sequence(
+                fadeOutAndFire(0.25,"diverging_automata.weight.input.1"),
+                hireAndFadeIn(0.25,"diverging_automata.weight.input.2")
+            ),
+            smooth(0.5,"diverging_automata.reader","x",106)
         ),
-        "",
-        smooth(0.5,"diverging_automata.reader","x",106),
         "",
         parallel(
             sequence(
@@ -1414,7 +1419,13 @@ window.addEventListener("load",function() {
             )
         ),
         "",
-        smooth(0.5,"diverging_automata.reader","x",212),
+        parallel(
+            sequence(
+                fadeOutAndFire(0.25,"diverging_automata.weight.input.2"),
+                hireAndFadeIn(0.25,"diverging_automata.weight.input.3")
+            ),
+            smooth(0.5,"diverging_automata.reader","x",212)
+        ),
         "",
         parallel(
             sequence(
@@ -1435,13 +1446,17 @@ window.addEventListener("load",function() {
             )
         ),
         "",
-        sequence(
-            fadeOutAndFire(0.25,"diverging_automata.weight.input.2"),
-            hireAndFadeIn(0.25,"diverging_automata.weight.input.n")
+        parallel(
+            sequence(
+                fadeOutAndFire(0.25,"diverging_automata.weight.input.3"),
+                hireAndFadeIn(0.25,"diverging_automata.weight.input.n")
+            ),
+            accelerate(0.5,"diverging_automata.reader","x",500)
         ),
-        "",
+        fire("diverging_automata.reader"),
         parallel(
             fadeOutAndFire(0.25,
+                "diverging_automata.weight.equals",
                 "diverging_automata.weight.1.1",
                 "diverging_automata.weight.2.1_3",
                 "diverging_automata.weight.dot.1",
@@ -1452,12 +1467,10 @@ window.addEventListener("load",function() {
                 "diverging_automata.weight.result.1_9"
             ),
             hireAndFadeInUseActors(0.5,
-                "diverging_automata.weight.result.1_3",
+                "diverging_automata.weight.1.1_3",
                 "diverging_automata.weight.result.to_the_n"
-            ),
-            accelerate(0.5,"diverging_automata.reader","x",500)
+            )
         ),
-        fire("diverging_automata.reader"),
         "",
     // }}}
     // Second example {{{
@@ -1466,9 +1479,8 @@ window.addEventListener("load",function() {
         "",
         parallel(
             fadeOutAndFire(0.5,
-                "diverging_automata.weight.result.1_3",
-                "diverging_automata.weight.result.to_the_n",
-                "diverging_automata.weight.equals"
+                "diverging_automata.weight.1.1_3",
+                "diverging_automata.weight.result.to_the_n"
             ),
             linear(0.5,"diverging_automata.automata","final_weights.1.opacity_override",1)
         ),
@@ -1621,10 +1633,8 @@ window.addEventListener("load",function() {
             "diverging_automata.weight.input.1",
             "diverging_automata.weight.mapsto"
         ),
-        "",
         hireAndFadeIn(0.5,"diverging_automata.marker",null,"diverging_automata.automata"),
         smooth(0.5,"diverging_automata.marker","x",124.169), 
-        "",
         hireAndFadeIn(0.5,"diverging_automata.reader"),
         "",
         parallel(
