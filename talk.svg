@@ -4922,7 +4922,7 @@
          y="565.22711"
          x="803.3551"
          id="tspan6448"
-         sodipodi:role="line">(1,ε), (2,a)</tspan></text>
+         sodipodi:role="line">(ε,1), (a,2)</tspan></text>
     <path
        class="punch_line_bottom_set punch_line_non_focus"
        style="font-size:12px;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;marker-end:none;font-family:Bitstream Vera Sans Mono"
@@ -5384,7 +5384,6 @@
        d="m 470,373 a 10,15 0 1 1 -20,0 10,15 0 1 1 20,0 z"
        transform="matrix(0.48963759,0,0,0.32642508,2.766705,524.24852)" />
   </g>
-
         <!-- }}} -->
         <!-- weighted rational operations {{{ -->
   <defs
