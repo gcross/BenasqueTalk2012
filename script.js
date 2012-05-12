@@ -1858,12 +1858,18 @@ window.addEventListener("load",function() {
         ),
         "",
         hireAndFadeInUseActors(0.5,
-            "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_letter_pointer_left",
             "diverging_rational_operations_example_output_0_mapsto"
         ),
         "",
         hireAndFadeIn(0.5,"diverging_rational_operations_example_output_0_mapsto_0"),
         "",
+        hireUseActors(
+            "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_letter_pointer_cover"
+        ),
+        moveToEnd("diverging_rational_operations_example_letter_pointer_left"),
+        moveToEnd("diverging_rational_operations_example_box"),
         parallel(
             smooth(0.5,"diverging_rational_operations_example_letter_pointer","x",28),
             hireAndFadeIn(0.5,"diverging_rational_operations_example_output_1_mapsto")
@@ -1942,6 +1948,8 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_example_letter_mapsto",
             "diverging_rational_operations_example_output_box",
             "diverging_rational_operations_example_letter_pointer",
+            "diverging_rational_operations_example_letter_pointer_cover",
+            "diverging_rational_operations_example_letter_pointer_left",
             "diverging_rational_operations_example_output_0_mapsto",
             "diverging_rational_operations_example_output_0_mapsto_0",
             "diverging_rational_operations_example_output_1_mapsto",

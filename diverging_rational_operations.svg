@@ -70,8 +70,8 @@
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="1.0332031"
-     inkscape:cx="659.53026"
-     inkscape:cy="180.69673"
+     inkscape:cx="668.92399"
+     inkscape:cy="153.3214"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -735,7 +735,7 @@
   </g>
   <g
      id="diverging_rational_operations_definition_3"
-     inkscape:label="#g4975">
+     inkscape:label="#g3184">
     <rect
        y="475.65625"
        x="24.637793"
@@ -756,7 +756,7 @@
          sodipodi:role="line">X</tspan></text>
     <path
        transform="translate(-66,164)"
-       d="m 251.1686,325.88852 c 0,1.88987 -1.53204,3.42191 -3.42191,3.42191 -1.88987,0 -3.42192,-1.53204 -3.42192,-3.42191 0,-1.88987 1.53205,-3.42192 3.42192,-3.42192 1.88987,0 3.42191,1.53205 3.42191,3.42192 z"
+       d="m 251.1686,325.88852 a 3.4219155,3.4219155 0 1 1 -6.84383,0 3.4219155,3.4219155 0 1 1 6.84383,0 z"
        sodipodi:ry="3.4219155"
        sodipodi:rx="3.4219155"
        sodipodi:cy="325.88852"
@@ -772,7 +772,7 @@
        sodipodi:cy="325.88852"
        sodipodi:rx="3.4219155"
        sodipodi:ry="3.4219155"
-       d="m 251.1686,325.88852 c 0,1.88987 -1.53204,3.42191 -3.42191,3.42191 -1.88987,0 -3.42192,-1.53204 -3.42192,-3.42191 0,-1.88987 1.53205,-3.42192 3.42192,-3.42192 1.88987,0 3.42191,1.53205 3.42191,3.42192 z"
+       d="m 251.1686,325.88852 a 3.4219155,3.4219155 0 1 1 -6.84383,0 3.4219155,3.4219155 0 1 1 6.84383,0 z"
        transform="translate(-66,180)" />
     <g
        id="g12212"
@@ -807,7 +807,7 @@
        sodipodi:cy="461.67108"
        sodipodi:rx="5.3232512"
        sodipodi:ry="5.3232512"
-       d="m 98.722116,461.67108 c 0,2.93995 -2.383301,5.32325 -5.323251,5.32325 -2.939951,0 -5.323252,-2.3833 -5.323252,-5.32325 0,-2.93995 2.383301,-5.32325 5.323252,-5.32325 2.93995,0 5.323251,2.3833 5.323251,5.32325 z"
+       d="m 98.722116,461.67108 a 5.3232512,5.3232512 0 1 1 -10.646503,0 5.3232512,5.3232512 0 1 1 10.646503,0 z"
        transform="matrix(1.331,0,0,1.331,-30.915025,-114.81313)" />
     <rect
        style="fill:#1fd800;fill-opacity:0.06730772;stroke:#1fd800;stroke-opacity:1"
@@ -863,12 +863,12 @@
        xml:space="preserve"
        style="font-size:32.40000153px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="445.03662"
-       y="507.79395"
+       y="509.79395"
        id="text12289"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="445.03662"
-         y="507.79395"
+         y="509.79395"
          id="tspan12291">0 if n &lt; |w| else X(w) · Y(w[n,∞])(n-|w|)</tspan></text>
   </g>
   <g

@@ -10039,8 +10039,8 @@
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="1.0332031"
-     inkscape:cx="659.53026"
-     inkscape:cy="180.69673"
+     inkscape:cx="668.92399"
+     inkscape:cy="153.3214"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -10704,7 +10704,7 @@
   </g>
   <g
      id="diverging_rational_operations_definition_3"
-     inkscape:label="#g4975">
+     inkscape:label="#g3184">
     <rect
        y="475.65625"
        x="24.637793"
@@ -10725,7 +10725,7 @@
          sodipodi:role="line">X</tspan></text>
     <path
        transform="translate(-66,164)"
-       d="m 251.1686,325.88852 c 0,1.88987 -1.53204,3.42191 -3.42191,3.42191 -1.88987,0 -3.42192,-1.53204 -3.42192,-3.42191 0,-1.88987 1.53205,-3.42192 3.42192,-3.42192 1.88987,0 3.42191,1.53205 3.42191,3.42192 z"
+       d="m 251.1686,325.88852 a 3.4219155,3.4219155 0 1 1 -6.84383,0 3.4219155,3.4219155 0 1 1 6.84383,0 z"
        sodipodi:ry="3.4219155"
        sodipodi:rx="3.4219155"
        sodipodi:cy="325.88852"
@@ -10741,7 +10741,7 @@
        sodipodi:cy="325.88852"
        sodipodi:rx="3.4219155"
        sodipodi:ry="3.4219155"
-       d="m 251.1686,325.88852 c 0,1.88987 -1.53204,3.42191 -3.42191,3.42191 -1.88987,0 -3.42192,-1.53204 -3.42192,-3.42191 0,-1.88987 1.53205,-3.42192 3.42192,-3.42192 1.88987,0 3.42191,1.53205 3.42191,3.42192 z"
+       d="m 251.1686,325.88852 a 3.4219155,3.4219155 0 1 1 -6.84383,0 3.4219155,3.4219155 0 1 1 6.84383,0 z"
        transform="translate(-66,180)" />
     <g
        id="g12212"
@@ -10776,7 +10776,7 @@
        sodipodi:cy="461.67108"
        sodipodi:rx="5.3232512"
        sodipodi:ry="5.3232512"
-       d="m 98.722116,461.67108 c 0,2.93995 -2.383301,5.32325 -5.323251,5.32325 -2.939951,0 -5.323252,-2.3833 -5.323252,-5.32325 0,-2.93995 2.383301,-5.32325 5.323252,-5.32325 2.93995,0 5.323251,2.3833 5.323251,5.32325 z"
+       d="m 98.722116,461.67108 a 5.3232512,5.3232512 0 1 1 -10.646503,0 5.3232512,5.3232512 0 1 1 10.646503,0 z"
        transform="matrix(1.331,0,0,1.331,-30.915025,-114.81313)" />
     <rect
        style="fill:#1fd800;fill-opacity:0.06730772;stroke:#1fd800;stroke-opacity:1"
@@ -10832,12 +10832,12 @@
        xml:space="preserve"
        style="font-size:32.40000153px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="445.03662"
-       y="507.79395"
+       y="509.79395"
        id="text12289"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="445.03662"
-         y="507.79395"
+         y="509.79395"
          id="tspan12291">0 if n &lt; |w| else X(w) · Y(w[n,∞])(n-|w|)</tspan></text>
   </g>
   <g
@@ -11049,9 +11049,8 @@
          x="404.17395"
          y="729.45068">...</tspan></text>
   </g>
-        
         <!-- }}} -->
-        <!-- diverging rational operations 2 {{{ -->
+        <!-- diverging rational operations 2 }}} -->
   <defs
      id="defs26765">
     <marker
@@ -11109,9 +11108,9 @@
      inkscape:window-height="1152"
      id="namedview26763"
      showgrid="false"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="673.5902"
-     inkscape:cy="260.59997"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="680.46166"
+     inkscape:cy="170.59997"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -11130,7 +11129,7 @@
          y="570.89764" /></flowRegion><flowPara
        id="flowPara5317" /></flowRoot>  <g
      id="diverging_rational_operations_definition_6"
-     inkscape:label="#g8645">
+     inkscape:label="#g3228">
     <rect
        style="fill:#0001d8;fill-opacity:0.06730772;stroke:#0800f2;stroke-opacity:1"
        id="rect15812"
@@ -11192,47 +11191,33 @@
        style="fill:#1fd800;fill-opacity:0.06730772;stroke:#1fd800;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-size:32.40000153px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:139.99999762%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="442.50354"
-       y="357.73792"
+       style="font-size:31.75523949px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:129.99999523%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="446.05432"
+       y="358.01904"
        id="text16044"
-       sodipodi:linespacing="140%"><tspan
-         id="tspan3596"
-         sodipodi:role="line"
-         x="442.50354"
-         y="357.73792">X(x<tspan
-   style="font-size:65.00091553%;baseline-shift:sub"
-   id="tspan8614">1</tspan>) · X(x<tspan
-   style="font-size:65.00091553%;baseline-shift:sub"
-   id="tspan8616">2</tspan>) · ... · X(x<tspan
-   style="font-size:65.00091553%;baseline-shift:sub"
-   id="tspan8618">k</tspan>) for all x<tspan
-   style="font-size:65.00091553%;baseline-shift:sub"
-   id="tspan8608">1</tspan>x<tspan
-   style="font-size:65.00091553%;baseline-shift:sub"
-   id="tspan8610">2</tspan> ... x<tspan
-   style="font-size:65.00091553%;baseline-shift:sub"
-   id="tspan8612">k</tspan></tspan><tspan
+       sodipodi:linespacing="130%"><tspan
          id="tspan3600"
          sodipodi:role="line"
-         x="442.50354"
-         y="403.09793">= w[0,n] where w[n,∞] is in X</tspan></text>
-    <g
-       transform="matrix(0.08862938,0,0,0.08862938,853.6394,357.03773)"
-       id="g3606"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Dialog">
-      <g
-         id="g3608">
-        <g
-           id="g3610">
-          <path
-             style="stroke:none"
-             inkscape:connector-curvature="0"
-             d="m 188.2969,236.6719 q 22.2187,39.6562 22.2187,77.2031 0,36.2812 -15.3984,55.8984 -15.3984,19.6172 -39.3047,19.6172 -31.5,0 -45.5625,-33.75 -13.9219,33.75 -45.4219,33.75 -24.1875,0 -39.4453,-19.7578 Q 10.125,349.875 10.125,313.875 q 0,-37.5469 22.0781,-77.2031 l 24.4688,0 q -14.9063,34.4531 -18.0703,49.9922 -3.1641,15.539 -3.1641,28.0547 0,24.3281 9,39.5156 9,15.1875 23.2031,15.1875 12.9375,0 21.4453,-12.586 8.5079,-12.5859 8.5079,-34.1015 l 0,-48.6563 25.3124,0 0,48.6563 q 0,22.3594 8.1563,34.5234 8.1563,12.1641 21.7969,12.1641 14.2031,0 23.2734,-14.625 9.0703,-14.625 9.0703,-40.0781 0,-13.7813 -3.5156,-29.6719 -3.5156,-15.8907 -17.8594,-48.375 l 24.4688,0 z"
-             id="path3612" />
-        </g>
-      </g>
-    </g>
+         x="446.05432"
+         y="358.01904">sum of X(x<tspan
+   id="tspan3226"
+   style="font-size:65%;baseline-shift:sub">1</tspan>) · X(x<tspan
+   id="tspan3222"
+   style="font-size:65%;baseline-shift:sub">2</tspan>) · ... · X(x<tspan
+   id="tspan3218"
+   style="font-size:65%;baseline-shift:sub">k</tspan>) for all</tspan><tspan
+         sodipodi:role="line"
+         x="446.05432"
+         y="399.30084"
+         id="tspan3131">x<tspan
+   id="tspan3204"
+   style="font-size:65.00091553%;baseline-shift:sub">1</tspan>x<tspan
+   id="tspan3208"
+   style="font-size:65.00091553%;baseline-shift:sub">2</tspan> ... x<tspan
+   style="font-size:65.00091553%;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:start;baseline-shift:sub;font-family:Arial;-inkscape-font-specification:Arial"
+   id="tspan8612">k</tspan>= w[0,n] where w[n,∞] is in X<tspan
+   id="tspan3214"
+   style="font-size:65%;baseline-shift:super">ω</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:32.40000153px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
@@ -11344,12 +11329,6 @@
      d="m 760.98341,552.30338 41.92787,0"
      style="fill:none;stroke:#000000;stroke-width:3.6099999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#StopL);marker-end:url(#TriangleOutM)"
      inkscape:label="#path5788" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:1.80499995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
-     d="m 650.39732,601.72357 0,-33.1929"
-     id="diverging_rational_operations_example_letter_pointer"
-     inkscape:connector-curvature="0"
-     inkscape:label="#path5790" />
   <g
      id="diverging_rational_operations_example_output_0_mapsto"
      inkscape:label="#g7844">
@@ -11555,55 +11534,6 @@
        x="867.72363"
        y="493.83868">(ab,2)</tspan></text>
   <g
-     id="diverging_rational_language_definition"
-     inkscape:label="#g8719">
-    <rect
-       y="568.4989"
-       x="166.92932"
-       height="35.907104"
-       width="369.17108"
-       id="rect5329"
-       style="fill:#d87a00;fill-opacity:0.19230772;stroke:none" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text5305"
-       y="595.27161"
-       x="39.12196"
-       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       xml:space="preserve"><tspan
-         id="tspan5327"
-         y="595.27161"
-         x="39.12196"
-         sodipodi:role="line">The set of rational diverging languages</tspan><tspan
-         y="630.27161"
-         x="39.12196"
-         sodipodi:role="line"
-         id="tspan7930">is obtained by starting with the finite</tspan><tspan
-         y="665.27161"
-         x="39.12196"
-         sodipodi:role="line"
-         id="tspan7932">weighted languages, closing them over the</tspan><tspan
-         y="700.27161"
-         x="39.12196"
-         sodipodi:role="line"
-         id="tspan8458">rational operators just presented and then</tspan><tspan
-         y="735.27161"
-         x="39.12196"
-         sodipodi:role="line"
-         id="tspan8460">taking only the words of infinite length.</tspan><tspan
-         y="770.27161"
-         x="39.12196"
-         sodipodi:role="line"
-         id="tspan7926" /></text>
-    <rect
-       y="560.35242"
-       x="24.637793"
-       height="190.91884"
-       width="560.02856"
-       id="rect6384"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-  </g>
-  <g
      id="diverging_rational_operations_identity"
      inkscape:label="#g7796">
     <g
@@ -11771,7 +11701,77 @@
        id="tspan7343"
        x="884.55914"
        y="731">...</tspan></text>
-
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.80499995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+     d="m 530.397,601.724 120.05166,0 -0.0513,-33.19333"
+     id="diverging_rational_operations_example_letter_pointer"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     inkscape:label="#path3261" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none"
+     id="diverging_rational_operations_example_letter_pointer_cover"
+     width="125.15788"
+     height="63.993134"
+     x="525.08221"
+     y="560.28741"
+     inkscape:label="#rect4235" />
+  <path
+     inkscape:label="#path5790"
+     inkscape:connector-curvature="0"
+     id="diverging_rational_operations_example_letter_pointer_left"
+     d="m 650.397,601.724 0,-33.19333"
+     style="fill:none;stroke:#000000;stroke-width:1.80499995;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+     sodipodi:nodetypes="cc" />
+  <g
+     id="diverging_rational_language_definition"
+     inkscape:label="#g8719">
+    <rect
+       y="568.4989"
+       x="166.92932"
+       height="35.907104"
+       width="369.17108"
+       id="rect5329"
+       style="fill:#d87a00;fill-opacity:0.19230772;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5305"
+       y="595.27161"
+       x="39.12196"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       xml:space="preserve"><tspan
+         id="tspan5327"
+         y="595.27161"
+         x="39.12196"
+         sodipodi:role="line">The set of rational diverging languages</tspan><tspan
+         y="630.27161"
+         x="39.12196"
+         sodipodi:role="line"
+         id="tspan7930">is obtained by starting with the finite</tspan><tspan
+         y="665.27161"
+         x="39.12196"
+         sodipodi:role="line"
+         id="tspan7932">weighted languages, closing them over the</tspan><tspan
+         y="700.27161"
+         x="39.12196"
+         sodipodi:role="line"
+         id="tspan8458">rational operators just presented and then</tspan><tspan
+         y="735.27161"
+         x="39.12196"
+         sodipodi:role="line"
+         id="tspan8460">taking only the words of infinite length.</tspan><tspan
+         y="770.27161"
+         x="39.12196"
+         sodipodi:role="line"
+         id="tspan7926" /></text>
+    <rect
+       y="560.35242"
+       x="24.637793"
+       height="190.91884"
+       width="560.02856"
+       id="rect6384"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  </g>
         <!-- }}} -->
         <!-- diverging automata {{{ -->
   <defs
