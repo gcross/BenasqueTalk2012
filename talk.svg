@@ -1216,7 +1216,9 @@
          sodipodi:role="line"
          x="228.13922"
          y="303.89148"
-         id="tspan3509">vector of length χ</tspan></text>
+         id="tspan3509">vector of length <tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan3128">b</tspan></tspan></text>
     <text
        transform="scale(0.99833836,1.0016644)"
        xml:space="preserve"
@@ -1281,7 +1283,9 @@
          id="tspan3518"
          y="524.39728"
          x="227.75879"
-         sodipodi:role="line">vector of length χ</tspan></text>
+         sodipodi:role="line">vector of length <tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan3130">b</tspan></tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3903"
@@ -1466,7 +1470,11 @@
          sodipodi:role="line"
          x="365.1962"
          y="436.4899"
-         id="tspan7083">matrix of dimension χ × χ</tspan></text>
+         id="tspan7083">matrix of dimension <tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan3124">b</tspan> × <tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan3126">b</tspan></tspan></text>
   </g>
   <g
      id="mps.wave_function.abstract"
@@ -1507,6 +1515,7 @@
            sodipodi:rx="4.8762298"
            sodipodi:cy="185.67551"
            sodipodi:cx="722.79413"
+           id="weighted_automata.weight.dot.1"
            style="fill:#000000;fill-opacity:1;stroke:none"
            sodipodi:type="arc" />
         <text
@@ -2034,7 +2043,6 @@
       </g>
     </g>
   </g>
-
         <!-- }}} -->
         <!-- mps automata connection {{{ -->
   <g
