@@ -155,11 +155,12 @@ function rotateTitle(index) { // {{{
 } // }}}
 // }}}
 var titles = [ // Titles {{{
-    "The Punch Line",
+    "Main Result",
     "Outline",
     "Matrix Product States",
     "Weighted Automata",
-    "Matrix Product States = Weighted Automata",
+    "Matrix Product States ⇒ Weighted Automata",
+    "Matrix Product States ⇐ Weighted Automata",
     "Kleene's Theorem",
     "Language",
     "Weighted Language",
@@ -274,6 +275,7 @@ window.addEventListener("load",function() {
     // }}}
     // Weighted automata {{{
         rotateNextTitle(),
+        "",
       // Introduce the automata {{{
         hireUseActors("weighted_automata.5tuple","weighted_automata.5tuple.cover"),
         linear(0.5,"weighted_automata.5tuple.cover","x",470),
@@ -569,9 +571,7 @@ window.addEventListener("load",function() {
             ),
             hireAndFadeInUseActor(0.5,"weighted_automata.weight.1.1_2")
         ),
-        "",
         smooth(0.5,"weighted_automata.reader","x",106),
-        "",
         parallel(
             sequence(
                 parallel(
@@ -586,9 +586,7 @@ window.addEventListener("load",function() {
             hireAndFadeInUseActor(0.5,"weighted_automata.weight.dot.1"),
             hireAndFadeInUseActor(0.5,"weighted_automata.weight.2.1_2")
         ),
-        "",
         smooth(0.5,"weighted_automata.reader","x",212),
-        "",
         parallel(
             sequence(
                 parallel(
@@ -603,9 +601,7 @@ window.addEventListener("load",function() {
             hireAndFadeInUseActor(0.5,"weighted_automata.weight.dot.2"),
             hireAndFadeInUseActor(0.5,"weighted_automata.weight.3.1_2")
         ),
-        "",
         smooth(0.5,"weighted_automata.reader","x",318),
-        "",
         parallel(
             sequence(
                 parallel(
@@ -621,7 +617,6 @@ window.addEventListener("load",function() {
             hireAndFadeInUseActor(0.5,"weighted_automata.weight.4.1_"),
             hireAndFadeInUseActor(0.5,"weighted_automata.weight.4._2")
         ),
-        "",
         fadeOut(0.5,"weighted_automata.reader"),
         "",
         set("weighted_automata.automata","state.1.opacity",1),
