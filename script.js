@@ -1470,7 +1470,8 @@ window.addEventListener("load",function() {
             ),
             hireAndFadeInUseActors(0.5,
                 "diverging_automata.weight.1.1_3",
-                "diverging_automata.weight.result.to_the_n"
+                "diverging_automata.weight.result.to_the_n",
+                "diverging_automata.weight.qualifier"
             )
         ),
         "",
@@ -1482,7 +1483,8 @@ window.addEventListener("load",function() {
         parallel(
             fadeOutAndFire(0.5,
                 "diverging_automata.weight.1.1_3",
-                "diverging_automata.weight.result.to_the_n"
+                "diverging_automata.weight.result.to_the_n",
+                "diverging_automata.weight.qualifier"
             ),
             linear(0.5,"diverging_automata.automata","final_weights.1.opacity_override",1)
         ),
