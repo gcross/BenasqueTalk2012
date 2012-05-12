@@ -1834,15 +1834,17 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_precondition_3",
             "diverging_rational_operations_precondition_4",
             "diverging_rational_operations_definition_1",
-            "diverging_rational_operations_definition_3",
+            "diverging_rational_operations_definition_2",
             "diverging_rational_operations_definition_4"
         ),
         parallel(
             smooth(0.5,"diverging_rational_operations_definition_5","y",-450.0),
-            smooth(0.5,"diverging_rational_operations_definition_2","y",-180.0)
+            smooth(0.5,"diverging_rational_operations_definition_3","y",-320.0)
         ),
         "",
         hireAndFadeInUseActor(0.5,"diverging_rational_operations_definition_6"),
+        "",
+        hireAndFadeIn(0.5,"diverging_rational_operations_identity"),
         "",
         hireAndFadeInUseActors(0.5,
             "diverging_rational_operations_example_box",
@@ -1857,6 +1859,7 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_example_letter_2",
             "diverging_rational_operations_example_letter_3",
             "diverging_rational_operations_example_letter_4",
+            "diverging_rational_operations_example_letter_5plus",
             "diverging_rational_operations_example_letter_mapsto",
             "diverging_rational_operations_example_output_box"
         ),
@@ -1866,7 +1869,11 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_example_output_0_mapsto"
         ),
         "",
+        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",0.25),
+        "",
         hireAndFadeIn(0.5,"diverging_rational_operations_example_output_0_mapsto_0"),
+        "",
+        linear(0.5,styleFor("diverging_rational_operations_example_input_1"),"opacity",1),
         "",
         hireUseActors(
             "diverging_rational_operations_example_letter_pointer",
@@ -1932,12 +1939,10 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(0.5,"diverging_rational_operations_example_output_dots"),
         "",
-        hireAndFadeIn(0.5,"diverging_rational_operations_identity"),
-        "",
         hireAndFadeIn(0.5,"diverging_rational_language_definition"),
         "",
         fadeOutAndFire(0.5,
-            "diverging_rational_operations_definition_2",
+            "diverging_rational_operations_definition_3",
             "diverging_rational_operations_definition_5",
             "diverging_rational_operations_definition_6",
             "diverging_rational_operations_example_box",
@@ -1949,6 +1954,7 @@ window.addEventListener("load",function() {
             "diverging_rational_operations_example_letter_2",
             "diverging_rational_operations_example_letter_3",
             "diverging_rational_operations_example_letter_4",
+            "diverging_rational_operations_example_letter_5plus",
             "diverging_rational_operations_example_letter_mapsto",
             "diverging_rational_operations_example_output_box",
             "diverging_rational_operations_example_letter_pointer",
