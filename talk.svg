@@ -11866,56 +11866,6 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient8340"
-       id="linearGradient3440"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(210,80)"
-       x1="697.92513"
-       y1="320.41344"
-       x2="715.14557"
-       y2="264.71854" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient8340"
-       id="linearGradient3442"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-10,80)"
-       x1="697.92513"
-       y1="320.41344"
-       x2="817.91022"
-       y2="320.41345" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient8340"
-       id="linearGradient3444"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-10,80)"
-       x1="697.92513"
-       y1="320.41344"
-       x2="715.14557"
-       y2="264.71854" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient8340"
-       id="linearGradient3446"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-10,80)"
-       x1="546.18597"
-       y1="320.41342"
-       x2="614.6073"
-       y2="320.41342" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient8340"
-       id="linearGradient6096"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-10,80)"
-       x1="546.18597"
-       y1="320.41342"
-       x2="614.6073"
-       y2="320.41342" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient8340"
        id="linearGradient6138"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-10,80)"
@@ -12719,27 +12669,28 @@
          y="681.14911"
          x="207"
          sodipodi:role="line"><tspan
-           id="tspan3250"
-           y="681.14911"
-           x="207">The sum of the weights of all paths of length </tspan><tspan
-           id="tspan3252"
-           style="font-style:italic;-inkscape-font-specification:Arial Italic">n</tspan><tspan
-           id="tspan3254"> through the automata </tspan></tspan><tspan
+   id="tspan3250"
+   y="681.14911"
+   x="207">the sum of the weights of all paths of length </tspan><tspan
+   id="tspan3252"
+   style="font-style:italic;-inkscape-font-specification:Arial Italic">n</tspan> through the automata </tspan><tspan
          id="tspan3256"
          y="711.14911"
          x="207"
          sodipodi:role="line"><tspan
            id="tspan3258"
-           x="207">starting at the initial state, where each path is multiplied by the weight of its </tspan></tspan><tspan
+           x="207">starting at the initial state, <tspan
+   style="font-style:italic;-inkscape-font-specification:Arial Italic"
+   id="tspan3232">where each path is multiplied by the weight of its </tspan></tspan></tspan><tspan
          id="tspan3260"
          y="741.14911"
          x="207"
          sodipodi:role="line"><tspan
            id="tspan3262"
-           x="207">final state if </tspan><tspan
-           id="tspan3264"
-           style="font-style:italic;-inkscape-font-specification:Arial Italic">w</tspan><tspan
-           id="tspan3266"> visits that state infinitely often and zero otherwise.</tspan></tspan></text>
+           x="207"
+           style="font-style:italic;-inkscape-font-specification:Arial Italic">final state if <tspan
+   style="font-style:normal;-inkscape-font-specification:Arial"
+   id="tspan3237">w</tspan> visits that state infinitely often and zero otherwise</tspan></tspan></text>
   </g>
   <text
      sodipodi:linespacing="125%"
