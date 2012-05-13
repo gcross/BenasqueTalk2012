@@ -1161,7 +1161,7 @@ window.addEventListener("load",function() {
   // }}}
       // Outline {{{
         rotateNextTitle(),
-        hireUseActors(0.5,"outline_1","outline_2"),
+        hireUseActors("outline_1","outline_2"),
         parallel(
             linear(0.5,styleFor("outline_1"),"opacity",0,1),
             linear(0.5,styleFor("outline_2"),"opacity",0,0.33)
