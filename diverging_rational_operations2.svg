@@ -28,6 +28,19 @@
   <defs
      id="defs26765">
     <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path8747"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+    <marker
        inkscape:stockid="Arrow1Mend"
        orient="auto"
        refY="0.0"
@@ -83,8 +96,8 @@
      id="namedview26763"
      showgrid="false"
      inkscape:zoom="0.99999999"
-     inkscape:cx="559.33825"
-     inkscape:cy="170.59997"
+     inkscape:cx="621.33825"
+     inkscape:cy="368.58987"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -764,16 +777,56 @@
        d="m 390.9593,392.18773 34.53095,0"
        style="fill:none;stroke:#000000;stroke-width:2.97312427;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#StopL);marker-end:url(#TriangleOutM)" />
   </g>
-  <text
-     inkscape:label="#text5729"
-     sodipodi:linespacing="125%"
+  <g
      id="diverging_rational_operations_example_letter_5plus"
-     y="561.66327"
-     x="728.8335"
-     style="font-size:36.09999847px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-     xml:space="preserve"><tspan
-       y="561.66327"
+     inkscape:label="#g9188">
+    <text
+       xml:space="preserve"
+       style="font-size:36.09999847px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        x="728.8335"
-       id="tspan4650"
-       sodipodi:role="line">...</tspan></text>
+       y="561.66327"
+       id="text5729"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text5729"><tspan
+         sodipodi:role="line"
+         id="tspan4650"
+         x="728.8335"
+         y="561.66327">...</tspan></text>
+    <g
+       transform="matrix(0,0.73509189,-0.73509189,0,1040.173,513.95324)"
+       id="g5911">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 180,388 c -30,0 -30,30 0,30"
+         id="path4223"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 157.75,403 22,0"
+         id="path4225"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <path
+       inkscape:label="#path5790"
+       inkscape:connector-curvature="0"
+       id="path6187"
+       d="m 743.93098,611.724 0,-33.19333"
+       style="fill:none;stroke:#000000;stroke-width:1.80499995000000002;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none;marker-mid:none;marker-start:url(#Arrow1Mstart)"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="744.70245"
+       y="689.80426"
+       id="text15826-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan15828-9"
+         x="744.70245"
+         y="689.80426">X<tspan
+   id="tspan7248"
+   style="font-size:65.00091553%;baseline-shift:super">ω</tspan></tspan></text>
+  </g>
 </svg>
