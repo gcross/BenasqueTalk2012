@@ -2101,6 +2101,7 @@ window.addEventListener("load",function() {
         hireAndFadeIn(0.5,"bidiverging_automata.criterion.1"),
         "",
         hireAndFadeIn(0.5,"bidiverging_automata.criterion.2"),
+/*
         "",
         fadeOutAndFire(0.5,
             "bidiverging_automata.5tuple",
@@ -2113,6 +2114,7 @@ window.addEventListener("load",function() {
             "bidiverging_automata.criterion.1",
             "bidiverging_automata.criterion.2"
         ),
+*/
     // }}}
   // }}}
 // }}} Script
