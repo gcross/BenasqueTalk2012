@@ -15573,9 +15573,9 @@
              style="fill:url(#linearGradient3698);fill-opacity:1;stroke:none;display:inline" />
         </g>
     <!-- }}} -->
-    <!-- title_template {{{ -->
+    <!-- heading_template {{{ -->
         <style>
-            .title {
+            .heading {
                 font-size:40px;
                 fill:#ffffff;
                 fill-opacity:1;
@@ -15584,10 +15584,10 @@
             }
         </style>
         <text
-            id="title_template"
+            id="heading_template"
             x="30.5"
             y="80.5"
-            class="title"
+            class="heading"
         />
     <!-- }}} -->
     <!-- white_rectangle {{{ -->

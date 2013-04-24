@@ -129,32 +129,32 @@ function makeDivergenceCurveActor() { return function() { // {{{
 }} // }}}
 // }}} Actors
 
-// Title Management {{{
-var current_title_index = -1
+// Heading Management {{{
+var current_heading_index = -1
 
-function nextTitleIndex() { // {{{
-    current_title_index += 1
-    return current_title_index
+function nextHeadingIndex() { // {{{
+    current_heading_index += 1
+    return current_heading_index
 } // }}}
-function rotateNextTitle() { // {{{
-    return rotateTitle(nextTitleIndex())
+function rotateNextHeading() { // {{{
+    return rotateHeading(nextHeadingIndex())
 } // }}}
-function rotateTitle(index) { // {{{
+function rotateHeading(index) { // {{{
     return sequence(
         parallel(
-            accelerate(0.25,titles[index-1],"y",-50),
-            fadeOutAndFire(0.25,titles[index-1])
+            accelerate(0.25,headings[index-1],"y",-50),
+            fadeOutAndFire(0.25,headings[index-1])
         ),
-        hireUseActor(titles[index]),
-        set(titles[index],"y",-50),
+        hireUseActor(headings[index]),
+        set(headings[index],"y",-50),
         parallel(
-            decelerate(0.25,titles[index],"y",0),
-            fadeIn(0.25,titles[index])
+            decelerate(0.25,headings[index],"y",0),
+            fadeIn(0.25,headings[index])
         )
     )
 } // }}}
 // }}}
-var titles = [ // Titles {{{
+var headings = [ // Headings {{{
     "Main Result",
     "Outline",
     "Matrix Product States",
@@ -179,18 +179,18 @@ var titles = [ // Titles {{{
     "Conclusion",
     "Bi-diverging Languages",
     "Bi-diverging Automata",
-] // }}} Titles
+] // }}} Headings
 
 window.addEventListener("load",function() {
     // Initialization {{{
     (function() {
         var resources = document.getElementById("resources")
-        var title_template = document.getElementById("title_template")
-        for(var i = 0; i < titles.length; ++i) {
-            var title = titles[i]
-            var node = title_template.cloneNode(false)
-            node.setAttribute("id",title)
-            node.appendChild(document.createTextNode(title))
+        var heading_template = document.getElementById("heading_template")
+        for(var i = 0; i < headings.length; ++i) {
+            var heading = headings[i]
+            var node = heading_template.cloneNode(false)
+            node.setAttribute("id",heading)
+            node.appendChild(document.createTextNode(heading))
             resources.appendChild(node)
         }
     })()
@@ -206,7 +206,7 @@ window.addEventListener("load",function() {
         fadeOutAndFire(1,"title_slide"),
         hireAndFadeInUseActors(0.5,
             "standard_backdrop",
-            titles[nextTitleIndex()]
+            headings[nextHeadingIndex()]
         ),
         parallel(
             hireAndFadeIn(0.5,"punch_line_top_set"),
@@ -255,7 +255,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Outline {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeInUseActors(0.5,"outline_1","outline_2"),
         "",
         linear(0.5,styleFor("outline_2"),"opacity",0.33),
@@ -264,7 +264,7 @@ window.addEventListener("load",function() {
     // }}}
   // Finite system {{{
     // Matrix product states{{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeInUseActors(0.5,"mps.definition","mps.wave_function.abstract"),
         "",
         parallel(
@@ -278,7 +278,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Weighted automata {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         "",
       // Introduce the automata {{{
         hireUseActors("weighted_automata.5tuple","weighted_automata.5tuple.cover"),
@@ -671,7 +671,7 @@ window.addEventListener("load",function() {
       // }}}
     // }}}
     // MPS => Automata {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeIn(0.5,"mac.mps"),
         "",
         hireAndFlashIn(0.5,0.25,
@@ -722,7 +722,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Automata => MPS {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         parallel(
             hireAndFadeIn(0.5,"mac.automata",makePartFocusActor("mac.automata",[
                 "initial",
@@ -913,7 +913,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Kleene's Theorem {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFlashIn(0.75,0.375,
             "weighted_kleene1",
             "weighted_kleene2",
@@ -930,7 +930,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Languages {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeIn(0.5,"languages.borderlines"),
         "",
         hireAndFadeIn(1,"languages.alphabet"),
@@ -1036,7 +1036,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Weighted language {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeIn(0.5,"weighted_languages.borderlines"),
         "",
         hireAndFadeIn(0.5,"weighted_languages.alphabet"),
@@ -1083,7 +1083,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Rational weighted operations {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFlashIn(0.5,0.25,
             "weighted_rational_operations_box_1",
             "weighted_rational_operations_box_2",
@@ -1121,7 +1121,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Kleene's Theorem (encore) {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFlashIn(0.75,0.375,
             "weighted_kleene4",
             "weighted_kleene2",
@@ -1162,7 +1162,7 @@ window.addEventListener("load",function() {
     // }}}
   // }}}
       // Outline {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireUseActors("outline_1","outline_2"),
         parallel(
             linear(0.5,styleFor("outline_1"),"opacity",0,1),
@@ -1178,7 +1178,7 @@ window.addEventListener("load",function() {
       // }}}
   // Infinite system {{{
     // IMPS {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFlashIn(0.5,0.25,
             "imps_justification.the_good.label",
             "imps_justification.the_bad.label",
@@ -1199,7 +1199,7 @@ window.addEventListener("load",function() {
             "imps_justification.the_bad.text",
             "imps_justification.the_beautiful.text"
         ),
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeIn(0.5,"divergence.backdrop"),
         "",
         hireUseActor("divergence.cover","divergence.backdrop"),
@@ -1236,7 +1236,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
   // Diverging automata {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
       // Introduce the automata {{{
         hireUseActors("diverging_automata.5tuple","diverging_automata.5tuple.cover"),
         linear(0.5,"diverging_automata.5tuple.cover","x",470),
@@ -1716,7 +1716,7 @@ window.addEventListener("load",function() {
         ),
   // }}}
     // Kleene's Theorem {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFlashIn(0.75,0.375,
             "diverging_kleene1",
             "diverging_kleene2",
@@ -1733,7 +1733,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Infinite languages {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeInUseActor(0.5,"infinite_languages.borderlines"),
         "",
         hireAndFadeInUseActor(0.5,"infinite_languages.alphabet"),
@@ -1777,7 +1777,7 @@ window.addEventListener("load",function() {
         ),
 // }}}
     // Diverging languages {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeIn(0.5,"diverging_languages.borderlines"),
         "",
         hireAndFadeIn(0.5,"diverging_languages.alphabet"),
@@ -1800,7 +1800,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Rational diverging operations {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFlashIn(0.5,0.25,
             "diverging_rational_operations_box_1",
             "diverging_rational_operations_box_2",
@@ -1978,7 +1978,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Kleene's Theorem (encore) {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFlashIn(0.75,0.375,
             "diverging_kleene4",
             "diverging_kleene2",
@@ -2018,7 +2018,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Characterization Theorem {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFlashIn(0.75,0.375,
             "diverging_characterization_theorem_1",
             "diverging_characterization_theorem_2",
@@ -2032,7 +2032,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Punch line (final appearance) {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         parallel(
             hireAndFadeIn(0.5,"punch_line_top_set"),
             sequence(
@@ -2060,7 +2060,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Bi-diverging languages {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireAndFadeInUseActors(0.5,
             "bidiverging_language",
             "bidiverging_juxtaposition_operator",
@@ -2074,7 +2074,7 @@ window.addEventListener("load",function() {
         ),
     // }}}
     // Bi-diverging automata {{{
-        rotateNextTitle(),
+        rotateNextHeading(),
         hireUseActors("bidiverging_automata.5tuple","bidiverging_automata.5tuple.cover"),
         linear(0.5,"bidiverging_automata.5tuple.cover","x",470),
         hireAndFlashIn(0.5,0.25,
