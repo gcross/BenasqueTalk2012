@@ -129,31 +129,6 @@ function makeDivergenceCurveActor() { return function() { // {{{
 }} // }}}
 // }}} Actors
 
-// Heading Management {{{
-var current_heading_index = -1
-
-function nextHeadingIndex() { // {{{
-    current_heading_index += 1
-    return current_heading_index
-} // }}}
-function rotateNextHeading() { // {{{
-    return rotateHeading(nextHeadingIndex())
-} // }}}
-function rotateHeading(index) { // {{{
-    return sequence(
-        parallel(
-            accelerate(0.25,headings[index-1],"y",-50),
-            fadeOutAndFire(0.25,headings[index-1])
-        ),
-        hireUseActor(headings[index]),
-        set(headings[index],"y",-50),
-        parallel(
-            decelerate(0.25,headings[index],"y",0),
-            fadeIn(0.25,headings[index])
-        )
-    )
-} // }}}
-// }}}
 var headings = [ // Headings {{{
     "Main Result",
     "Outline",
@@ -181,33 +156,8 @@ var headings = [ // Headings {{{
     "Bi-diverging Automata",
 ] // }}} Headings
 
-window.addEventListener("load",function() {
-    // Initialization {{{
-    (function() {
-        var resources = document.getElementById("resources")
-        var heading_template = document.getElementById("heading_template")
-        for(var i = 0; i < headings.length; ++i) {
-            var heading = headings[i]
-            var node = heading_template.cloneNode(false)
-            node.setAttribute("id",heading)
-            node.appendChild(document.createTextNode(heading))
-            resources.appendChild(node)
-        }
-    })()
-    // }}} Initialization
-
-    initializeSlick([].concat([
-// Script {{{
-    // Title {{{
-        hire("title_slide"),
-        "",
-    // }}} Title
+var script = function() { return [ // Script {{{
     // Punch line (first appearance) {{{
-        fadeOutAndFire(1,"title_slide"),
-        hireAndFadeInUseActors(0.5,
-            "standard_backdrop",
-            headings[nextHeadingIndex()]
-        ),
         parallel(
             hireAndFadeIn(0.5,"punch_line_top_set"),
             sequence(
@@ -2117,6 +2067,4 @@ window.addEventListener("load",function() {
 */
     // }}}
   // }}}
-// }}} Script
-    ]))
-},false)
+]} // }}} Script
